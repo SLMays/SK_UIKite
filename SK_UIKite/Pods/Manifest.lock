@@ -1,0 +1,35 @@
+PODS:
+  - HexColors (2.2.1)
+  - Masonry (1.1.0)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
+  - ZKUDID (2.0)
+
+DEPENDENCIES:
+  - Masonry
+  - ReactiveCocoa (= 2.3.1)
+  - SDWebImage
+  - TSMessages
+  - ZKUDID (~> 2.0)
+
+SPEC CHECKSUMS:
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
+  ZKUDID: f283dbf371b9561c8a6d516c9f1274276ec17e89
+
+PODFILE CHECKSUM: 895859d94269c4741d34a67c7566bed04cd47d23
+
+COCOAPODS: 1.3.1

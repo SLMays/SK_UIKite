@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+use_frameworks!
+
+def share_pods
+   pod 'Masonry'
+   pod 'SDWebImage'
+   pod 'ReactiveCocoa', '2.3.1'
+   pod 'ZKUDID', '~> 2.0'
+end
+
+target 'SK_UIKite' do
+    share_pods
+    pod 'TSMessages'
+end

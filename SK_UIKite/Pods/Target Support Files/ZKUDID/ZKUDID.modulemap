@@ -1,0 +1,6 @@
+framework module ZKUDID {
+  umbrella header "ZKUDID-umbrella.h"
+
+  export *
+  module * { export * }
+}
