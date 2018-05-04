@@ -24,9 +24,9 @@
 	<string>请求访问相机权限</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>请求访问麦克风权限</string>
-    <key>NSSpeechRecognitionUsageDescription</key>
-    <string>请求访问语音识别技术权限</string>
-	<key>UIAppFonts（Fonts provided by application）</key>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>请求访问语音识别技术权限</string>
+	<key>UIAppFonts</key>
 	<array>
 		<string>iconfont.ttf</string>
 	</array>

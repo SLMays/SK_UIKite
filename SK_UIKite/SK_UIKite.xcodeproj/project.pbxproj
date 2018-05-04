@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09717C9330C2246B7140E941 /* Pods_SK_UIKite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */; };
+		A421233C20941EB000F90D7C /* SK_UnLock_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A421233B20941EB000F90D7C /* SK_UnLock_ViewController.m */; };
 		A44B0B951FA9CF2B001B00FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0B941FA9CF2B001B00FB /* AppDelegate.m */; };
 		A44B0B981FA9CF2B001B00FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0B971FA9CF2B001B00FB /* ViewController.m */; };
 		A44B0B9D1FA9CF2B001B00FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44B0B9C1FA9CF2B001B00FB /* Assets.xcassets */; };
@@ -48,13 +49,13 @@
 		A4AC4C41207E164400A2F7FD /* SK_NavigationAlpha_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC4C40207E164400A2F7FD /* SK_NavigationAlpha_ViewController.m */; };
 		A4B7D1FA207F566D00A4312D /* SK_NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D1F9207F566D00A4312D /* SK_NavigationController.m */; };
 		A4B7D1FD207F5FC200A4312D /* SK_IconFont_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D1FC207F5FC200A4312D /* SK_IconFont_ViewController.m */; };
-		A4B7D228207F640800A4312D /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4B7D21E207F640800A4312D /* iconfont.ttf */; };
 		A4B7D235207F66F500A4312D /* SK_IconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D234207F66F500A4312D /* SK_IconInfo.m */; };
 		A4B7D238207F68C600A4312D /* SK_IconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D237207F68C600A4312D /* SK_IconFont.m */; };
 		A4E7DFA120907DB1007E3967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E7DF9D20907DB1007E3967 /* Main.storyboard */; };
 		A4E7DFA220907DB1007E3967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E7DF9F20907DB1007E3967 /* LaunchScreen.storyboard */; };
 		A4E7DFA520908E7D007E3967 /* SK_SpeechRecognition_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */; };
 		A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */; };
+		A4F15ACC209C02B30035AA46 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4F15ACB209C02B30035AA46 /* iconfont.ttf */; };
 		A4F68220208F1B5B00876A38 /* BankOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6820C208F1B5A00876A38 /* BankOverlayView.m */; };
 		A4F68221208F1B5B00876A38 /* IDOverLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6820D208F1B5A00876A38 /* IDOverLayerView.m */; };
 		A4F68222208F1B5B00876A38 /* XLScanManagerInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F68215208F1B5A00876A38 /* XLScanManagerInitialize.m */; };
@@ -71,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SK_UIKite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A421233A20941EB000F90D7C /* SK_UnLock_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_UnLock_ViewController.h; sourceTree = "<group>"; };
+		A421233B20941EB000F90D7C /* SK_UnLock_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_UnLock_ViewController.m; sourceTree = "<group>"; };
 		A44B0B901FA9CF2B001B00FB /* SK_UIKite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK_UIKite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44B0B931FA9CF2B001B00FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A44B0B941FA9CF2B001B00FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,7 +158,6 @@
 		A4B7D1F9207F566D00A4312D /* SK_NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_NavigationController.m; sourceTree = "<group>"; };
 		A4B7D1FB207F5FC200A4312D /* SK_IconFont_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_IconFont_ViewController.h; sourceTree = "<group>"; };
 		A4B7D1FC207F5FC200A4312D /* SK_IconFont_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_IconFont_ViewController.m; sourceTree = "<group>"; };
-		A4B7D21E207F640800A4312D /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		A4B7D233207F66F500A4312D /* SK_IconInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_IconInfo.h; sourceTree = "<group>"; };
 		A4B7D234207F66F500A4312D /* SK_IconInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_IconInfo.m; sourceTree = "<group>"; };
 		A4B7D236207F68C600A4312D /* SK_IconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_IconFont.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_SpeechRecognition_ViewController.m; sourceTree = "<group>"; };
 		A4E7DFA620909544007E3967 /* UITextView+SKUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+SKUtils.h"; sourceTree = "<group>"; };
 		A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SKUtils.m"; sourceTree = "<group>"; };
+		A4F15ACB209C02B30035AA46 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		A4F68204208F18C200876A38 /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
 		A4F68206208F18C200876A38 /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
 		A4F68207208F18C200876A38 /* libbankcard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbankcard.a; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */,
 				A47A26202092D3640015F03E /* SK_ColorGradientAnimation_ViewController.h */,
 				A47A26212092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m */,
+				A421233A20941EB000F90D7C /* SK_UnLock_ViewController.h */,
+				A421233B20941EB000F90D7C /* SK_UnLock_ViewController.m */,
 			);
 			path = "SK_Demo+";
 			sourceTree = "<group>";
@@ -432,7 +437,7 @@
 		A4B7D1FE207F602500A4312D /* SK_IcnoFont */ = {
 			isa = PBXGroup;
 			children = (
-				A4B7D21E207F640800A4312D /* iconfont.ttf */,
+				A4F15ACB209C02B30035AA46 /* iconfont.ttf */,
 			);
 			path = SK_IcnoFont;
 			sourceTree = "<group>";
@@ -587,8 +592,8 @@
 			files = (
 				A4A2D4E5208F156600116BE1 /* zocr0.lib in Resources */,
 				A44B0B9D1FA9CF2B001B00FB /* Assets.xcassets in Resources */,
-				A4B7D228207F640800A4312D /* iconfont.ttf in Resources */,
 				A4E7DFA220907DB1007E3967 /* LaunchScreen.storyboard in Resources */,
+				A4F15ACC209C02B30035AA46 /* iconfont.ttf in Resources */,
 				A4E7DFA120907DB1007E3967 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +704,7 @@
 				A44B0BD51FA9D1F4001B00FB /* UIViewController+SKUtils.m in Sources */,
 				A47D81B8208DC813003958C9 /* SK_IDCard_ViewController.m in Sources */,
 				A44B0BCF1FA9D1B1001B00FB /* NSDate+SKUtils.m in Sources */,
+				A421233C20941EB000F90D7C /* SK_UnLock_ViewController.m in Sources */,
 				A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */,
 				A44B0BD81FA9D200001B00FB /* UIView+SKUtils.m in Sources */,
 				A44B0BCC1FA9D1A5001B00FB /* NSData+SKUtils.m in Sources */,

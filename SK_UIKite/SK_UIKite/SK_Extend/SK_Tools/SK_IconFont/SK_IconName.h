@@ -41,4 +41,5 @@
 #define k_IconFont_Weather_19   @"\U0000e6b0"
 #define k_IconFont_Weather_20   @"\U0000e6b3"
 
+#define k_IconFont_kaihu_3      @"\U0000e602"
 

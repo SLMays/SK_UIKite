@@ -130,14 +130,7 @@
         navigationBgView.alpha = 1.0;
         titleLabel.alpha = 1.0;
     }
-    
-    NSLog(@"\n\nTop:%f\nLeft:%f\nWidth:%f\nHeight:%f\n",headImageView.top,headImageView.left,headImageView.width,headImageView.height);
-    
 }
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

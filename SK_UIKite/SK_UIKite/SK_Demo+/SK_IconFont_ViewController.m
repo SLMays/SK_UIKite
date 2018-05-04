@@ -21,6 +21,8 @@
 }
 -(void)initUI
 {
+    self.view.backgroundColor = RandomColor;
+    
     SK_IconInfoMake(k_IconFont_Tab1, 24, RandomColor);
     UIButton * searchBtn = [UIButton initWithFrame:CGRectMake(0, 0, 44, 44) Title:nil TitleColor:nil BgColor:nil Image:SK_IconImageMake(k_IconFont_Search, 24, [UIColor whiteColor]) BgImage:nil Target:self Action:@selector(SearchAction) ForControlEvents:UIControlEventTouchUpInside Tag:0];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
@@ -59,7 +61,12 @@
         
         int n = [RandomNumber((int)WeatherArr.count) intValue];
         NSString * wstr = WeatherArr[n];
-        UILabel * weather = [UILabel initWithFrame:CGRectMake(width+20, top+i*height, width, height) Title:wstr TitleColor:RandomColor BgColor:[UIColor clearColor] Font:[UIFont fontWithName:@"iconfont" size:25] TextAlignment:NSTextAlignmentLeft Tag:3];
+//        UILabel * weather = [UILabel initWithFrame:CGRectMake(width+20, top+i*height, width, height) Title:wstr TitleColor:nil BgColor:[UIColor clearColor] Font:[UIFont fontWithName:@"iconfont" size:25] TextAlignment:NSTextAlignmentLeft Tag:33+i];
+        UILabel * weather = [[UILabel alloc]initWithFrame:CGRectMake(width+20, top+i*height, width, height)];
+        weather.text = wstr;
+        weather.font = [UIFont fontWithName:@"iconfont" size:25];
+        weather.backgroundColor = [UIColor clearColor];
+        weather.textAlignment = NSTextAlignmentLeft;
         [self.view addSubview:weather];
     }
 }
@@ -75,7 +82,13 @@
 }
 -(void)tabBarChange:(UIButton *)btn
 {
-    self.view.backgroundColor = btn.titleLabel.textColor;
+//    self.view.backgroundColor = btn.titleLabel.textColor;
+    
+    for (UILabel * label in self.view.subviews) {
+        if (label.tag>=33) {
+            [label setTextColor:btn.titleLabel.textColor];
+        }
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

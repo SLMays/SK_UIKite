@@ -29,11 +29,10 @@
     btn.centerX = WIDTH_IPHONE/2;
     btn.bRadius = 50;
     [self.view addSubview:btn];
-    
 }
 
 -(void)Action{
-  
+  //还未实现
 }
 
 
