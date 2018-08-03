@@ -31,6 +31,7 @@
     UIView * tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, HAVE_TABBAR_HEIGHT, WIDTH_IPHONE, Height_TabBar)];
     tabbarView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:tabbarView];
+    
     NSArray * iconArr = @[k_IconFont_Tab1,k_IconFont_Tab2,k_IconFont_Tab3,k_IconFont_Tab4];
     CGFloat btnWidth = WIDTH_IPHONE/4;
     for (int i=0; i<4; i++) {

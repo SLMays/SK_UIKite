@@ -11,7 +11,7 @@
 #define k_IconFont_Refresh  @"\U0000e65a"
 #define k_IconFont_Search   @"\U0000e65b"
 #define k_IconFont_Add      @"\U0000e65c"
-
+#define k_IconFont_Help     @"\U0000e782"
 
 //TabBar
 #define k_IconFont_Tab1     @"\U0000e655"

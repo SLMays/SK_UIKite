@@ -3,8 +3,8 @@
         "viewBgColor"           :"#FF7F24",
         "btnBgColor"            :"#FF7F24",
         "btnTitColor"           :"#FFFFFF",
-        "btnTitHightColor"      :"#CFCFCF",
-        "labTextColor"           :"#000000",
+        "btnTitHightColor"      :"#1E90FF",
+        "labTextColor"          :"#000000",
     },
     
     "image": {

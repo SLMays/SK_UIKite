@@ -518,8 +518,6 @@
 				A42F6F5B20ECA0F400666251 /* Tab1_ViewController.h */,
 				A42F6F5A20ECA0F400666251 /* Tab1_ViewController.m */,
 				A4AC4C42207E167700A2F7FD /* SK_DemoMenuClass_Header.h */,
-				A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */,
-				A4FDEFC820FEEA0E00FCE0AD /* 后台运行 */,
 				A42F6F5220EC7A2C00666251 /* TestDemo */,
 				A42F6F4B20EC73F400666251 /* 导航栏颜色渐变 */,
 				A42F6F4C20EC740800666251 /* IconFont绘制图片文字 */,
@@ -530,6 +528,8 @@
 				A42F6F5120EC7A1100666251 /* WebView导航栏透明 */,
 				A42F6F4720EC73DE00666251 /* 屏幕旋转 */,
 				A4C9CF8520FC72BB0076F63C /* 分享功能 */,
+				A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */,
+				A4FDEFC820FEEA0E00FCE0AD /* 后台运行 */,
 			);
 			path = "Tab1_ Functions";
 			sourceTree = "<group>";

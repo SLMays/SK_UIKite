@@ -82,7 +82,6 @@
     //列表内容
     mainTableView = [UITableView initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, HEIGHT_IPHONE) Style:UITableViewStylePlain Delegate:self SeparatorStyle:SK_TableViewCellSeparatorStyle_Full];
     mainTableView.backgroundColor = [UIColor clearColor];
-    mainTableView.bColor = RandomColor;
      mainTableView.tableHeaderView = headView;
      [self.view addSubview:mainTableView];
     
@@ -110,6 +109,10 @@
     cell.textLabel.text = [NSString stringWithFormat:@"第 %d 行",(int)indexPath.row+1];
     
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

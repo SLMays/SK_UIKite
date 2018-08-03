@@ -23,4 +23,12 @@
     [btn addTarget:target action:sel forControlEvents:event];
     return btn;
 }
+
++(UIButton *_Nullable)initWithFrame:(CGRect)frame Title:(NSString * _Nullable)title TitleFont:(UIFont *)font TitleColor:(UIColor *_Nullable)tColor BgColor:(UIColor *_Nullable)bgColor Image:(UIImage *_Nullable)image BgImage:(UIImage *_Nullable)bgImage Target:(id _Nullable )target Action:(nonnull SEL)sel ForControlEvents:(UIControlEvents)event Tag:(int)tag
+{
+    UIButton * btn = [UIButton initWithFrame:frame Title:title TitleColor:tColor BgColor:bgColor Image:image BgImage:bgImage Target:target Action:sel ForControlEvents:event Tag:tag];
+    btn.titleLabel.font = font;
+    return btn;
+}
+
 @end

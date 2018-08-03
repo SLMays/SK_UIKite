@@ -52,8 +52,6 @@
     
 }
 
-
-
 -(void)initRightItem
 {
     UIButton * themeBtn = [UIButton initWithFrame:CGRectMake(0, 0, 44, 44) Title:@"" TitleColor:[UIColor grayColor] BgColor:nil Image:nil BgImage:nil Target:self Action:@selector(ThemeChangeClick:) ForControlEvents:UIControlEventTouchUpInside Tag:100];

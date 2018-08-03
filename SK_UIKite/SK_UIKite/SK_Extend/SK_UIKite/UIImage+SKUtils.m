@@ -210,14 +210,17 @@
     UIImage* image = nil;
     
     CGSize imageSize = tableView.contentSize;
-    if (screenEdge.bottom >= 0 && screenEdge.right >= 0) {
-        imageSize = CGSizeMake(imageSize.width-screenEdge.right, imageSize.height-screenEdge.bottom);
-    }else if (screenEdge.bottom >= 0){
-        imageSize = CGSizeMake(imageSize.width, imageSize.height-screenEdge.bottom);
-    }else if (screenEdge.right >= 0){
-        imageSize = CGSizeMake(imageSize.width-screenEdge.right, imageSize.height);
-    }
+    CGFloat w = tableView.contentSize.width;
+    CGFloat h = tableView.contentSize.height;
     
+    if (screenEdge.bottom > 0){
+        h -=screenEdge.bottom;
+    }
+    if (screenEdge.right > 0){
+        w -=screenEdge.right;
+    }
+    imageSize = CGSizeMake(w, h);
+
     UIGraphicsBeginImageContextWithOptions(imageSize , YES, 0.0);
     
     //保存tableView当前的偏移量

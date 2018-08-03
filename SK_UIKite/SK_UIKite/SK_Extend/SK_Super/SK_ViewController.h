@@ -13,4 +13,5 @@
 @property (nonatomic, assign, getter=isCanBack) BOOL  canBack;//是否可以返回
 @property (nonatomic, strong) UIImageView * topBgImageView;//顶部背景图片
 -(void)BackAction;
+-(void)initNavigation;
 @end

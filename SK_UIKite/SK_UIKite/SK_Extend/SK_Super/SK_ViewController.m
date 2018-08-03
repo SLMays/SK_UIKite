@@ -25,7 +25,9 @@
 -(void)setCanBack:(BOOL)canBack
 {
     if (!canBack) {
-        self.navigationItem.leftBarButtonItem = nil;
+        UIButton * backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+        self.navigationItem.leftBarButtonItem = item;
     }
 }
 

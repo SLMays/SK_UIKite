@@ -20,6 +20,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)initNavigation
+{
+    [super initNavigation];
+    
+    UIButton * shareBtn = [UIButton initWithFrame:CGRectMake(0, 0, 30, 44) Title:@"分享" TitleColor:[UIColor whiteColor] BgColor:nil Image:nil BgImage:nil Target:self Action:@selector(shareBtnClick) ForControlEvents:UIControlEventTouchUpInside Tag:0];
+    
+    UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithCustomView:shareBtn];
+
+    self.navigationItem.rightBarButtonItem = item;
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     Notification_ADD(self, userDidTakeScreenshot:, UIApplicationUserDidTakeScreenshotNotification, nil);
@@ -33,7 +45,45 @@
     /*
      自定义处理方法的代码,随意吧
      */
+    [self shareBtnClick];
+}
+- (UIImage *)processShareImage
+{
     
+    self.canBack = NO;
+    self.navigationItem.rightBarButtonItem = nil;
+    
+//    UIImage * img = [UIImage shotWithView:self.view];   //除去导航栏
+    UIImage * img = [UIImage shotScreen];                 //全屏幕
+    UIImage * bottomImg = [UIImage imageNamed:@"ShareBottom"];
+    img = [UIImage addSlaveImage:bottomImg toMasterImage:img directionType:(SK_DirectionType_TopToBottom)];
+    
+    self.canBack = YES;
+    [self initNavigation];
+    
+    return img;
+}
+- (void)shareScreenshot
+{
+    //在这里呢 如果想分享图片 就把图片添加进去 【分享内容可以是 文字、图片、链接】
+    NSArray *activityItems = @[_mainScreenshot];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+    //不出现在活动项目
+    activityVC.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
+    [self presentViewController:activityVC animated:YES completion:nil];
+    // 分享之后的回调
+    activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+        if (completed) {
+            NSLog(@"completed");
+            //分享 成功
+        } else  {
+            NSLog(@"cancled");
+            //分享 取消
+        }
+    };
+}
+-(void)shareBtnClick
+{
     _mainScreenshot = [self processShareImage];
     
     CGFloat imgWidth = Width_Alert-20;
@@ -58,35 +108,6 @@
     [alertView setUseMotionEffects:true];
     [alertView show];
 }
-- (UIImage *)processShareImage
-{
-//    UIImage * img = [UIImage shotWithView:self.view];   //除去导航栏
-    UIImage * img = [UIImage shotScreen];             //全屏幕
-    UIImage * bottomImg = [UIImage imageNamed:@"ShareBottom"];
-    img = [UIImage addSlaveImage:bottomImg toMasterImage:img directionType:(SK_DirectionType_TopToBottom)];
-    
-    return img;
-}
-- (void)shareScreenshot
-{
-    //在这里呢 如果想分享图片 就把图片添加进去 【分享内容可以是 文字、图片、链接】
-    NSArray *activityItems = @[_mainScreenshot];
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
-    //不出现在活动项目
-    activityVC.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
-    [self presentViewController:activityVC animated:YES completion:nil];
-    // 分享之后的回调
-    activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
-        if (completed) {
-            NSLog(@"completed");
-            //分享 成功
-        } else  {
-            NSLog(@"cancled");
-            //分享 取消
-        }
-    };
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
