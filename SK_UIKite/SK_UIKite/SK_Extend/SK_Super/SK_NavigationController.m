@@ -7,6 +7,8 @@
 //
 
 #import "SK_NavigationController.h"
+#import "SK_Landscape_ViewController.h"
+#import "WHGradientHelper.h"
 
 @interface SK_NavigationController ()<UIGestureRecognizerDelegate>
 
@@ -41,14 +43,37 @@
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
     
     //修改背景为图片
-//    [self.navigationBar setBackgroundImage:[UIImage GradientImageFromColors:@[RandomColor,RandomColor] ByGradientType:(GradientType_leftToRight) addSuperView:self.navigationBar] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setBackgroundImage:[UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(GradientType_leftToRight) addSuperView:self.navigationBar] forBarMetrics:UIBarMetricsDefault];
-
+    [self.navigationBar setBackgroundImage:[UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(SK_GradientType_leftToRight) addSuperView:self.navigationBar] forBarMetrics:UIBarMetricsDefault];
 }
 -(void)BackAction
 {
     [self popViewControllerAnimated:YES];
 }
+
+
+#pragma mark - 屏幕旋转
+- (BOOL)canRotatingVC
+{
+    UIViewController * vc = self.topViewController;
+    if ([vc isKindOfClass:[SK_Landscape_ViewController class]]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+- (BOOL)shouldAutorotate
+{
+    return ![self canRotatingVC];
+}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return [self canRotatingVC]?UIInterfaceOrientationMaskAllButUpsideDown:UIInterfaceOrientationMaskPortrait;
+}
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return [self canRotatingVC]?UIInterfaceOrientationLandscapeLeft:UIInterfaceOrientationPortrait;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

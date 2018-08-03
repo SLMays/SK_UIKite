@@ -10,18 +10,30 @@
 @class SK_IconInfo;
 
 typedef enum  {
-    GradientType_topToBottom         = 0,//从上到下
-    GradientType_leftToRight         = 1,//从左到右
-    GradientType_upleftTolowRight    = 2,//左上到右下
-    GradientType_uprightTolowLeft    = 3,//右上到左下
-}GradientType;
+    SK_GradientType_topToBottom         = 0,//从上到下
+    SK_GradientType_leftToRight         = 1,//从左到右
+    SK_GradientType_upleftTolowRight    = 2,//左上到右下
+    SK_GradientType_uprightTolowLeft    = 3,//右上到左下
+}SK_GradientType;
+
+typedef enum  {
+    SK_DirectionType_TopToBottom         = 0,//上下拼接
+    SK_DirectionType_LeftToRight         = 1,//左右拼接
+}SK_DirectionType;
+
+
+
+typedef NS_ENUM(NSInteger, directionType) {
+    directionTypeUpAndDown = 0,
+    directionTypeLeftAndRight = 1,
+};
 
 @interface UIImage (SKUtils)
 
 #pragma mark - 生成单一颜色的图片
 +(UIImage *)imageWithColor:(UIColor *)color;
 #pragma mark - 生成渐变颜色的图片
-+(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(GradientType)gradientType addSuperView:(UIView *)sView;
++(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType addSuperView:(UIView *)sView;
 #pragma mark - 图片中心点拉伸
 +(UIImage *)scalingImagWithName:(NSString *)name;
 
@@ -62,12 +74,41 @@ typedef enum  {
 
 #pragma mark - 全屏截图
 + (UIImage *)shotScreen;
++ (UIImage *)imageWithScreenshot;
 
 #pragma mark - 截取一张 view 生成图片
 + (UIImage *)shotWithView:(UIView *)view;
 
-#pragma mark - 截取view中某个区域生成一张图片
-+ (UIImage *)shotWithView:(UIView *)view scope:(CGRect)scope;
+/*
+ 参数说明
+ 1.view:你想截取的普通view
+ 2.screenSize:你想截取的大小，默认是整个view,若传入宽高小于view宽高则会舍弃view的右边或下边部分
+ 3.size:你想要的截图的大小，单位是KB
+ */
+#pragma mark - 截取普通View图片
++ (UIImage *)screenShotForView:(UIView *)view screenRect:(CGSize )screenSize imageKB:(NSInteger)size;
+
+/*
+ 参数说明
+ 1.tableView或collectionView：你想要截图的view
+ 2.screenEdge:你想截取的长图距view的各边距离(只有右边和下边起作用)，默认是整个tableView,若传入宽高小于tableView宽高则会舍弃tableView的右边或下边部分
+ 3.size：你想得到的图片大小，单位是KB
+ */
+#pragma mark - 截取tableView长图
++ (UIImage *)screenShotForTableView:(UITableView *)tableView screenRect:(UIEdgeInsets )screenEdge imageKB:(NSInteger)size;
+#pragma mark - 截取collectionView长图
++ (UIImage *)screenShotForCollectionView:(UICollectionView *)collectionView screenRect:(UIEdgeInsets )screenEdge imageKB:(NSInteger)size;
+
+/**
+ 拼接两张图
+ 
+ @param slaveImage 要拼接的内容
+ @param masterImage 拼接到的内容主体
+ @param direction 拼接方向
+ @return 拼接后的图片
+ */
+#pragma mark - 拼接两张图片
++ (UIImage *)addSlaveImage:(UIImage *)slaveImage toMasterImage:(UIImage *)masterImage directionType:(SK_DirectionType)direction;
 
 #pragma mark - 压缩图片到指定尺寸大小
 + (UIImage *)compressOriginalImage:(UIImage *)image toSize:(CGSize)size;
@@ -234,4 +275,16 @@ typedef enum  {
  */
 - (UIImage*)imageWaterMarkWithString:(NSString*)str rect:(CGRect)strRect attribute:(NSDictionary *)attri image:(UIImage *)image imageRect:(CGRect)imgRect alpha:(CGFloat)alpha;
 
+/**
+ 根据目标图片制作一个盖水印的图片(45°倾斜)
+ 
+ @param title 水印文字
+ @param markFont 水印文字font(如果不传默认为23)
+ @param markColor 水印文字颜色(如果不传递默认为源图片的对比色)
+ @return 返回盖水印的图片
+ */
+- (UIImage *)WaterMarkWithTitle: (NSString *)title andMarkFont: (UIFont *)markFont andMarkColor: (UIColor *)markColor;
+
+//根据图片获取图片的主色调
++(UIColor*)mostColor:(UIImage*)image;
 @end

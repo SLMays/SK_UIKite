@@ -1,5 +1,21 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - HexColors (2.2.1)
+  - LEETheme (1.1.7)
   - Masonry (1.1.0)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
@@ -16,6 +32,8 @@ PODS:
   - ZKUDID (2.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - LEETheme
   - Masonry
   - ReactiveCocoa (= 2.3.1)
   - SDWebImage
@@ -23,13 +41,15 @@ DEPENDENCIES:
   - ZKUDID (~> 2.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  LEETheme: e5dc623fe58ee9f2b973e9a7445267e3e972deb4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
   ZKUDID: f283dbf371b9561c8a6d516c9f1274276ec17e89
 
-PODFILE CHECKSUM: 895859d94269c4741d34a67c7566bed04cd47d23
+PODFILE CHECKSUM: 9283c4b0481d372525852ffeb37a901fc0a7ad09
 
 COCOAPODS: 1.3.1

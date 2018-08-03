@@ -38,6 +38,12 @@ _Pragma("clang diagnostic pop") \
 #define NOHAVE_TABBAR_HEIGHT    (HAVE_TABBAR_HEIGHT+49)
 #define WIDTH_IPHONE            ([UIScreen mainScreen].bounds.size.width)
 #define HEIGHT_IPHONE           ([UIScreen mainScreen].bounds.size.height)
+#define ScreenRatio_HW          (HEIGHT_IPHONE/WIDTH_IPHONE)
+#define ScreenRatio_WH          (WIDTH_IPHONE/HEIGHT_IPHONE)
+#define Width_Alert             (WIDTH_IPHONE*3/4)
+
+
+
 
 #pragma mark- 随机
 #define RandomColor  [UIColor colorWithHue: (arc4random()% 256/256.0) saturation:(arc4random()%128/256.0)+0.5 brightness:(arc4random()%128/256.0)+ 0.5 alpha:1]
@@ -45,6 +51,7 @@ _Pragma("clang diagnostic pop") \
 
 #pragma mark - 颜色
 #define COLORWITHRGBA(R,G,B,A) [UIColor colorWithRed:(R)/255.0f green:(G)/255.0f blue:(B)/255.0f alpha:(A)]
+#define COLORWITHHEXSTRING(HEX) [UIColor colorWithHexString:HEX]
 
 #pragma mark - UserDefaults的存储和读取
 #define SaveUserDefaults(key,value) [[NSUserDefaults standardUserDefaults]setObject:value forKey:key];[[NSUserDefaults standardUserDefaults] synchronize]
@@ -70,6 +77,22 @@ _Pragma("clang diagnostic pop") \
 #pragma mark - Toast提示
 #define SK_Toast(Msg)  if (STRING_IS_NOT_EMPTY(Msg)) {[[UIViewController currentViewController].view makeToast:Msg];};
 
+#pragma mark - Cell的两种实例化方法
+#define CELL_NAME(UITableViewCell,identStr,color)     static NSString *identifier = identStr;\
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];\
+if (cell == NULL){\
+cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];\
+cell.selectionStyle = UITableViewCellSelectionStyleNone;\
+cell.backgroundColor = color;\
+}
+
+#define CELL_XIB(TableViewCellClass,cellName,color)     static NSString *identifier = cellName;\
+TableViewCellClass *cell = [tableView dequeueReusableCellWithIdentifier:identifier];\
+if (cell == NULL){\
+cell = [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([TableViewCellClass class]) owner:self options:nil]lastObject];\
+cell.selectionStyle = UITableViewCellSelectionStyleNone;\
+cell.backgroundColor = color;\
+}
 
 //key宏
 #define K_MenuTitle @"Title"
@@ -86,7 +109,6 @@ _Pragma("clang diagnostic pop") \
 +(float)TabBarHeight;
 #pragma 判断StatusBar高度
 +(float)StatusHeight;
-
 
 
 @end

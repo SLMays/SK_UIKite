@@ -25,7 +25,7 @@ typedef enum : NSUInteger {
 
 @interface XLScanBaseManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate,AVCaptureMetadataOutputObjectsDelegate>
 
-@property (nonatomic, assign) BOOL                      verify;
+@property (nonatomic, assign) BOOL   verify;
 
 @property (nonatomic, assign) kScanType scanType;
 
@@ -38,11 +38,11 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, copy) NSString *sessionPreset; // 图片质量
 
-@property (nonatomic, assign) BOOL isInProcessing;
+@property (nonatomic, assign) BOOL isInProcessing;//是否在处理
 
-@property (nonatomic, assign) BOOL isHasResult;
+@property (nonatomic, assign) BOOL isHasResult;//是否有结果
 
-//出流
+//输出流
 @property (nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
 //输入流
 @property (nonatomic, strong) AVCaptureDeviceInput *activeVideoInput;

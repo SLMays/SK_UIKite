@@ -96,11 +96,9 @@
         _weakSelf.infoModel.bankName = info.bankName;
         _weakSelf.infoModel.bankNumber = info.bankNumber;
         
-        UIImage * bankImg = info.bankImage;
-        bankImg = [bankImg imageWaterMarkWithString:@"仅限美美证券开户用" point:CGPointMake(_weakSelf.bankImgView.width/2, bankImg.size.height/2) attribute:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:50],NSForegroundColorAttributeName:COLORWITHRGBA(255, 255, 255, 0.5)}];
-        _weakSelf.bankImgView.image = bankImg;
+        _weakSelf.bankImgView.image = [info.bankImage WaterMarkWithTitle:@"仅限于美美证券开户使用" andMarkFont:[UIFont systemFontOfSize:16] andMarkColor:COLORWITHRGBA(255, 255, 255, 0.5)];
         _weakSelf.bankImgView.Str = @"";
-            
+        
         _weakSelf.bankCardInfoLabel.text = [NSString stringWithFormat:@"银行名称：%@\n银行卡号：%@",_weakSelf.infoModel.bankName,_weakSelf.infoModel.bankNumber];
     }];
 }

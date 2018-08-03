@@ -7,6 +7,7 @@
 //
 
 #import "SK_ViewController.h"
+#import "SK_Landscape_ViewController.h"
 
 @interface SK_ViewController ()<UINavigationControllerDelegate>
 
@@ -19,6 +20,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.delegate = self;
     [self initNavigation];
+    [self initTopBgImageView];
 }
 -(void)setCanBack:(BOOL)canBack
 {
@@ -26,6 +28,7 @@
         self.navigationItem.leftBarButtonItem = nil;
     }
 }
+
 -(void)initNavigation
 {
     //自定义返回按钮
@@ -42,6 +45,11 @@
 }
 
 
+-(void)initTopBgImageView
+{
+    _topBgImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:_topBgImageView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -76,8 +76,10 @@
 }
 -(void)startScanning
 {
+    //识别边框
     [self.view bringSubviewToFront:self.BankOverlayView];
     
+    //图片质量高低
     self.cameraManager.sessionPreset = AVCaptureSessionPresetHigh;
     
     if ([self.cameraManager configIDScanManager]) {
@@ -85,7 +87,7 @@
         [self.view insertSubview:view atIndex:0];
         AVCaptureVideoPreviewLayer *preLayer = [AVCaptureVideoPreviewLayer layerWithSession: self.cameraManager.captureSession];
         preLayer.frame = [UIScreen mainScreen].bounds;
-        
+
         preLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         [view.layer addSublayer:preLayer];
         

@@ -10,4 +10,350 @@
 
 @implementation NSDate (SKUtils)
 
+
+/**
+ *  将时间戳转换成需要的格式，以字符串输出
+ *
+ *  @param dateStr   时间戳
+ *  @param Formatter 时间格式
+ *
+ *  @return 转好后的时间字符串
+ */
++(NSString *)getDateToStr:(NSString *)dateStr withFormatter:(NSString *)Formatter
+{
+    //    NSString *str=@"1368082020";//时间戳
+    //    NSTimeInterval time=[timestamp doubleValue]/28800;//因为时差问题要加8小时 == 28800 sec
+    
+    long long date = [dateStr longLongValue]/1000;
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:date];
+    //实例化一个NSDateFormatter对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:Formatter];
+    
+    NSString *currentDateStr = [dateFormatter stringFromDate: detaildate];
+    
+    
+    return currentDateStr;
+}
+
+/**
+ *  获取当前日期
+ *
+ *  @param Formatter 时间格式
+ *
+ *  @return 当前日期
+ */
++(NSString *)GetTodayDateWithFormatter:(NSString *)Formatter
+{
+    NSDateFormatter * format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:Formatter];
+    NSString * date = [format stringFromDate:[NSDate date]];
+    NSLog(@"今天日期---------【%@】",date);
+    return date;
+}
++(NSDate *)GetTodayDate
+{
+    NSCalendar *calendar         = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSUIntegerMax fromDate:[NSDate date]];
+    components.hour              = 0;
+    components.minute            = 0;
+    components.second            = 0;
+    NSTimeInterval ts = (double)(int)[[calendar dateFromComponents:components] timeIntervalSince1970];
+    return [NSDate dateWithTimeIntervalSince1970:ts];
+}
+
+/**
+ *  获取今天之前的一段时间日期
+ *
+ *  @param time 据今天之前的时间（天）
+ *
+ *  @return 日期[NSString *]
+ */
++(NSString *)GetDateStrWithTime:(int)time  WithFormatter:(NSString *)Formatter
+{
+    float day                = 60*60*24;
+    NSDate * date            = [NSDate date];
+    date                     = [date dateByAddingTimeInterval:day*time];
+    NSDateFormatter * format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:Formatter];
+    NSString * dateStr = [format stringFromDate:date];
+    //    NSLog(@"%.f天前的时间为---------【%@】",time,dateStr);
+    return dateStr;
+}
+
+/**
+ *  获取距离今天的一段时间日期
+ *
+ *  @param time 据今天的时间（天）正数为之后，负数为之前
+ *
+ *  @return 日期[NSDate *]
+ */
++(NSDate *)GetDateWithTime:(float)time
+{
+    float day     = 60*60*24;
+    NSDate * date = [NSDate date];
+    date          = [date dateByAddingTimeInterval:day*time];
+    return date;
+}
+
+/**
+ *  计算两个时间戳之间的时间间隔
+ *
+ *  @param start     开始时间
+ *  @param end       结束时间
+ *  @param Formatter 时间格式
+ *
+ *  @return 时间间隔
+ */
++(NSString *)GetTimeIntervalWithStart:(NSString *)start  End:(NSString *)end  Type:(NSInteger)type
+{
+    //创建日期格式化对象
+    NSString * Formatter = @"yyyy-MM-dd HH:mm:ss";
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:Formatter];
+    
+    //创建了两个日期对象
+    long long et   = [end longLongValue];
+    long long st   = [start longLongValue];
+    long long time = et - st;
+    time           = time/1000;
+    
+    //取两个日期对象的时间间隔：
+    //这里的NSTimeInterval 并不是对象，是基本型，其实是double类型，是由c定义的:typedef double NSTimeInterval;
+    if (time<=0) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"key" object:nil];
+    }
+    NSString *dateContent;
+    switch (type) {
+        case 1:
+        {
+            int days=((int)time)/(3600*24);
+            dateContent=[[NSString alloc] initWithFormat:@"%i天",days];
+        }
+            break;
+        case 2:
+        {
+            int days=((int)time)/(3600*24);
+            int hours=((int)time)%(3600*24)/3600;
+            int minutes=((int)time)%(3600*24)%3600/60;
+            dateContent=[[NSString alloc] initWithFormat:@"%i天%i时%i分",days,hours,minutes];
+        }
+            break;
+        case 3:
+        {
+            int days=((int)time)/(3600*24);
+            int hours=((int)time)%(3600*24)/3600;
+            int minutes=((int)time)%(3600*24)%3600/60;
+            int seconds =((int)time)%(3600*24)%3600%60;
+            dateContent=[[NSString alloc] initWithFormat:@"%i天%i时%i分%i秒",days,hours,minutes,seconds];
+        }
+            
+            break;
+        case 4:
+        {
+            int minutes=((int)time)%(3600*24)%3600/60;
+            int seconds =((int)time)%(3600*24)%3600%60;
+            dateContent=[[NSString alloc] initWithFormat:@"%i分%i秒",minutes,seconds];
+            
+        }
+            break;
+        case 5:
+        {
+            int minutes=((int)time)%(3600*24)%3600/60;
+            dateContent=[[NSString alloc] initWithFormat:@"%i",minutes];
+        }
+            break;
+        default:
+            break;
+    }
+    //    NSLog(@"dateContent------------%@",dateContent);
+    return dateContent;
+}
+
+/**
+ *  将date转换成时间戳
+ *
+ *  @param date date原数据
+ *
+ *  @return 时间戳
+ */
++(long)GetTimeStampWithDate:(NSDate *)date millisecond:(BOOL)milli
+{
+    long TimeStamp = 0;
+    if (date) {
+        if (milli) {
+            TimeStamp = (long)[date timeIntervalSince1970]*1000;
+        }else{
+            TimeStamp = (long)[date timeIntervalSince1970];
+        }
+    }
+    
+    return TimeStamp;
+}
+
++(NSString *)GetTimeStampStrWithDate:(NSDate *)date
+{
+    NSString * TimeStamp;
+    if (date) {
+        TimeStamp = [NSString stringWithFormat:@"%.f",[date timeIntervalSince1970]*1000];
+    }
+    
+    return TimeStamp;
+}
+
+/**
+ *  时间戳转换成date
+ *
+ *  @param timeStamp 时间戳
+ *
+ *  @return date
+ */
++(NSDate *)GetDateWithTimeStamp:(NSString *)timeStamp
+{
+    NSString * time = [NSString stringWithFormat:@"%.f",[timeStamp doubleValue]/1000];
+    //    timeStamp += 8*3600;
+    NSDate *date    = [NSDate dateWithTimeIntervalSince1970:[time integerValue]];
+    NSLog(@"时间戳转换成date:  %@",date);
+    
+    return date;
+}
+
+/**
+ *  获取当前时间(北京时间)
+ *
+ *  @return 当前时间
+ */
++(NSDate *)getTimeForNow
+{
+    NSDate *date       = [NSDate date];
+    NSTimeZone *zone   = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: date];
+    NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
+    return localeDate;
+}
+
+
++ (NSMutableArray *)getMonthTrisectionWithFirstTimeStamp:(NSString *)Stamp
+{
+    NSMutableArray * TrisectionArr = [NSMutableArray new];
+    
+    NSString * TimeStamp = [NSString stringWithFormat:@"%@000",Stamp];
+    NSString * date = [NSDate getDateToStr:TimeStamp withFormatter:@"yyyy-MM-dd"];
+    NSArray * dateArr = [date componentsSeparatedByString:@"-"];
+    int Year = [dateArr[0] intValue];
+    int Month = [dateArr[1] intValue];
+    int day1 = 1;
+    int day2 = 15;
+    int day3 = 30;
+    
+    if (Month==1 || Month==3 || Month==5 || Month==7 || Month==8 || Month==10 || Month==12) {
+        day1 = 1;   day2 = 15;  day3 = 31;
+    }else if (Month==2){
+        if (Year % 100 == 0)
+        {
+            if (Year % 400 == 0){
+                day1 = 1;   day2 = 15;  day3 = 29;
+            }else{
+                day1 = 1;   day2 = 15;  day3 = 28;
+            }
+        }else{
+            if (Year % 4 == 0){
+                day1 = 1;   day2 = 15;  day3 = 29;
+            }else{
+                day1 = 1;   day2 = 15;  day3 = 28;
+            }
+        }
+    }
+    
+    [TrisectionArr addObject:[NSString stringWithFormat:@"%02d-%02d",Month,day1]];
+    [TrisectionArr addObject:[NSString stringWithFormat:@"%02d-%02d",Month,day2]];
+    [TrisectionArr addObject:[NSString stringWithFormat:@"%02d-%02d",Month,day3]];
+    
+    return TrisectionArr;
+}
+
+
+//获取当前的美东时间
++ (NSString *)getTodayEasternDate:(NSDate *)date formatter:(NSString *)formatter timeZone:(NSString *)timeZone
+{
+    NSTimeZone *nowTimeZone = [NSTimeZone timeZoneWithName:timeZone];
+    
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.timeZone = nowTimeZone;
+    dateFormatter.dateFormat = formatter;
+    NSString *currentDateStr = [dateFormatter stringFromDate:date];
+    return currentDateStr;
+}
+
+//获取距离当前日期 n年n月n日 的美东时间
++ (NSString *)getEasternDate:(NSDate *)date yearAgo:(int)year monthAgo:(int)month dayAgo:(int)day formatter:(NSString *)formatter
+{
+    //转为美东时区
+    NSTimeZone *nowTimeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.timeZone = nowTimeZone;
+    dateFormatter.dateFormat = formatter;
+    //    NSString *currentDateStr = [dateFormatter stringFromDate:date];
+    
+    NSCalendar *greCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    //    NSLog(@"current TIME IS%@",currentDateStr);
+    
+    NSDateComponents *components = [greCal components: NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour |NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:date];
+    
+    if (year) {
+        [components setYear:([components year] - year)];
+    }
+    if (month) {
+        [components setMonth:([components month] - month)];
+    }
+    if (day) {
+        [components setDay:([components day] - day)];
+    }
+    
+    NSDate *newDate = [greCal dateFromComponents:components];
+    NSLog(@"new TIME IS%@",[dateFormatter stringFromDate:newDate]);
+    
+    return [dateFormatter stringFromDate:newDate];
+}
+
+//NSString 转为美东时间NSDate
++ (NSDate *)getEasternDateFromSting:(NSString *)str
+{
+    NSTimeZone *nowTimeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyyMMdd"];
+    formatter.timeZone = nowTimeZone;
+    
+    NSDate *date = [formatter dateFromString:str];
+    return date;
+}
+
++(NSString *)getDateComparedWithNow:(NSString *)time isBeiJing:(BOOL)isBJ
+{
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.timeZone = [NSTimeZone systemTimeZone];//[NSTimeZone timeZoneForSecondsFromGMT:0];
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *date = [dateFormatter dateFromString:time];
+    
+    //今天日期
+    NSString * today = [dateFormatter stringFromDate:[NSDate date]];
+    today = [today substringToIndex:10];
+    
+    //转为美东时区
+    NSTimeZone *nowTimeZone = [NSTimeZone timeZoneWithName:isBJ?@"Asia/Hong_Kong":@"America/New_York"];
+    NSInteger timeOffset = [nowTimeZone secondsFromGMTForDate:date];
+    NSDate *newDate = [date dateByAddingTimeInterval:timeOffset];
+    NSString *newDateStr = [dateFormatter stringFromDate: newDate];
+    
+    
+    if ([newDateStr hasPrefix:today]) {
+        return [newDateStr substringFromIndex:11];
+    }else{
+        return [newDateStr substringToIndex:10];
+    }
+}
+
 @end

@@ -236,7 +236,7 @@
 
 - (void)setFlashMode:(AVCaptureFlashMode)flashMode {
     AVCaptureDevice *device = [self activeCamera];
-    
+
     if (device.flashMode != flashMode &&
         [device isFlashModeSupported:flashMode]) {
         NSError *error;

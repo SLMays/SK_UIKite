@@ -39,6 +39,7 @@
 //初始化UI
 -(void)initUI
 {
+    //用来存放证件的显示信息的相关控件，方便扫描时隐藏，以防止不能扫描
     idInfoView = [[UIView alloc]initWithFrame:self.view.bounds];
     idInfoView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:idInfoView];
@@ -92,6 +93,7 @@
     }];
     [alert addAction:action];
     [self presentViewController:alert animated:YES completion:^{
+        //记录已经提示过alert，下次不会再提示
         didShowAlert = YES;
     }];
 }
@@ -110,17 +112,14 @@
             _weakSelf.infoModel.gender = info.gender;
             _weakSelf.infoModel.address = info.address;
             
-            UIImage * faceImg = info.idImage;
-            faceImg = [faceImg imageWaterMarkWithString:@"仅限美美证券开户用" point:CGPointMake(_weakSelf.faceImgView.width/2, faceImg.size.height/2) attribute:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:50],NSForegroundColorAttributeName:COLORWITHRGBA(255, 255, 255, 0.5)}];
-            _weakSelf.faceImgView.image = faceImg;
+            _weakSelf.faceImgView.image = [info.idImage WaterMarkWithTitle:@"仅限于美美证券开户使用" andMarkFont:[UIFont systemFontOfSize:16] andMarkColor:COLORWITHRGBA(255, 255, 255, 0.5)];
             _weakSelf.faceImgView.Str = @"";
             
         }else{
             _weakSelf.infoModel.issue = info.issue;
             _weakSelf.infoModel.valid = info.valid;
-            UIImage * backImg = info.idImage;
-            backImg = [backImg imageWaterMarkWithString:@"仅限美美证券开户用" point:CGPointMake(_weakSelf.backImgView.width/2, backImg.size.height/2) attribute:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:50],NSForegroundColorAttributeName:COLORWITHRGBA(255, 255, 255, 0.5)}];
-            _weakSelf.backImgView.image = backImg;
+            
+            _weakSelf.backImgView.image = [info.idImage WaterMarkWithTitle:@"仅限于美美证券开户使用" andMarkFont:[UIFont systemFontOfSize:16] andMarkColor:COLORWITHRGBA(255, 255, 255, 0.5)];
             _weakSelf.backImgView.Str = @"";
         }
         

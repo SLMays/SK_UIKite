@@ -1,0 +1,17 @@
+{
+    "color": {
+        "viewBgColor"           :"#363636",
+        "btnBgColor"            :"#363636",
+        "btnTitColor"           :"#CFCFCF",
+        "btnTitHightColor"      :"#E8E8E8",
+        "labTextColor"           :"#CFCFCF",
+    },
+    
+    "image": {
+        
+    },
+    
+    "other": {
+        
+    }
+}

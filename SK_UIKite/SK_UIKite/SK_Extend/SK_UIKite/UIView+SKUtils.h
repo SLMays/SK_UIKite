@@ -23,4 +23,12 @@
 @property (nonatomic, strong) UIColor * bColor;    ///< Shortcut for layer.borderColor.
 @property (nonatomic, assign) NSInteger bRadius;    ///< Shortcut for layer.cornerRadius.
 
++(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha;
++(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag;
++(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX;
++(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerY:(CGFloat)centerY;
++(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX centerY:(CGFloat)centerY;
+
+
+
 @end

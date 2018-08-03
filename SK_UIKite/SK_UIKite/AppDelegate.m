@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "SK_TabBarController.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WXApi.h"  //微信SDK头文件
 
 @interface AppDelegate ()
 
@@ -15,18 +18,69 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     sleep(1.5f);
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[SK_NavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
+    self.window.rootViewController = [[SK_TabBarController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
+    
+    //设置主题
+    [self configTheme];
+    
+    //启动主题
+    [LEETheme startTheme:Theme_Day];
+    
+    //配置shareSDK
+    [self configShare];
     
     return YES;
 }
 
+#pragma mark - 设置主题
+
+- (void)configTheme{
+    
+    NSString *dayJsonPath   = [[NSBundle mainBundle] pathForResource:@"theme_day" ofType:@"json"];
+    NSString *nightJsonPath = [[NSBundle mainBundle] pathForResource:@"theme_night" ofType:@"json"];
+    NSString *dayJson = [NSString stringWithContentsOfFile:dayJsonPath encoding:NSUTF8StringEncoding error:nil];
+    NSString *nightJson = [NSString stringWithContentsOfFile:nightJsonPath encoding:NSUTF8StringEncoding error:nil];
+    [LEETheme addThemeConfigWithJson:dayJson Tag:Theme_Day ResourcesPath:nil];
+    [LEETheme addThemeConfigWithJson:nightJson Tag:Theme_Night ResourcesPath:nil];
+
+    [LEETheme defaultTheme:Theme_Day];
+}
+
+#pragma mark - 配置微信分享
+- (void)configShare
+{
+    [ShareSDK registerActivePlatforms:@[@(SSDKPlatformTypeWechat)]
+                             onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             default:
+                 break;
+         }
+     }onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx4868b35061f87885"
+                                       appSecret:@"64020361b8ec4c99936c0e3999a9f249"];
+                 break;
+             default:
+                 break;
+         }
+     }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -48,8 +48,8 @@
 - (BOOL)isDark;
 
 + (UIColor *)randomColor;
-+ (UIColor *)colorWithString:(NSString *)stringToConvert;
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
++ (UIColor *)colorWithString:(NSString *)stringToConvert;
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert andAlpha:(CGFloat)alpha;
 
