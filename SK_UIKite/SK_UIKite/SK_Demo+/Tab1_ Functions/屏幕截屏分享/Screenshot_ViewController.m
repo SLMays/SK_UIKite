@@ -25,7 +25,7 @@
 {
     [super initNavigation];
     
-    UIButton * shareBtn = [UIButton initWithFrame:CGRectMake(0, 0, 30, 44) Title:@"分享" TitleColor:[UIColor whiteColor] BgColor:nil Image:nil BgImage:nil Target:self Action:@selector(shareBtnClick) ForControlEvents:UIControlEventTouchUpInside Tag:0];
+    UIButton * shareBtn = [UIButton initWithFrame:CGRectMake(0, 0, 44, 44) Title:@"" TitleColor:[UIColor whiteColor] BgColor:nil Image:SK_IconImageMake(k_IconFont_Share, 22, [UIColor whiteColor]) BgImage:nil Target:self Action:@selector(shareBtnClick) ForControlEvents:UIControlEventTouchUpInside Tag:0];
     
     UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithCustomView:shareBtn];
 

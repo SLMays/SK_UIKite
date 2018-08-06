@@ -23,7 +23,6 @@
 {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    SK_IconInfoMake(k_IconFont_Tab1, 24, RandomColor);
     UIButton * searchBtn = [UIButton initWithFrame:CGRectMake(0, 0, 44, 44) Title:nil TitleColor:nil BgColor:nil Image:SK_IconImageMake(k_IconFont_Search, 24, [UIColor whiteColor]) BgImage:nil Target:self Action:@selector(SearchAction) ForControlEvents:UIControlEventTouchUpInside Tag:0];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
     

@@ -47,7 +47,6 @@
 #import "SK_IconFont.h"
 #import "TSMessage.h"
 #import "UIView+Toast.h"
-#import "SupportedInterfaceOrientations.h"
 #import "LEETheme.h"//主题切换
 
 

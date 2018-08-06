@@ -12,6 +12,7 @@
 char * const kProtectCrashProtectorName = "kProtectCrashProtector";
 
 void ProtectCrashProtected(id self, SEL sel) {
+    
 }
 
 @implementation NSObject (SXRuntime)

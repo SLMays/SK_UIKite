@@ -8,9 +8,6 @@
 
 #import "AppDelegate.h"
 #import "SK_TabBarController.h"
-#import <ShareSDK/ShareSDK.h>
-#import <ShareSDKConnector/ShareSDKConnector.h>
-#import "WXApi.h"  //微信SDK头文件
 
 @interface AppDelegate ()
 
@@ -30,12 +27,6 @@
     //设置主题
     [self configTheme];
     
-    //启动主题
-    [LEETheme startTheme:Theme_Day];
-    
-    //配置shareSDK
-    [self configShare];
-    
     return YES;
 }
 
@@ -51,35 +42,9 @@
     [LEETheme addThemeConfigWithJson:nightJson Tag:Theme_Night ResourcesPath:nil];
 
     [LEETheme defaultTheme:Theme_Day];
-}
-
-#pragma mark - 配置微信分享
-- (void)configShare
-{
-    [ShareSDK registerActivePlatforms:@[@(SSDKPlatformTypeWechat)]
-                             onImport:^(SSDKPlatformType platformType)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [ShareSDKConnector connectWeChat:[WXApi class]];
-                 break;
-             default:
-                 break;
-         }
-     }onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
-     {
-
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [appInfo SSDKSetupWeChatByAppId:@"wx4868b35061f87885"
-                                       appSecret:@"64020361b8ec4c99936c0e3999a9f249"];
-                 break;
-             default:
-                 break;
-         }
-     }];
+    
+    //启动主题
+    [LEETheme startTheme:Theme_Day];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

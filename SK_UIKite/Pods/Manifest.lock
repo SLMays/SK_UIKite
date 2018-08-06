@@ -17,7 +17,6 @@ PODS:
   - HexColors (2.2.1)
   - LEETheme (1.1.7)
   - Masonry (1.1.0)
-  - PooCodeView (1.0.1)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
   - ReactiveCocoa/Core (2.3.1):
@@ -25,22 +24,19 @@ PODS:
   - ReactiveCocoa/no-arc (2.3.1)
   - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
-  - ZKUDID (2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - LEETheme
   - Masonry
-  - PooCodeView
   - ReactiveCocoa (= 2.3.1)
   - SDWebImage
   - TSMessages
-  - ZKUDID (~> 2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -48,23 +44,19 @@ SPEC REPOS:
     - HexColors
     - LEETheme
     - Masonry
-    - PooCodeView
     - ReactiveCocoa
     - SDWebImage
     - TSMessages
-    - ZKUDID
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   LEETheme: e5dc623fe58ee9f2b973e9a7445267e3e972deb4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  PooCodeView: 641a8742bdcd97c88b8c2cb5e0dbfd2ed130e082
   ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
-  ZKUDID: f283dbf371b9561c8a6d516c9f1274276ec17e89
 
-PODFILE CHECKSUM: d3d43e0ddb981cbc67e53e0039d99bd65b3f0a54
+PODFILE CHECKSUM: f543fbd02d9e0a53fce218e545e3722098b7a798
 
 COCOAPODS: 1.5.3

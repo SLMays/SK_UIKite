@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "SK_IconName.h"
 
-#define SK_IconInfoMake(text, imageSize, imageColor) [SK_IconInfo iconInfoWithText:text size:imageSize color:imageColor]
+#define SK_IconInfoMake(text, textSize, textColor) [SK_IconInfo iconInfoWithText:text size:textSize color:textColor]
 #define SK_IconImageMake(text, imageSize, imageColor) [UIImage iconWithInfo:[SK_IconInfo iconInfoWithText:text size:imageSize color:imageColor]]
 
 @interface SK_IconInfo : NSObject

@@ -7,7 +7,6 @@
 //
 
 #import "SK_NavigationController.h"
-#import "SK_Landscape_ViewController.h"
 #import "WHGradientHelper.h"
 
 @interface SK_NavigationController ()<UIGestureRecognizerDelegate>
@@ -50,28 +49,6 @@
     [self popViewControllerAnimated:YES];
 }
 
-
-#pragma mark - 屏幕旋转
-- (BOOL)canRotatingVC
-{
-    UIViewController * vc = self.topViewController;
-    if ([vc isKindOfClass:[SK_Landscape_ViewController class]]) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
-- (BOOL)shouldAutorotate
-{
-    return ![self canRotatingVC];
-}
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return [self canRotatingVC]?UIInterfaceOrientationMaskAllButUpsideDown:UIInterfaceOrientationMaskPortrait;
-}
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return [self canRotatingVC]?UIInterfaceOrientationLandscapeLeft:UIInterfaceOrientationPortrait;
-}
 
 
 - (void)didReceiveMemoryWarning {

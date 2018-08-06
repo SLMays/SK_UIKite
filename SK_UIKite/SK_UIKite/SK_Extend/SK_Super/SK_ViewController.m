@@ -7,7 +7,6 @@
 //
 
 #import "SK_ViewController.h"
-#import "SK_Landscape_ViewController.h"
 
 @interface SK_ViewController ()<UINavigationControllerDelegate>
 

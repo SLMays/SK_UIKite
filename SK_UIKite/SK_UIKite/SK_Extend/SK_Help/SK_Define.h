@@ -43,8 +43,6 @@ _Pragma("clang diagnostic pop") \
 #define Width_Alert             (WIDTH_IPHONE*3/4)
 
 
-
-
 #pragma mark- 随机
 #define RandomColor  [UIColor colorWithHue: (arc4random()% 256/256.0) saturation:(arc4random()%128/256.0)+0.5 brightness:(arc4random()%128/256.0)+ 0.5 alpha:1]
 #define RandomNumber(n) [NSString stringWithFormat:@"%u",(arc4random() % n)]

@@ -27,18 +27,6 @@
 		A419C45B2118339700301306 /* UIBarButtonItem+SXCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C3E22118339600301306 /* UIBarButtonItem+SXCreate.m */; };
 		A419C45C2118339700301306 /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C3E42118339600301306 /* NSObject+SXRuntime.m */; };
 		A419C45D2118339700301306 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C3E72118339600301306 /* UIView+Toast.m */; };
-		A419C45E2118339700301306 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A419C3EF2118339600301306 /* README.txt */; };
-		A419C45F2118339700301306 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3F12118339600301306 /* libWeChatSDK.a */; };
-		A419C4602118339700301306 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3F32118339600301306 /* ShareSDKConnector.framework */; };
-		A419C4612118339700301306 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A419C3F42118339600301306 /* ShareSDK.bundle */; };
-		A419C4622118339700301306 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A419C3F62118339600301306 /* ShareSDKUI.bundle */; };
-		A419C4632118339700301306 /* ShareSDKConfigFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3F72118339600301306 /* ShareSDKConfigFile.framework */; };
-		A419C4642118339700301306 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3F82118339600301306 /* ShareSDKExtension.framework */; };
-		A419C4652118339700301306 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3F92118339600301306 /* ShareSDKUI.framework */; };
-		A419C4662118339700301306 /* ShareSDKConfigFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A419C3FA2118339600301306 /* ShareSDKConfigFile.bundle */; };
-		A419C4672118339700301306 /* WechatConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3FC2118339600301306 /* WechatConnector.framework */; };
-		A419C4682118339700301306 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3FD2118339600301306 /* ShareSDK.framework */; };
-		A419C4692118339700301306 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419C3FF2118339700301306 /* MOBFoundation.framework */; };
 		A419C46A2118339700301306 /* LMComBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4012118339700301306 /* LMComBoxView.m */; };
 		A419C46B2118339700301306 /* down_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A419C4032118339700301306 /* down_dark@2x.png */; };
 		A419C46C2118339700301306 /* down_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A419C4042118339700301306 /* down_dark@3x.png */; };
@@ -72,6 +60,10 @@
 		A419C49D2118341000301306 /* SK_TencentOCR_IDCard_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4932118341000301306 /* SK_TencentOCR_IDCard_ViewController.m */; };
 		A419C49E2118341000301306 /* SK_IDScanning_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4952118341000301306 /* SK_IDScanning_ViewController.m */; };
 		A419C49F2118341000301306 /* SK_IDCard_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4982118341000301306 /* SK_IDCard_ViewController.m */; };
+		A419C4A72118396D00301306 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4A52118396D00301306 /* PooCodeView.m */; };
+		A419C4AE21183AF500301306 /* SK_GraphicsValidation_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A419C4AC21183AF500301306 /* SK_GraphicsValidation_ViewController.m */; };
+		A419C4AF21183AF500301306 /* SK_GraphicsValidation_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A419C4AD21183AF500301306 /* SK_GraphicsValidation_ViewController.xib */; };
+		A419C4B1211848A300301306 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A419C4B0211848A300301306 /* iconfont.ttf */; };
 		A41DE39D2113FDC400BA6340 /* Screenshot_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41DE39A2113FDC400BA6340 /* Screenshot_ViewController.xib */; };
 		A41DE39E2113FDC400BA6340 /* Screenshot_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41DE39B2113FDC400BA6340 /* Screenshot_ViewController.m */; };
 		A41DE3A1211400FD00BA6340 /* UIWindow+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A41DE3A0211400FD00BA6340 /* UIWindow+SKUtils.m */; };
@@ -125,7 +117,6 @@
 		A4E7791C20BB9A3500B94944 /* SK_TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7791B20BB9A3500B94944 /* SK_TableView.m */; };
 		A4E7DFA520908E7D007E3967 /* SK_SpeechRecognition_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */; };
 		A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */; };
-		A4F15ACC209C02B30035AA46 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4F15ACB209C02B30035AA46 /* iconfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,21 +155,6 @@
 		A419C3E42118339600301306 /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
 		A419C3E62118339600301306 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		A419C3E72118339600301306 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		A419C3ED2118339600301306 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		A419C3EE2118339600301306 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		A419C3EF2118339600301306 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		A419C3F02118339600301306 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		A419C3F12118339600301306 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		A419C3F32118339600301306 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
-		A419C3F42118339600301306 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
-		A419C3F62118339600301306 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
-		A419C3F72118339600301306 /* ShareSDKConfigFile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConfigFile.framework; sourceTree = "<group>"; };
-		A419C3F82118339600301306 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
-		A419C3F92118339600301306 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
-		A419C3FA2118339600301306 /* ShareSDKConfigFile.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKConfigFile.bundle; sourceTree = "<group>"; };
-		A419C3FC2118339600301306 /* WechatConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WechatConnector.framework; sourceTree = "<group>"; };
-		A419C3FD2118339600301306 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
-		A419C3FF2118339700301306 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		A419C4012118339700301306 /* LMComBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMComBoxView.m; sourceTree = "<group>"; };
 		A419C4022118339700301306 /* LMComBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMComBoxView.h; sourceTree = "<group>"; };
 		A419C4032118339700301306 /* down_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_dark@2x.png"; sourceTree = "<group>"; };
@@ -246,6 +222,12 @@
 		A419C4972118341000301306 /* SK_BankCard_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_BankCard_ViewController.h; sourceTree = "<group>"; };
 		A419C4982118341000301306 /* SK_IDCard_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SK_IDCard_ViewController.m; sourceTree = "<group>"; };
 		A419C4992118341000301306 /* SK_TencentOCR_IDCard_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_TencentOCR_IDCard_ViewController.h; sourceTree = "<group>"; };
+		A419C4A52118396D00301306 /* PooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PooCodeView.m; sourceTree = "<group>"; };
+		A419C4A62118396D00301306 /* PooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PooCodeView.h; sourceTree = "<group>"; };
+		A419C4AB21183AF500301306 /* SK_GraphicsValidation_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_GraphicsValidation_ViewController.h; sourceTree = "<group>"; };
+		A419C4AC21183AF500301306 /* SK_GraphicsValidation_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_GraphicsValidation_ViewController.m; sourceTree = "<group>"; };
+		A419C4AD21183AF500301306 /* SK_GraphicsValidation_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SK_GraphicsValidation_ViewController.xib; sourceTree = "<group>"; };
+		A419C4B0211848A300301306 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		A41DE39A2113FDC400BA6340 /* Screenshot_ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Screenshot_ViewController.xib; sourceTree = "<group>"; };
 		A41DE39B2113FDC400BA6340 /* Screenshot_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screenshot_ViewController.m; sourceTree = "<group>"; };
 		A41DE39C2113FDC400BA6340 /* Screenshot_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screenshot_ViewController.h; sourceTree = "<group>"; };
@@ -346,7 +328,6 @@
 		A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_SpeechRecognition_ViewController.m; sourceTree = "<group>"; };
 		A4E7DFA620909544007E3967 /* UITextView+SKUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+SKUtils.h"; sourceTree = "<group>"; };
 		A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SKUtils.m"; sourceTree = "<group>"; };
-		A4F15ACB209C02B30035AA46 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EBF9BF238886C419C0509272 /* Pods-SK_UIKite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SK_UIKite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite.debug.xcconfig"; sourceTree = "<group>"; };
 		F7CB9DA96BA5C4A530A6D5F7 /* Pods-SK_UIKite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SK_UIKite.release.xcconfig"; path = "Pods/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -357,11 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C9CFD120FC91E40076F63C /* libsqlite3.tbd in Frameworks */,
-				A419C4672118339700301306 /* WechatConnector.framework in Frameworks */,
 				A4C9CFCD20FC91BE0076F63C /* libstdc++.tbd in Frameworks */,
-				A419C4642118339700301306 /* ShareSDKExtension.framework in Frameworks */,
-				A419C4652118339700301306 /* ShareSDKUI.framework in Frameworks */,
-				A419C45F2118339700301306 /* libWeChatSDK.a in Frameworks */,
 				A4C9CFCB20FC91AF0076F63C /* libicucore.tbd in Frameworks */,
 				A40B5B9520EA07E2000EF0A2 /* libz.tbd in Frameworks */,
 				A419C4742118339700301306 /* CloudApiSdk.framework in Frameworks */,
@@ -373,11 +350,7 @@
 				A40B5B8F20EA07BF000EF0A2 /* CoreTelephony.framework in Frameworks */,
 				A419C4852118339700301306 /* libexidcardios.a in Frameworks */,
 				A4A33A142086F5A900907B97 /* Photos.framework in Frameworks */,
-				A419C4692118339700301306 /* MOBFoundation.framework in Frameworks */,
-				A419C4632118339700301306 /* ShareSDKConfigFile.framework in Frameworks */,
-				A419C4682118339700301306 /* ShareSDK.framework in Frameworks */,
 				09717C9330C2246B7140E941 /* Pods_SK_UIKite.framework in Frameworks */,
-				A419C4602118339700301306 /* ShareSDKConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,10 +422,10 @@
 		A419C3D42118339600301306 /* SK_3rdTools */ = {
 			isa = PBXGroup;
 			children = (
+				A419C4A42118396D00301306 /* PooCodeView */,
 				A419C3D52118339600301306 /* FixOrientation */,
 				A419C3D82118339600301306 /* UINavigation-SXFixSpace */,
 				A419C3E52118339600301306 /* Toast */,
-				A419C3E82118339600301306 /* ShareSDK */,
 				A419C4002118339700301306 /* LMComBox */,
 				A419C4052118339700301306 /* WHGradientHelper */,
 			);
@@ -496,92 +469,6 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
-		A419C3E82118339600301306 /* ShareSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3E92118339600301306 /* ShareSDK */,
-				A419C3FE2118339700301306 /* Required */,
-			);
-			path = ShareSDK;
-			sourceTree = "<group>";
-		};
-		A419C3E92118339600301306 /* ShareSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3EA2118339600301306 /* Support */,
-				A419C3FD2118339600301306 /* ShareSDK.framework */,
-			);
-			path = ShareSDK;
-			sourceTree = "<group>";
-		};
-		A419C3EA2118339600301306 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3EB2118339600301306 /* PlatformSDK */,
-				A419C3F22118339600301306 /* Required */,
-				A419C3F52118339600301306 /* Optional */,
-				A419C3FB2118339600301306 /* PlatformConnector */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		A419C3EB2118339600301306 /* PlatformSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3EC2118339600301306 /* WeChatSDK */,
-			);
-			path = PlatformSDK;
-			sourceTree = "<group>";
-		};
-		A419C3EC2118339600301306 /* WeChatSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3ED2118339600301306 /* WXApi.h */,
-				A419C3EE2118339600301306 /* WXApiObject.h */,
-				A419C3EF2118339600301306 /* README.txt */,
-				A419C3F02118339600301306 /* WechatAuthSDK.h */,
-				A419C3F12118339600301306 /* libWeChatSDK.a */,
-			);
-			path = WeChatSDK;
-			sourceTree = "<group>";
-		};
-		A419C3F22118339600301306 /* Required */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3F32118339600301306 /* ShareSDKConnector.framework */,
-				A419C3F42118339600301306 /* ShareSDK.bundle */,
-			);
-			path = Required;
-			sourceTree = "<group>";
-		};
-		A419C3F52118339600301306 /* Optional */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3F62118339600301306 /* ShareSDKUI.bundle */,
-				A419C3F72118339600301306 /* ShareSDKConfigFile.framework */,
-				A419C3F82118339600301306 /* ShareSDKExtension.framework */,
-				A419C3F92118339600301306 /* ShareSDKUI.framework */,
-				A419C3FA2118339600301306 /* ShareSDKConfigFile.bundle */,
-			);
-			path = Optional;
-			sourceTree = "<group>";
-		};
-		A419C3FB2118339600301306 /* PlatformConnector */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3FC2118339600301306 /* WechatConnector.framework */,
-			);
-			path = PlatformConnector;
-			sourceTree = "<group>";
-		};
-		A419C3FE2118339700301306 /* Required */ = {
-			isa = PBXGroup;
-			children = (
-				A419C3FF2118339700301306 /* MOBFoundation.framework */,
-			);
-			path = Required;
-			sourceTree = "<group>";
-		};
 		A419C4002118339700301306 /* LMComBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +492,7 @@
 		A419C4082118339700301306 /* SK_IconFont */ = {
 			isa = PBXGroup;
 			children = (
+				A419C4B0211848A300301306 /* iconfont.ttf */,
 				A419C4092118339700301306 /* SK_IconInfo.h */,
 				A419C40A2118339700301306 /* SK_IconFont.h */,
 				A419C40B2118339700301306 /* SK_IconName.h */,
@@ -757,6 +645,25 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A419C4A3211834A400301306 /* 图形验证 */ = {
+			isa = PBXGroup;
+			children = (
+				A419C4AB21183AF500301306 /* SK_GraphicsValidation_ViewController.h */,
+				A419C4AC21183AF500301306 /* SK_GraphicsValidation_ViewController.m */,
+				A419C4AD21183AF500301306 /* SK_GraphicsValidation_ViewController.xib */,
+			);
+			path = "图形验证";
+			sourceTree = "<group>";
+		};
+		A419C4A42118396D00301306 /* PooCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				A419C4A52118396D00301306 /* PooCodeView.m */,
+				A419C4A62118396D00301306 /* PooCodeView.h */,
+			);
+			path = PooCodeView;
+			sourceTree = "<group>";
+		};
 		A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +751,7 @@
 				A42F6F4F20EC744400666251 /* 语音输入转文字 */,
 				A42F6F5020EC7A0200666251 /* 颜色渐变动画 */,
 				A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */,
+				A419C4A3211834A400301306 /* 图形验证 */,
 			);
 			path = "Tab1_ Functions";
 			sourceTree = "<group>";
@@ -977,7 +885,6 @@
 			children = (
 				A4E75102206DE14A00A135C3 /* SK_Help */,
 				A4B7D1FF207F605700A4312D /* SK_Tools */,
-				A4B7D1FE207F602500A4312D /* SK_IcnoFont */,
 				A44B0BB71FA9CFE6001B00FB /* SK_Foundation */,
 				A44B0BB61FA9CFC7001B00FB /* SK_Super */,
 				A44B0BA91FA9CF37001B00FB /* SK_UIKite */,
@@ -992,14 +899,6 @@
 				A42F6F6020ECA14900666251 /* Tab2_Theme */,
 			);
 			path = "SK_Demo+";
-			sourceTree = "<group>";
-		};
-		A4B7D1FE207F602500A4312D /* SK_IcnoFont */ = {
-			isa = PBXGroup;
-			children = (
-				A4F15ACB209C02B30035AA46 /* iconfont.ttf */,
-			);
-			path = SK_IcnoFont;
 			sourceTree = "<group>";
 		};
 		A4B7D1FF207F605700A4312D /* SK_Tools */ = {
@@ -1094,20 +993,17 @@
 			files = (
 				A44B0B9D1FA9CF2B001B00FB /* Assets.xcassets in Resources */,
 				A41DE39D2113FDC400BA6340 /* Screenshot_ViewController.xib in Resources */,
+				A419C4B1211848A300301306 /* iconfont.ttf in Resources */,
 				A419C46B2118339700301306 /* down_dark@2x.png in Resources */,
 				A419C47E2118339700301306 /* idCard_2.jpeg in Resources */,
-				A419C4622118339700301306 /* ShareSDKUI.bundle in Resources */,
 				A4C09BB320A9378100641829 /* Main.storyboard in Resources */,
-				A419C4662118339700301306 /* ShareSDKConfigFile.bundle in Resources */,
 				A4C09BB420A9378100641829 /* LaunchScreen.storyboard in Resources */,
 				A419C4882118339700301306 /* idCard_1.jpeg in Resources */,
 				A419C4542118339700301306 /* theme_night.json in Resources */,
 				A419C4532118339700301306 /* theme_day.json in Resources */,
 				A419C46C2118339700301306 /* down_dark@3x.png in Resources */,
-				A419C45E2118339700301306 /* README.txt in Resources */,
-				A419C4612118339700301306 /* ShareSDK.bundle in Resources */,
 				A419C4862118339700301306 /* zocr0.lib in Resources */,
-				A4F15ACC209C02B30035AA46 /* iconfont.ttf in Resources */,
+				A419C4AF21183AF500301306 /* SK_GraphicsValidation_ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,11 +1039,9 @@
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/LEETheme/LEETheme.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/PooCodeView/PooCodeView.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TSMessages/TSMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/ZKUDID/ZKUDID.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1155,11 +1049,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEETheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PooCodeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKUDID.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1189,6 +1081,7 @@
 				A4AEDB2820A5794200315E82 /* SK_WebNavigation_ViewController.m in Sources */,
 				A419C47B2118339700301306 /* XLScanBaseManager.m in Sources */,
 				A419C46A2118339700301306 /* LMComBoxView.m in Sources */,
+				A419C4AE21183AF500301306 /* SK_GraphicsValidation_ViewController.m in Sources */,
 				A419C4522118339700301306 /* SK_HTTPClient.m in Sources */,
 				A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */,
 				A44B0BC91FA9D19B001B00FB /* NSObject+SKUtils.m in Sources */,
@@ -1201,6 +1094,7 @@
 				A419C4752118339700301306 /* SHA256.m in Sources */,
 				A42F6F5C20ECA0F400666251 /* Tab1_ViewController.m in Sources */,
 				A44B0BD81FA9D200001B00FB /* UIView+SKUtils.m in Sources */,
+				A419C4A72118396D00301306 /* PooCodeView.m in Sources */,
 				A419C49C2118341000301306 /* SK_BankScanning_ViewController.m in Sources */,
 				A419C4552118339700301306 /* SK_ThemeHelp.m in Sources */,
 				A44B0BCC1FA9D1A5001B00FB /* NSData+SKUtils.m in Sources */,
@@ -1377,6 +1271,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BJQ3XA6GG;
@@ -1385,22 +1280,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/ALi_src",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/Required",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1412,13 +1292,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/libexidcard",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/bank_io/exbankcardcore",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sky.SKUIKiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1434,6 +1309,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BJQ3XA6GG;
@@ -1441,22 +1317,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/ALi_src",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/Required",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1468,13 +1329,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/libexidcard",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/bank_io/exbankcardcore",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
-					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_3rdTools/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sky.SKUIKiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
