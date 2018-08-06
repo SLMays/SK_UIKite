@@ -49,7 +49,6 @@
 }
 - (UIImage *)processShareImage
 {
-    
     self.canBack = NO;
     self.navigationItem.rightBarButtonItem = nil;
     

@@ -7,10 +7,11 @@ def share_pods
    pod 'ReactiveCocoa', '2.3.1'
    pod 'ZKUDID', '~> 2.0'
    pod 'AFNetworking', '~> 3.1.0'
+   pod 'PooCodeView'    #图形验证码#
 end
 
 target 'SK_UIKite' do
     share_pods
     pod 'TSMessages'
-    pod 'LEETheme'
+    pod 'LEETheme'  #主题颜色#
 end

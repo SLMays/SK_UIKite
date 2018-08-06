@@ -1,0 +1,6 @@
+framework module PooCodeView {
+  umbrella header "PooCodeView-umbrella.h"
+
+  export *
+  module * { export * }
+}
