@@ -41,7 +41,8 @@
                              @{K_MenuTitle:@"语音识别",K_MenuClass:@"SK_SpeechRecognition_ViewController"},
                              @{K_MenuTitle:@"颜色渐变动画",K_MenuClass:@"SK_ColorGradientAnimation_ViewController"},
 //                             @{K_MenuTitle:@"屏幕旋转",K_MenuClass:@"SK_Vertical_ViewController"},
-                             @{K_MenuTitle:@"屏幕截屏分享",K_MenuClass:@"Screenshot_ViewController"}
+                             @{K_MenuTitle:@"屏幕截屏分享",K_MenuClass:@"Screenshot_ViewController"},
+                             @{K_MenuTitle:@"时间转换",K_MenuClass:@"SK_DateTransformation_ViewController"},
                              ];
     }
     

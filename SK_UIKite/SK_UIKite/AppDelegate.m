@@ -74,5 +74,15 @@
 }
 
 
+//可以用来做测试方法用
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
+    if ([touches.anyObject locationInView:nil].y > Height_StatusBar) return;
+    [self testDemo];
+}
+-(void)testDemo
+{
+
+}
+
 @end
 

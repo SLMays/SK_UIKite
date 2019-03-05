@@ -95,6 +95,8 @@
 		A4620B5D202C5044002686ED /* SK_Define.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5C202C5044002686ED /* SK_Define.m */; };
 		A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5F202C568A002686ED /* UIImage+SKUtils.m */; };
 		A4620B7A202C5E44002686ED /* SK_TableView_Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B79202C5E44002686ED /* SK_TableView_Controller.m */; };
+		A467A7E221B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A7E121B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m */; };
+		A467A7E621B7CF1000DCBBA5 /* SK_GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A7E521B7CF0F00DCBBA5 /* SK_GCDTimer.m */; };
 		A47A26222092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47A26212092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m */; };
 		A47A2628209310520015F03E /* SK_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47A2627209310520015F03E /* SK_TabBarController.m */; };
 		A47D81A5208DC403003958C9 /* SK_OCR_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47D81A4208DC403003958C9 /* SK_OCR_ViewController.m */; };
@@ -290,6 +292,10 @@
 		A4620B5F202C568A002686ED /* UIImage+SKUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SKUtils.m"; sourceTree = "<group>"; };
 		A4620B78202C5E44002686ED /* SK_TableView_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TableView_Controller.h; sourceTree = "<group>"; };
 		A4620B79202C5E44002686ED /* SK_TableView_Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_TableView_Controller.m; sourceTree = "<group>"; };
+		A467A7E021B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_DateTransformation_ViewController.h; sourceTree = "<group>"; };
+		A467A7E121B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_DateTransformation_ViewController.m; sourceTree = "<group>"; };
+		A467A7E421B7CF0F00DCBBA5 /* SK_GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_GCDTimer.h; sourceTree = "<group>"; };
+		A467A7E521B7CF0F00DCBBA5 /* SK_GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SK_GCDTimer.m; sourceTree = "<group>"; };
 		A47A26202092D3640015F03E /* SK_ColorGradientAnimation_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_ColorGradientAnimation_ViewController.h; sourceTree = "<group>"; };
 		A47A26212092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_ColorGradientAnimation_ViewController.m; sourceTree = "<group>"; };
 		A47A2626209310520015F03E /* SK_TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TabBarController.h; sourceTree = "<group>"; };
@@ -752,6 +758,7 @@
 				A42F6F5020EC7A0200666251 /* 颜色渐变动画 */,
 				A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */,
 				A419C4A3211834A400301306 /* 图形验证 */,
+				A467A7DF21B7CCDE00DCBBA5 /* 时间转换 */,
 			);
 			path = "Tab1_ Functions";
 			sourceTree = "<group>";
@@ -892,6 +899,24 @@
 			path = SK_Extend;
 			sourceTree = "<group>";
 		};
+		A467A7DF21B7CCDE00DCBBA5 /* 时间转换 */ = {
+			isa = PBXGroup;
+			children = (
+				A467A7E021B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.h */,
+				A467A7E121B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m */,
+			);
+			path = "时间转换";
+			sourceTree = "<group>";
+		};
+		A467A7E321B7CF0F00DCBBA5 /* SK_GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A467A7E421B7CF0F00DCBBA5 /* SK_GCDTimer.h */,
+				A467A7E521B7CF0F00DCBBA5 /* SK_GCDTimer.m */,
+			);
+			path = SK_GCDTimer;
+			sourceTree = "<group>";
+		};
 		A4AC4C3E207E105600A2F7FD /* SK_Demo+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +929,7 @@
 		A4B7D1FF207F605700A4312D /* SK_Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A467A7E321B7CF0F00DCBBA5 /* SK_GCDTimer */,
 				A419C3D42118339600301306 /* SK_3rdTools */,
 				A419C3C42118339600301306 /* SK_Encryption */,
 				A419C4082118339700301306 /* SK_IconFont */,
@@ -1034,7 +1060,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/LEETheme/LEETheme.framework",
@@ -1055,7 +1081,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1086,6 +1112,7 @@
 				A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */,
 				A44B0BC91FA9D19B001B00FB /* NSObject+SKUtils.m in Sources */,
 				A44B0BD51FA9D1F4001B00FB /* UIViewController+SKUtils.m in Sources */,
+				A467A7E221B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m in Sources */,
 				A44B0BCF1FA9D1B1001B00FB /* NSDate+SKUtils.m in Sources */,
 				A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */,
 				A419C4892118339700301306 /* BankOverlayView.m in Sources */,
@@ -1125,6 +1152,7 @@
 				A44B0B951FA9CF2B001B00FB /* AppDelegate.m in Sources */,
 				A419C48A2118339700301306 /* IDOverLayerView.m in Sources */,
 				A419C49B2118341000301306 /* SK_ALiOCR_IDCard_ViewController.m in Sources */,
+				A467A7E621B7CF1000DCBBA5 /* SK_GCDTimer.m in Sources */,
 				A44B0BFC1FA9D662001B00FB /* UICollectionView+SKUtils.m in Sources */,
 				A4AC4C41207E164400A2F7FD /* SK_NavigationAlpha_ViewController.m in Sources */,
 				A419C4512118339700301306 /* SK_Base64Util.m in Sources */,

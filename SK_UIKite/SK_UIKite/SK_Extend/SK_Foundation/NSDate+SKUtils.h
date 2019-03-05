@@ -2,8 +2,8 @@
 //  NSDate+SKUtils.h
 //  SK_UIKiteDemo
 //
-//  Created by ShiLei on 2017/11/1.
-//  Copyright © 2017年 SKyLin. All rights reserved.
+//  Created by 石磊 on 2017/11/1.
+//  Copyright © 2017年 ShiLei. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -107,4 +107,28 @@
  */
 +(NSString *)getDateComparedWithNow:(NSString *)time isBeiJing:(BOOL)isBJ;
 
+/**
+ *  时间戳按时区转换时间
+ */
++(NSString *)getDate:(NSString *)time GMT:(NSInteger)seconds ZoneName:(NSString *)name;
+
+//获取服务器时间(保证不同时区下转换时间不变)
++(NSString *)getServerDate_C:(NSString *)time  withFormatter:(NSString *)formatter;
++(NSString *)getServerDate_Java:(NSString *)time  withFormatter:(NSString *)formatter;
+//时间戳转时间
++(NSDate *)getDateWidthTimeStamp_C:(long long)C_timeStamp TimeStamp_Java:(long long)J_timeStamp;
+//UTC时间戳转当地时间
++(NSString *)getDateWidthUTCTimeStamp_C:(long long)C_timeStamp TimeStamp_Java:(long long)J_timeStamp dateFormat:(NSString *)dateFormat;
++ (BOOL)validateWithStartTime:(NSString *)startTime expireTime:(NSString *)expireTime;
+
+//是否为今天
+- (BOOL)isToday;
+//是否为昨天
+- (BOOL)isYesterday;
+//是否为前天
+- (BOOL)isBeforeYesterday;
+//是否为今年
+- (BOOL)isThisYear;
+//获取时间戳距离当前时间多久
++ (NSString *)getDateIntervalForNow_CDate:(long long)c_date javaDate:(long long)java_date;
 @end
