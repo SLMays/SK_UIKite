@@ -22,7 +22,7 @@
     CGFloat height = NOHAVE_TABBAR_HEIGHT/4;
     
     for (int i=0; i<4; i++) {
-        UIView * animationView = [UIView initWithFrame:CGRectMake(0, height*i, WIDTH_IPHONE, height) setBackgroundColor:RandomColor alpha:1.0];
+        UIView * animationView = [UIView initWithFrame:CGRectMake(0, height*i, WIDTH_IPHONE, height) backgroundColor:RandomColor alpha:1.0];
         [self.view addSubview:animationView];
         [WHGradientHelper addGradientChromatoAnimation:animationView directionType:i];
     }

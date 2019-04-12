@@ -6,6 +6,78 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string></string>
+				<string></string>
+				<string></string>
+				<string></string>
+			</array>
+			<key>icon_1</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_1iPhoneApp_60pt</string>
+					<string>icon_1iPhoneNotification_20pt</string>
+					<string>icon_1iPhoneSpootlight5_29pt</string>
+					<string>icon_1iPhoneSpootlight7_40pt</string>
+				</array>
+			</dict>
+			<key>icon_2</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_2iPhoneApp_60pt</string>
+					<string>icon_2iPhoneNotification_20pt</string>
+					<string>icon_2iPhoneSpootlight5_29pt</string>
+					<string>icon_2iPhoneSpootlight7_40pt</string>
+				</array>
+			</dict>
+			<key>icon_3</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_3iPhoneApp_60pt</string>
+					<string>icon_3iPhoneNotification_20pt</string>
+					<string>icon_3iPhoneSpootlight5_29pt</string>
+					<string>icon_3iPhoneSpootlight7_40pt</string>
+				</array>
+			</dict>
+			<key>icon_4</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_4iPhoneApp_60pt</string>
+					<string>icon_4iPhoneNotification_20pt</string>
+					<string>icon_4iPhoneSpootlight5_29pt</string>
+					<string>icon_4iPhoneSpootlight7_40pt</string>
+				</array>
+			</dict>
+			<key>icon_5</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_5iPhoneApp_60pt</string>
+					<string>icon_5iPhoneNotification_20pt</string>
+					<string>icon_5iPhoneSpootlight5_29pt</string>
+					<string>icon_5iPhoneSpootlight7_40pt</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string></string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -52,8 +124,6 @@
 	<array>
 		<string>audio</string>
 	</array>
-	<key>UIMainStoryboardFile~iphone</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

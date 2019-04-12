@@ -31,7 +31,6 @@
        nameArr:@[@"image[0]"]
    fileNameArr:@[@"image"]
       mimeType:@"image/jpeg"
-HTTPCachePolicy:HTTPCachePolicyNormal
        success:^(NSURLSessionDataTask *operation, id responseObject, BOOL isOK) {
            
        } failure:^(NSURLSessionDataTask *operation, NSError *error) {
@@ -41,7 +40,6 @@ HTTPCachePolicy:HTTPCachePolicyNormal
 }
 -(void)post:(NSString *)requestHeader
  parameters:(NSDictionary *)parameters
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
     success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
     failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
@@ -68,7 +66,7 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
          }];
 }
 
--(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
+-(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
     
     SK_HTTPClient *manager = [SK_HTTPClient manager];

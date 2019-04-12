@@ -5,7 +5,6 @@ def share_pods
    pod 'Masonry'
    pod 'SDWebImage'
    pod 'ReactiveCocoa', '2.3.1'
-#   pod 'ZKUDID', '~> 2.0'
    pod 'AFNetworking', '~> 3.1.0'
 end
 
@@ -13,4 +12,5 @@ target 'SK_UIKite' do
     share_pods
     pod 'TSMessages'
     pod 'LEETheme'  #主题颜色#
+    pod 'SDWebImage/GIF' #GIF图#
 end

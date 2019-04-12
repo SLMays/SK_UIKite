@@ -9,6 +9,7 @@
 #import "SK_TabBarController.h"
 #import "Tab1_ViewController.h"
 #import "Tab2_ViewController.h"
+#import "SK_LaunchScreen_ViewController.h"
 
 @interface SK_TabBarController ()
 
@@ -28,7 +29,6 @@
     tabbarBgView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.tabBar insertSubview:tabbarBgView atIndex:0];
 }
-
 - (void)configRootViewControllers
 {
     

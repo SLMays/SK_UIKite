@@ -45,14 +45,12 @@ typedef enum {
  *
  *  @param requestHeader 请求的 接口名称 如@"getCabList"  不需要包括请求头
  *  @param parameters    API 请求参数 字典格式
- *  @param cashPolicyType 缓存策略  Normal(不缓存) CacheAndRefresh(得不到新数据时读缓存) CacheAndLocal(优先读缓存)
  *  @param success       成功的回调
  *  @param failure       失败的回调
  *
  */
 +(void)post:(NSString *)requestHeader
  parameters:(NSDictionary *)parameters
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
     success:(void (^)(NSURLSessionDataTask *operation, id responseObject,BOOL isOK))success
     failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
@@ -62,7 +60,6 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
  *
  *  @param requestHeader 请求的 接口名称 如@"getCabList"  不需要包括请求头
  *  @param parameters    API 请求参数 字典格式
- *  @param cashPolicyType 缓存策略  Normal(不缓存) CacheAndRefresh(得不到新数据时读缓存) CacheAndLocal(优先读缓存)
  *  @param image         准备上传的图片
  *  @param success       成功回调
  *  @param failure       失败回调
@@ -74,7 +71,6 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
        name:(NSString *)name
    fileName:(NSString *)fileName
    mimeType:(NSString *)mimeType
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
     success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
     failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
@@ -83,13 +79,11 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
  *
  *  @param requestHeader 请求的 接口名称 如@"getCabList"  不需要包括请求头
  *  @param parameters    API 请求参数 字典格式
- *  @param cashPolicyType 缓存策略  Normal(不缓存) CacheAndRefresh(得不到新数据时读缓存) CacheAndLocal(优先读缓存)
- *  @param images        准备上传的图片集合
  *  @param success       成功回调
  *  @param failure       失败回调
  *
  */
-+(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
++(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
 
 /*!
@@ -97,23 +91,18 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
  *
  *  @param URLString  请求接口名 不包括请求头
  *  @param parameters 参数 字典格式
- *  @param cashPolicyType 缓存策略  Normal(不缓存) CacheAndRefresh(得不到新数据时读缓存) CacheAndLocal(优先读缓存)
  *  @param success    成功回调
  *  @param failure    失败回调
  *
  */
 +(void)get:(NSString *)URLString
 parameters:(id)parameters
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
    success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
    failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
 
 
 /**
  *  根据Error获得错误信息
- *
- *  @param error
- *
  *  @return 错误信息
  */
 +(NSString *)getErrorContentWith:(NSError *)error;

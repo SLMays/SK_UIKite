@@ -69,6 +69,48 @@
 		A41DE3A1211400FD00BA6340 /* UIWindow+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A41DE3A0211400FD00BA6340 /* UIWindow+SKUtils.m */; };
 		A41DE3A82114059F00BA6340 /* SK_AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41DE3A62114059F00BA6340 /* SK_AlertView.m */; };
 		A41DE3AA2114273300BA6340 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41DE3A92114273300BA6340 /* Social.framework */; };
+		A425E5BD225F1E430048C4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A425E5BC225F1E430048C4BD /* LaunchScreen.storyboard */; };
+		A425E5C7225F2C390048C4BD /* icon_1iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5BF225F2C330048C4BD /* icon_1iPhoneApp_60pt@2x.png */; };
+		A425E5C8225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C0225F2C340048C4BD /* icon_1iPhoneSpootlight5_29pt@2x.png */; };
+		A425E5C9225F2C390048C4BD /* icon_1iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C1225F2C350048C4BD /* icon_1iPhoneSpootlight7_40pt@3x.png */; };
+		A425E5CA225F2C390048C4BD /* icon_1iPhoneNotification_20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C2225F2C350048C4BD /* icon_1iPhoneNotification_20pt@2x.png */; };
+		A425E5CB225F2C390048C4BD /* icon_1iPhoneNotification_20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C3225F2C360048C4BD /* icon_1iPhoneNotification_20pt@3x.png */; };
+		A425E5CC225F2C390048C4BD /* icon_1iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C4225F2C370048C4BD /* icon_1iPhoneApp_60pt@3x.png */; };
+		A425E5CD225F2C390048C4BD /* icon_1iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C5225F2C380048C4BD /* icon_1iPhoneSpootlight7_40pt@2x.png */; };
+		A425E5CE225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5C6225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@3x.png */; };
+		A425E5D7225F2C500048C4BD /* icon_2iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5CF225F2C4A0048C4BD /* icon_2iPhoneSpootlight5_29pt@3x.png */; };
+		A425E5D8225F2C500048C4BD /* icon_2iPhoneNotification_20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D0225F2C4B0048C4BD /* icon_2iPhoneNotification_20pt@3x.png */; };
+		A425E5D9225F2C500048C4BD /* icon_2iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D1225F2C4B0048C4BD /* icon_2iPhoneApp_60pt@3x.png */; };
+		A425E5DA225F2C500048C4BD /* icon_2iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D2225F2C4C0048C4BD /* icon_2iPhoneApp_60pt@2x.png */; };
+		A425E5DB225F2C500048C4BD /* icon_2iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D3225F2C4D0048C4BD /* icon_2iPhoneSpootlight5_29pt@2x.png */; };
+		A425E5DC225F2C500048C4BD /* icon_2iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D4225F2C4E0048C4BD /* icon_2iPhoneSpootlight7_40pt@2x.png */; };
+		A425E5DD225F2C500048C4BD /* icon_2iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D5225F2C4F0048C4BD /* icon_2iPhoneSpootlight7_40pt@3x.png */; };
+		A425E5DE225F2C500048C4BD /* icon_2iPhoneNotification_20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5D6225F2C500048C4BD /* icon_2iPhoneNotification_20pt@2x.png */; };
+		A425E5E7225F2C5F0048C4BD /* icon_3iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5DF225F2C590048C4BD /* icon_3iPhoneSpootlight5_29pt@2x.png */; };
+		A425E5E8225F2C5F0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E0225F2C5A0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png */; };
+		A425E5E9225F2C5F0048C4BD /* icon_3iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E1225F2C5A0048C4BD /* icon_3iPhoneApp_60pt@3x.png */; };
+		A425E5EA225F2C5F0048C4BD /* icon_3iPhoneNotification_20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E2225F2C5B0048C4BD /* icon_3iPhoneNotification_20pt@2x.png */; };
+		A425E5EB225F2C5F0048C4BD /* icon_3iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E3225F2C5C0048C4BD /* icon_3iPhoneApp_60pt@2x.png */; };
+		A425E5EC225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E4225F2C5D0048C4BD /* icon_3iPhoneSpootlight7_40pt@3x.png */; };
+		A425E5ED225F2C5F0048C4BD /* icon_3iPhoneNotification_20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E5225F2C5E0048C4BD /* icon_3iPhoneNotification_20pt@3x.png */; };
+		A425E5EE225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5E6225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@2x.png */; };
+		A425E5F7225F2C6E0048C4BD /* icon_4iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5EF225F2C680048C4BD /* icon_4iPhoneApp_60pt@3x.png */; };
+		A425E5F8225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F0225F2C690048C4BD /* icon_4iPhoneSpootlight7_40pt@3x.png */; };
+		A425E5F9225F2C6E0048C4BD /* icon_4iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F1225F2C6A0048C4BD /* icon_4iPhoneApp_60pt@2x.png */; };
+		A425E5FA225F2C6E0048C4BD /* icon_4iPhoneNotification_20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F2225F2C6B0048C4BD /* icon_4iPhoneNotification_20pt@2x.png */; };
+		A425E5FB225F2C6E0048C4BD /* icon_4iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F3225F2C6C0048C4BD /* icon_4iPhoneSpootlight5_29pt@3x.png */; };
+		A425E5FC225F2C6E0048C4BD /* icon_4iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F4225F2C6D0048C4BD /* icon_4iPhoneSpootlight5_29pt@2x.png */; };
+		A425E5FD225F2C6E0048C4BD /* icon_4iPhoneNotification_20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F5225F2C6D0048C4BD /* icon_4iPhoneNotification_20pt@3x.png */; };
+		A425E5FE225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5F6225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@2x.png */; };
+		A425E607225F2C860048C4BD /* icon_5iPhoneNotification_20pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E5FF225F2C800048C4BD /* icon_5iPhoneNotification_20pt@3x.png */; };
+		A425E608225F2C860048C4BD /* icon_5iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E600225F2C810048C4BD /* icon_5iPhoneApp_60pt@3x.png */; };
+		A425E609225F2C860048C4BD /* icon_5iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E601225F2C810048C4BD /* icon_5iPhoneSpootlight7_40pt@3x.png */; };
+		A425E60A225F2C860048C4BD /* icon_5iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E602225F2C820048C4BD /* icon_5iPhoneSpootlight5_29pt@3x.png */; };
+		A425E60B225F2C860048C4BD /* icon_5iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E603225F2C830048C4BD /* icon_5iPhoneApp_60pt@2x.png */; };
+		A425E60C225F2C860048C4BD /* icon_5iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E604225F2C840048C4BD /* icon_5iPhoneSpootlight7_40pt@2x.png */; };
+		A425E60D225F2C860048C4BD /* icon_5iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E605225F2C850048C4BD /* icon_5iPhoneSpootlight5_29pt@2x.png */; };
+		A425E60E225F2C860048C4BD /* icon_5iPhoneNotification_20pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A425E606225F2C860048C4BD /* icon_5iPhoneNotification_20pt@2x.png */; };
+		A425E613225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A425E611225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m */; };
 		A42F6F5C20ECA0F400666251 /* Tab1_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F6F5A20ECA0F400666251 /* Tab1_ViewController.m */; };
 		A42F6F5F20ECA14000666251 /* Tab2_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F6F5E20ECA14000666251 /* Tab2_ViewController.m */; };
 		A44B0B951FA9CF2B001B00FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0B941FA9CF2B001B00FB /* AppDelegate.m */; };
@@ -110,12 +152,17 @@
 		A4AEDB2B20A581A300315E82 /* UIWebView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AEDB2A20A581A300315E82 /* UIWebView+SKUtils.m */; };
 		A4B7D1FA207F566D00A4312D /* SK_NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D1F9207F566D00A4312D /* SK_NavigationController.m */; };
 		A4B7D1FD207F5FC200A4312D /* SK_IconFont_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B7D1FC207F5FC200A4312D /* SK_IconFont_ViewController.m */; };
-		A4C09BB320A9378100641829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C09BB120A9378100641829 /* Main.storyboard */; };
-		A4C09BB420A9378100641829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C09BB220A9378100641829 /* LaunchScreen.storyboard */; };
 		A4C9CFCB20FC91AF0076F63C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9CFCA20FC91AF0076F63C /* libicucore.tbd */; };
 		A4C9CFCD20FC91BE0076F63C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9CFCC20FC91BE0076F63C /* libstdc++.tbd */; };
 		A4C9CFCF20FC91CD0076F63C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9CFCE20FC91CD0076F63C /* JavaScriptCore.framework */; };
 		A4C9CFD120FC91E40076F63C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9CFD020FC91E30076F63C /* libsqlite3.tbd */; };
+		A4CDEE302243822B00AAFE04 /* GFCalendarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE252243822B00AAFE04 /* GFCalendarScrollView.m */; };
+		A4CDEE312243822B00AAFE04 /* GFCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE292243822B00AAFE04 /* GFCalendarCell.m */; };
+		A4CDEE322243822B00AAFE04 /* GFCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE2A2243822B00AAFE04 /* GFCalendarView.m */; };
+		A4CDEE332243822B00AAFE04 /* NSDate+GFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE2C2243822B00AAFE04 /* NSDate+GFCalendar.m */; };
+		A4CDEE342243822B00AAFE04 /* GFCalendarMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE2E2243822B00AAFE04 /* GFCalendarMonth.m */; };
+		A4CDEE382243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE372243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m */; };
+		A4DCD0A7225C6A900074F648 /* SK_LaunchScreen_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */; };
 		A4E7791C20BB9A3500B94944 /* SK_TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7791B20BB9A3500B94944 /* SK_TableView.m */; };
 		A4E7DFA520908E7D007E3967 /* SK_SpeechRecognition_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */; };
 		A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */; };
@@ -238,6 +285,49 @@
 		A41DE3A62114059F00BA6340 /* SK_AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SK_AlertView.m; sourceTree = "<group>"; };
 		A41DE3A72114059F00BA6340 /* SK_AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_AlertView.h; sourceTree = "<group>"; };
 		A41DE3A92114273300BA6340 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A425E5BC225F1E430048C4BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A425E5BF225F2C330048C4BD /* icon_1iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		A425E5C0225F2C340048C4BD /* icon_1iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		A425E5C1225F2C350048C4BD /* icon_1iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		A425E5C2225F2C350048C4BD /* icon_1iPhoneNotification_20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneNotification_20pt@2x.png"; sourceTree = "<group>"; };
+		A425E5C3225F2C360048C4BD /* icon_1iPhoneNotification_20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneNotification_20pt@3x.png"; sourceTree = "<group>"; };
+		A425E5C4225F2C370048C4BD /* icon_1iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		A425E5C5225F2C380048C4BD /* icon_1iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		A425E5C6225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_1iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		A425E5CF225F2C4A0048C4BD /* icon_2iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		A425E5D0225F2C4B0048C4BD /* icon_2iPhoneNotification_20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneNotification_20pt@3x.png"; sourceTree = "<group>"; };
+		A425E5D1225F2C4B0048C4BD /* icon_2iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		A425E5D2225F2C4C0048C4BD /* icon_2iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		A425E5D3225F2C4D0048C4BD /* icon_2iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		A425E5D4225F2C4E0048C4BD /* icon_2iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		A425E5D5225F2C4F0048C4BD /* icon_2iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		A425E5D6225F2C500048C4BD /* icon_2iPhoneNotification_20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_2iPhoneNotification_20pt@2x.png"; sourceTree = "<group>"; };
+		A425E5DF225F2C590048C4BD /* icon_3iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		A425E5E0225F2C5A0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		A425E5E1225F2C5A0048C4BD /* icon_3iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		A425E5E2225F2C5B0048C4BD /* icon_3iPhoneNotification_20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneNotification_20pt@2x.png"; sourceTree = "<group>"; };
+		A425E5E3225F2C5C0048C4BD /* icon_3iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		A425E5E4225F2C5D0048C4BD /* icon_3iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		A425E5E5225F2C5E0048C4BD /* icon_3iPhoneNotification_20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneNotification_20pt@3x.png"; sourceTree = "<group>"; };
+		A425E5E6225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_3iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		A425E5EF225F2C680048C4BD /* icon_4iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		A425E5F0225F2C690048C4BD /* icon_4iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		A425E5F1225F2C6A0048C4BD /* icon_4iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		A425E5F2225F2C6B0048C4BD /* icon_4iPhoneNotification_20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneNotification_20pt@2x.png"; sourceTree = "<group>"; };
+		A425E5F3225F2C6C0048C4BD /* icon_4iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		A425E5F4225F2C6D0048C4BD /* icon_4iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		A425E5F5225F2C6D0048C4BD /* icon_4iPhoneNotification_20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneNotification_20pt@3x.png"; sourceTree = "<group>"; };
+		A425E5F6225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_4iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		A425E5FF225F2C800048C4BD /* icon_5iPhoneNotification_20pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneNotification_20pt@3x.png"; sourceTree = "<group>"; };
+		A425E600225F2C810048C4BD /* icon_5iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		A425E601225F2C810048C4BD /* icon_5iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		A425E602225F2C820048C4BD /* icon_5iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		A425E603225F2C830048C4BD /* icon_5iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		A425E604225F2C840048C4BD /* icon_5iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		A425E605225F2C850048C4BD /* icon_5iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		A425E606225F2C860048C4BD /* icon_5iPhoneNotification_20pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_5iPhoneNotification_20pt@2x.png"; sourceTree = "<group>"; };
+		A425E610225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_ChangeAppIcon_ViewController.h; sourceTree = "<group>"; };
+		A425E611225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_ChangeAppIcon_ViewController.m; sourceTree = "<group>"; };
 		A42F6F5A20ECA0F400666251 /* Tab1_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab1_ViewController.m; sourceTree = "<group>"; };
 		A42F6F5B20ECA0F400666251 /* Tab1_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab1_ViewController.h; sourceTree = "<group>"; };
 		A42F6F5D20ECA14000666251 /* Tab2_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tab2_ViewController.h; sourceTree = "<group>"; };
@@ -322,12 +412,25 @@
 		A4B7D1F9207F566D00A4312D /* SK_NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_NavigationController.m; sourceTree = "<group>"; };
 		A4B7D1FB207F5FC200A4312D /* SK_IconFont_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_IconFont_ViewController.h; sourceTree = "<group>"; };
 		A4B7D1FC207F5FC200A4312D /* SK_IconFont_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_IconFont_ViewController.m; sourceTree = "<group>"; };
-		A4C09BB120A9378100641829 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A4C09BB220A9378100641829 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4C9CFCA20FC91AF0076F63C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		A4C9CFCC20FC91BE0076F63C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A4C9CFCE20FC91CD0076F63C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		A4C9CFD020FC91E30076F63C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A4CDEE252243822B00AAFE04 /* GFCalendarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarScrollView.m; sourceTree = "<group>"; };
+		A4CDEE262243822B00AAFE04 /* NSDate+GFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GFCalendar.h"; sourceTree = "<group>"; };
+		A4CDEE272243822B00AAFE04 /* GFCalendarMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarMonth.h; sourceTree = "<group>"; };
+		A4CDEE282243822B00AAFE04 /* GFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendar.h; sourceTree = "<group>"; };
+		A4CDEE292243822B00AAFE04 /* GFCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarCell.m; sourceTree = "<group>"; };
+		A4CDEE2A2243822B00AAFE04 /* GFCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarView.m; sourceTree = "<group>"; };
+		A4CDEE2B2243822B00AAFE04 /* GFCalendarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarScrollView.h; sourceTree = "<group>"; };
+		A4CDEE2C2243822B00AAFE04 /* NSDate+GFCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GFCalendar.m"; sourceTree = "<group>"; };
+		A4CDEE2D2243822B00AAFE04 /* GFCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarCell.h; sourceTree = "<group>"; };
+		A4CDEE2E2243822B00AAFE04 /* GFCalendarMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCalendarMonth.m; sourceTree = "<group>"; };
+		A4CDEE2F2243822B00AAFE04 /* GFCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarView.h; sourceTree = "<group>"; };
+		A4CDEE362243829700AAFE04 /* SK_CalendarDateChoose_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_CalendarDateChoose_ViewController.h; sourceTree = "<group>"; };
+		A4CDEE372243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_CalendarDateChoose_ViewController.m; sourceTree = "<group>"; };
+		A4DCD0A4225C6A900074F648 /* SK_LaunchScreen_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_LaunchScreen_ViewController.h; sourceTree = "<group>"; };
+		A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_LaunchScreen_ViewController.m; sourceTree = "<group>"; };
 		A4E7791A20BB9A3500B94944 /* SK_TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TableView.h; sourceTree = "<group>"; };
 		A4E7791B20BB9A3500B94944 /* SK_TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_TableView.m; sourceTree = "<group>"; };
 		A4E7DFA320908E7D007E3967 /* SK_SpeechRecognition_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_SpeechRecognition_ViewController.h; sourceTree = "<group>"; };
@@ -375,18 +478,18 @@
 		7B04AE0C746802C86597ECAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A41DE3A92114273300BA6340 /* Social.framework */,
-				A4C9CFD020FC91E30076F63C /* libsqlite3.tbd */,
-				A4C9CFCE20FC91CD0076F63C /* JavaScriptCore.framework */,
-				A4C9CFCC20FC91BE0076F63C /* libstdc++.tbd */,
-				A4C9CFCA20FC91AF0076F63C /* libicucore.tbd */,
-				A40B5B9420EA07E2000EF0A2 /* libz.tbd */,
-				A40B5B9220EA07D7000EF0A2 /* SystemConfiguration.framework */,
-				A40B5B9020EA07CB000EF0A2 /* Security.framework */,
 				A40B5B8E20EA07BF000EF0A2 /* CoreTelephony.framework */,
-				A40B5B8C20EA07A1000EF0A2 /* tingyunApp.framework */,
+				A4C9CFCE20FC91CD0076F63C /* JavaScriptCore.framework */,
 				A4A33A132086F5A900907B97 /* Photos.framework */,
 				51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */,
+				A40B5B9020EA07CB000EF0A2 /* Security.framework */,
+				A41DE3A92114273300BA6340 /* Social.framework */,
+				A40B5B9220EA07D7000EF0A2 /* SystemConfiguration.framework */,
+				A40B5B8C20EA07A1000EF0A2 /* tingyunApp.framework */,
+				A4C9CFCA20FC91AF0076F63C /* libicucore.tbd */,
+				A4C9CFD020FC91E30076F63C /* libsqlite3.tbd */,
+				A4C9CFCC20FC91BE0076F63C /* libstdc++.tbd */,
+				A40B5B9420EA07E2000EF0A2 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,6 +531,7 @@
 		A419C3D42118339600301306 /* SK_3rdTools */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDEE242243822B00AAFE04 /* GFCalendar */,
 				A419C4A42118396D00301306 /* PooCodeView */,
 				A419C3D52118339600301306 /* FixOrientation */,
 				A419C3D82118339600301306 /* UINavigation-SXFixSpace */,
@@ -499,11 +603,11 @@
 			isa = PBXGroup;
 			children = (
 				A419C4B0211848A300301306 /* iconfont.ttf */,
-				A419C4092118339700301306 /* SK_IconInfo.h */,
 				A419C40A2118339700301306 /* SK_IconFont.h */,
-				A419C40B2118339700301306 /* SK_IconName.h */,
 				A419C40C2118339700301306 /* SK_IconFont.m */,
+				A419C4092118339700301306 /* SK_IconInfo.h */,
 				A419C40D2118339700301306 /* SK_IconInfo.m */,
+				A419C40B2118339700301306 /* SK_IconName.h */,
 			);
 			path = SK_IconFont;
 			sourceTree = "<group>";
@@ -680,6 +784,62 @@
 			path = "屏幕截屏分享";
 			sourceTree = "<group>";
 		};
+		A425E5BE225F2C080048C4BD /* SK_APP_Icons */ = {
+			isa = PBXGroup;
+			children = (
+				A425E5BF225F2C330048C4BD /* icon_1iPhoneApp_60pt@2x.png */,
+				A425E5C4225F2C370048C4BD /* icon_1iPhoneApp_60pt@3x.png */,
+				A425E5C2225F2C350048C4BD /* icon_1iPhoneNotification_20pt@2x.png */,
+				A425E5C3225F2C360048C4BD /* icon_1iPhoneNotification_20pt@3x.png */,
+				A425E5C0225F2C340048C4BD /* icon_1iPhoneSpootlight5_29pt@2x.png */,
+				A425E5C6225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@3x.png */,
+				A425E5C5225F2C380048C4BD /* icon_1iPhoneSpootlight7_40pt@2x.png */,
+				A425E5C1225F2C350048C4BD /* icon_1iPhoneSpootlight7_40pt@3x.png */,
+				A425E5D2225F2C4C0048C4BD /* icon_2iPhoneApp_60pt@2x.png */,
+				A425E5D1225F2C4B0048C4BD /* icon_2iPhoneApp_60pt@3x.png */,
+				A425E5D6225F2C500048C4BD /* icon_2iPhoneNotification_20pt@2x.png */,
+				A425E5D0225F2C4B0048C4BD /* icon_2iPhoneNotification_20pt@3x.png */,
+				A425E5D3225F2C4D0048C4BD /* icon_2iPhoneSpootlight5_29pt@2x.png */,
+				A425E5CF225F2C4A0048C4BD /* icon_2iPhoneSpootlight5_29pt@3x.png */,
+				A425E5D4225F2C4E0048C4BD /* icon_2iPhoneSpootlight7_40pt@2x.png */,
+				A425E5D5225F2C4F0048C4BD /* icon_2iPhoneSpootlight7_40pt@3x.png */,
+				A425E5E3225F2C5C0048C4BD /* icon_3iPhoneApp_60pt@2x.png */,
+				A425E5E1225F2C5A0048C4BD /* icon_3iPhoneApp_60pt@3x.png */,
+				A425E5E2225F2C5B0048C4BD /* icon_3iPhoneNotification_20pt@2x.png */,
+				A425E5E5225F2C5E0048C4BD /* icon_3iPhoneNotification_20pt@3x.png */,
+				A425E5DF225F2C590048C4BD /* icon_3iPhoneSpootlight5_29pt@2x.png */,
+				A425E5E0225F2C5A0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png */,
+				A425E5E6225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@2x.png */,
+				A425E5E4225F2C5D0048C4BD /* icon_3iPhoneSpootlight7_40pt@3x.png */,
+				A425E5F1225F2C6A0048C4BD /* icon_4iPhoneApp_60pt@2x.png */,
+				A425E5EF225F2C680048C4BD /* icon_4iPhoneApp_60pt@3x.png */,
+				A425E5F2225F2C6B0048C4BD /* icon_4iPhoneNotification_20pt@2x.png */,
+				A425E5F5225F2C6D0048C4BD /* icon_4iPhoneNotification_20pt@3x.png */,
+				A425E5F4225F2C6D0048C4BD /* icon_4iPhoneSpootlight5_29pt@2x.png */,
+				A425E5F3225F2C6C0048C4BD /* icon_4iPhoneSpootlight5_29pt@3x.png */,
+				A425E5F6225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@2x.png */,
+				A425E5F0225F2C690048C4BD /* icon_4iPhoneSpootlight7_40pt@3x.png */,
+				A425E603225F2C830048C4BD /* icon_5iPhoneApp_60pt@2x.png */,
+				A425E600225F2C810048C4BD /* icon_5iPhoneApp_60pt@3x.png */,
+				A425E606225F2C860048C4BD /* icon_5iPhoneNotification_20pt@2x.png */,
+				A425E5FF225F2C800048C4BD /* icon_5iPhoneNotification_20pt@3x.png */,
+				A425E605225F2C850048C4BD /* icon_5iPhoneSpootlight5_29pt@2x.png */,
+				A425E602225F2C820048C4BD /* icon_5iPhoneSpootlight5_29pt@3x.png */,
+				A425E604225F2C840048C4BD /* icon_5iPhoneSpootlight7_40pt@2x.png */,
+				A425E601225F2C810048C4BD /* icon_5iPhoneSpootlight7_40pt@3x.png */,
+			);
+			path = SK_APP_Icons;
+			sourceTree = "<group>";
+		};
+		A425E60F225F34610048C4BD /* 动态更换AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				A425E610225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.h */,
+				A425E611225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m */,
+			);
+			path = "动态更换AppIcon";
+			sourceTree = "<group>";
+		};
 		A42F6F4B20EC73F400666251 /* 导航栏颜色渐变 */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,6 +919,8 @@
 				A41DE3992113FDC400BA6340 /* 屏幕截屏分享 */,
 				A419C4A3211834A400301306 /* 图形验证 */,
 				A467A7DF21B7CCDE00DCBBA5 /* 时间转换 */,
+				A4CDEE352243824400AAFE04 /* 日历时间选择器 */,
+				A425E60F225F34610048C4BD /* 动态更换AppIcon */,
 			);
 			path = "Tab1_ Functions";
 			sourceTree = "<group>";
@@ -798,8 +960,6 @@
 				A44B0B9C1FA9CF2B001B00FB /* Assets.xcassets */,
 				A44B0C031FA9D834001B00FB /* SK_Extend */,
 				A4AC4C3E207E105600A2F7FD /* SK_Demo+ */,
-				A4C09BB220A9378100641829 /* LaunchScreen.storyboard */,
-				A4C09BB120A9378100641829 /* Main.storyboard */,
 				A44B0BA11FA9CF2B001B00FB /* Info.plist */,
 				A44B0BA21FA9CF2B001B00FB /* main.m */,
 			);
@@ -890,6 +1050,7 @@
 		A44B0C031FA9D834001B00FB /* SK_Extend */ = {
 			isa = PBXGroup;
 			children = (
+				A425E5BE225F2C080048C4BD /* SK_APP_Icons */,
 				A4E75102206DE14A00A135C3 /* SK_Help */,
 				A4B7D1FF207F605700A4312D /* SK_Tools */,
 				A44B0BB71FA9CFE6001B00FB /* SK_Foundation */,
@@ -920,6 +1081,7 @@
 		A4AC4C3E207E105600A2F7FD /* SK_Demo+ */ = {
 			isa = PBXGroup;
 			children = (
+				A4DCD0A3225C6A6C0074F648 /* LaunchScreen */,
 				A42F6F5920ECA0BB00666251 /* Tab1_ Functions */,
 				A42F6F6020ECA14900666251 /* Tab2_Theme */,
 			);
@@ -938,6 +1100,43 @@
 				A419C3CF2118339600301306 /* SK_ThemeHelp */,
 			);
 			path = SK_Tools;
+			sourceTree = "<group>";
+		};
+		A4CDEE242243822B00AAFE04 /* GFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDEE282243822B00AAFE04 /* GFCalendar.h */,
+				A4CDEE2D2243822B00AAFE04 /* GFCalendarCell.h */,
+				A4CDEE292243822B00AAFE04 /* GFCalendarCell.m */,
+				A4CDEE272243822B00AAFE04 /* GFCalendarMonth.h */,
+				A4CDEE2E2243822B00AAFE04 /* GFCalendarMonth.m */,
+				A4CDEE2B2243822B00AAFE04 /* GFCalendarScrollView.h */,
+				A4CDEE252243822B00AAFE04 /* GFCalendarScrollView.m */,
+				A4CDEE2F2243822B00AAFE04 /* GFCalendarView.h */,
+				A4CDEE2A2243822B00AAFE04 /* GFCalendarView.m */,
+				A4CDEE262243822B00AAFE04 /* NSDate+GFCalendar.h */,
+				A4CDEE2C2243822B00AAFE04 /* NSDate+GFCalendar.m */,
+			);
+			path = GFCalendar;
+			sourceTree = "<group>";
+		};
+		A4CDEE352243824400AAFE04 /* 日历时间选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDEE362243829700AAFE04 /* SK_CalendarDateChoose_ViewController.h */,
+				A4CDEE372243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m */,
+			);
+			path = "日历时间选择器";
+			sourceTree = "<group>";
+		};
+		A4DCD0A3225C6A6C0074F648 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A4DCD0A4225C6A900074F648 /* SK_LaunchScreen_ViewController.h */,
+				A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */,
+				A425E5BC225F1E430048C4BD /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		A4E75102206DE14A00A135C3 /* SK_Help */ = {
@@ -1017,19 +1216,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A425E5ED225F2C5F0048C4BD /* icon_3iPhoneNotification_20pt@3x.png in Resources */,
+				A425E60C225F2C860048C4BD /* icon_5iPhoneSpootlight7_40pt@2x.png in Resources */,
 				A44B0B9D1FA9CF2B001B00FB /* Assets.xcassets in Resources */,
 				A41DE39D2113FDC400BA6340 /* Screenshot_ViewController.xib in Resources */,
+				A425E5EC225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@3x.png in Resources */,
 				A419C4B1211848A300301306 /* iconfont.ttf in Resources */,
 				A419C46B2118339700301306 /* down_dark@2x.png in Resources */,
+				A425E5DD225F2C500048C4BD /* icon_2iPhoneSpootlight7_40pt@3x.png in Resources */,
 				A419C47E2118339700301306 /* idCard_2.jpeg in Resources */,
-				A4C09BB320A9378100641829 /* Main.storyboard in Resources */,
-				A4C09BB420A9378100641829 /* LaunchScreen.storyboard in Resources */,
+				A425E5CE225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@3x.png in Resources */,
+				A425E5D7225F2C500048C4BD /* icon_2iPhoneSpootlight5_29pt@3x.png in Resources */,
+				A425E60B225F2C860048C4BD /* icon_5iPhoneApp_60pt@2x.png in Resources */,
 				A419C4882118339700301306 /* idCard_1.jpeg in Resources */,
+				A425E5CB225F2C390048C4BD /* icon_1iPhoneNotification_20pt@3x.png in Resources */,
+				A425E5FA225F2C6E0048C4BD /* icon_4iPhoneNotification_20pt@2x.png in Resources */,
+				A425E5FB225F2C6E0048C4BD /* icon_4iPhoneSpootlight5_29pt@3x.png in Resources */,
 				A419C4542118339700301306 /* theme_night.json in Resources */,
+				A425E5CD225F2C390048C4BD /* icon_1iPhoneSpootlight7_40pt@2x.png in Resources */,
+				A425E5DB225F2C500048C4BD /* icon_2iPhoneSpootlight5_29pt@2x.png in Resources */,
+				A425E5DC225F2C500048C4BD /* icon_2iPhoneSpootlight7_40pt@2x.png in Resources */,
+				A425E5DE225F2C500048C4BD /* icon_2iPhoneNotification_20pt@2x.png in Resources */,
+				A425E5D8225F2C500048C4BD /* icon_2iPhoneNotification_20pt@3x.png in Resources */,
+				A425E5FD225F2C6E0048C4BD /* icon_4iPhoneNotification_20pt@3x.png in Resources */,
+				A425E608225F2C860048C4BD /* icon_5iPhoneApp_60pt@3x.png in Resources */,
+				A425E5E7225F2C5F0048C4BD /* icon_3iPhoneSpootlight5_29pt@2x.png in Resources */,
 				A419C4532118339700301306 /* theme_day.json in Resources */,
+				A425E60D225F2C860048C4BD /* icon_5iPhoneSpootlight5_29pt@2x.png in Resources */,
+				A425E607225F2C860048C4BD /* icon_5iPhoneNotification_20pt@3x.png in Resources */,
+				A425E5C9225F2C390048C4BD /* icon_1iPhoneSpootlight7_40pt@3x.png in Resources */,
+				A425E60E225F2C860048C4BD /* icon_5iPhoneNotification_20pt@2x.png in Resources */,
+				A425E5D9225F2C500048C4BD /* icon_2iPhoneApp_60pt@3x.png in Resources */,
+				A425E5CA225F2C390048C4BD /* icon_1iPhoneNotification_20pt@2x.png in Resources */,
+				A425E5FC225F2C6E0048C4BD /* icon_4iPhoneSpootlight5_29pt@2x.png in Resources */,
 				A419C46C2118339700301306 /* down_dark@3x.png in Resources */,
+				A425E5BD225F1E430048C4BD /* LaunchScreen.storyboard in Resources */,
+				A425E5E8225F2C5F0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png in Resources */,
 				A419C4862118339700301306 /* zocr0.lib in Resources */,
+				A425E5C7225F2C390048C4BD /* icon_1iPhoneApp_60pt@2x.png in Resources */,
+				A425E5EB225F2C5F0048C4BD /* icon_3iPhoneApp_60pt@2x.png in Resources */,
+				A425E5CC225F2C390048C4BD /* icon_1iPhoneApp_60pt@3x.png in Resources */,
+				A425E5EA225F2C5F0048C4BD /* icon_3iPhoneNotification_20pt@2x.png in Resources */,
+				A425E5C8225F2C390048C4BD /* icon_1iPhoneSpootlight5_29pt@2x.png in Resources */,
+				A425E5F7225F2C6E0048C4BD /* icon_4iPhoneApp_60pt@3x.png in Resources */,
 				A419C4AF21183AF500301306 /* SK_GraphicsValidation_ViewController.xib in Resources */,
+				A425E5F9225F2C6E0048C4BD /* icon_4iPhoneApp_60pt@2x.png in Resources */,
+				A425E60A225F2C860048C4BD /* icon_5iPhoneSpootlight5_29pt@3x.png in Resources */,
+				A425E609225F2C860048C4BD /* icon_5iPhoneSpootlight7_40pt@3x.png in Resources */,
+				A425E5EE225F2C5F0048C4BD /* icon_3iPhoneSpootlight7_40pt@2x.png in Resources */,
+				A425E5DA225F2C500048C4BD /* icon_2iPhoneApp_60pt@2x.png in Resources */,
+				A425E5E9225F2C5F0048C4BD /* icon_3iPhoneApp_60pt@3x.png in Resources */,
+				A425E5FE225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@2x.png in Resources */,
+				A425E5F8225F2C6E0048C4BD /* icon_4iPhoneSpootlight7_40pt@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,6 +1300,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SK_UIKite/Pods-SK_UIKite-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/LEETheme/LEETheme.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -1072,6 +1311,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEETheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -1101,14 +1341,17 @@
 				A44B0BF91FA9D64A001B00FB /* UIButton+SKUtils.m in Sources */,
 				A419C49A2118341000301306 /* SK_BankCard_ViewController.m in Sources */,
 				A44B0BF31FA9D62A001B00FB /* UITextField+SKUtils.m in Sources */,
+				A4DCD0A7225C6A900074F648 /* SK_LaunchScreen_ViewController.m in Sources */,
 				A44B0BDB1FA9D211001B00FB /* UINavigationController+SKUtils.m in Sources */,
 				A419C44F2118339700301306 /* SK_MD5Encryption.m in Sources */,
 				A44B0BEA1FA9D5AA001B00FB /* UIImageView+SKUtils.m in Sources */,
+				A4CDEE322243822B00AAFE04 /* GFCalendarView.m in Sources */,
 				A4AEDB2820A5794200315E82 /* SK_WebNavigation_ViewController.m in Sources */,
 				A419C47B2118339700301306 /* XLScanBaseManager.m in Sources */,
 				A419C46A2118339700301306 /* LMComBoxView.m in Sources */,
 				A419C4AE21183AF500301306 /* SK_GraphicsValidation_ViewController.m in Sources */,
 				A419C4522118339700301306 /* SK_HTTPClient.m in Sources */,
+				A4CDEE302243822B00AAFE04 /* GFCalendarScrollView.m in Sources */,
 				A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */,
 				A44B0BC91FA9D19B001B00FB /* NSObject+SKUtils.m in Sources */,
 				A44B0BD51FA9D1F4001B00FB /* UIViewController+SKUtils.m in Sources */,
@@ -1119,7 +1362,9 @@
 				A419C4702118339700301306 /* BaseApiClient.m in Sources */,
 				A419C4732118339700301306 /* SignUtil.m in Sources */,
 				A419C4752118339700301306 /* SHA256.m in Sources */,
+				A4CDEE332243822B00AAFE04 /* NSDate+GFCalendar.m in Sources */,
 				A42F6F5C20ECA0F400666251 /* Tab1_ViewController.m in Sources */,
+				A4CDEE312243822B00AAFE04 /* GFCalendarCell.m in Sources */,
 				A44B0BD81FA9D200001B00FB /* UIView+SKUtils.m in Sources */,
 				A419C4A72118396D00301306 /* PooCodeView.m in Sources */,
 				A419C49C2118341000301306 /* SK_BankScanning_ViewController.m in Sources */,
@@ -1161,6 +1406,7 @@
 				A419C47C2118339700301306 /* XLScanManager.m in Sources */,
 				A419C4772118339700301306 /* XLScanResultModel.m in Sources */,
 				A4E7791C20BB9A3500B94944 /* SK_TableView.m in Sources */,
+				A425E613225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m in Sources */,
 				A47D81AA208DC542003958C9 /* UIColor+SKUtils.m in Sources */,
 				A44B0C021FA9D768001B00FB /* SK_ViewController.m in Sources */,
 				A4B7D1FA207F566D00A4312D /* SK_NavigationController.m in Sources */,
@@ -1168,7 +1414,9 @@
 				A419C4712118339700301306 /* Demo_IdCardIdentify.m in Sources */,
 				A4AEDB2B20A581A300315E82 /* UIWebView+SKUtils.m in Sources */,
 				A4620B5D202C5044002686ED /* SK_Define.m in Sources */,
+				A4CDEE342243822B00AAFE04 /* GFCalendarMonth.m in Sources */,
 				A44B0BE11FA9D229001B00FB /* UITabBarController+SKUtils.m in Sources */,
+				A4CDEE382243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m in Sources */,
 				A41DE3A82114059F00BA6340 /* SK_AlertView.m in Sources */,
 				A419C46F2118339700301306 /* SK_IconInfo.m in Sources */,
 				A42F6F5F20ECA14000666251 /* Tab2_ViewController.m in Sources */,

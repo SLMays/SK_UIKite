@@ -24,7 +24,7 @@
 }
 - (void)makeUI {
     
-    UIView * view = [UIView initWithFrame:CGRectMake(0, 20, WIDTH_IPHONE/2, 100) setBackgroundColor:RandomColor alpha:1.0 tag:1 centerX:WIDTH_IPHONE/2];
+    UIView * view = [UIView initWithFrame:CGRectMake(0, 20, WIDTH_IPHONE/2, 100) backgroundColor:RandomColor alpha:1.0 tag:1 centerX:WIDTH_IPHONE/2];
     [self.view addSubview:view];
 
     view.lee_theme.LeeConfigBackgroundColor(@"viewBgColor");

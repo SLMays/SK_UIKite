@@ -8,13 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSInteger{
+    DateBeforeType_OneWeak=0,      //一周前
+    DateBeforeType_OneMonth=1,     //一个月前
+    DateBeforeType_ThreeMonths=3,  //三个月前
+    DateBeforeType_HalfYear=6,     //半年前
+    DateBeforeType_OneYear=12,      //一年前
+}DateBeforeType; //日期往前类型
+
+
 @interface NSDate (SKUtils)
 
 
 /**
  *  将时间戳转换成需要的格式，以字符串输出
  *
- *  @param timeStr   时间戳
  *  @param Formatter 时间格式
  *
  *  @return 转好后的时间字符串
@@ -57,7 +65,6 @@
  *
  *  @param start     开始时间
  *  @param end       结束时间
- *  @param Formatter 时间格式
  *
  *  @return 时间间隔
  */
@@ -131,4 +138,15 @@
 - (BOOL)isThisYear;
 //获取时间戳距离当前时间多久
 + (NSString *)getDateIntervalForNow_CDate:(long long)c_date javaDate:(long long)java_date;
+
+
+/**
+ 获取传入日期的前一段时间
+
+ @param nowDate 比较的日期  yyyyMMDD
+ @param type    类型       DateBeforeType
+ @return 之前的日期         yyyyMMDD
+ */
++(NSString *)getBeforeDate:(NSString *)nowDate type:(DateBeforeType)type;
+
 @end

@@ -27,13 +27,13 @@
     return image;
 }
 
-+(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType addSuperView:(UIView *)sView
++(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType frame:(CGRect)frame
 {
     NSMutableArray *ar = [NSMutableArray array];
     for(UIColor *c in colors) {
         [ar addObject:(id)c.CGColor];
     }
-    UIGraphicsBeginImageContextWithOptions(sView.frame.size, YES, 1);
+    UIGraphicsBeginImageContextWithOptions(frame.size, YES, 1);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
     CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors lastObject] CGColor]);
@@ -43,19 +43,19 @@
     switch (gradientType) {
         case SK_GradientType_topToBottom:
             start = CGPointMake(0.0, 0.0);
-            end = CGPointMake(0.0, sView.frame.size.height);
+            end = CGPointMake(0.0, frame.size.height);
             break;
         case SK_GradientType_leftToRight:
             start = CGPointMake(0.0, 0.0);
-            end = CGPointMake(sView.frame.size.width, 0.0);
+            end = CGPointMake(frame.size.width, 0.0);
             break;
         case SK_GradientType_upleftTolowRight:
             start = CGPointMake(0.0, 0.0);
-            end = CGPointMake(sView.frame.size.width, sView.frame.size.height);
+            end = CGPointMake(frame.size.width, frame.size.height);
             break;
         case SK_GradientType_uprightTolowLeft:
-            start = CGPointMake(sView.frame.size.width, 0.0);
-            end = CGPointMake(0.0, sView.frame.size.height);
+            start = CGPointMake(frame.size.width, 0.0);
+            end = CGPointMake(0.0, frame.size.height);
             break;
         default:
             break;

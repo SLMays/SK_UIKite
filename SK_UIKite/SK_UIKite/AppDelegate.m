@@ -17,17 +17,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    sleep(1.5f);
     
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[SK_TabBarController alloc] init];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyWindow];
-    
+    //设置主页面
+    [self setRootView];
+
     //设置主题
     [self configTheme];
     
+    //设置启动页
+//    [self setLaunchScreenImg];
+    
     return YES;
+}
+
+-(UIWindow *)window
+{
+    if (!_window) {
+        _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        _window.backgroundColor = [UIColor whiteColor];
+    }
+    return _window;
 }
 
 #pragma mark - 设置主题
@@ -46,6 +55,71 @@
     //启动主题
     [LEETheme startTheme:Theme_Day];
 }
+
+-(void)setRootView
+{
+    self.window.rootViewController = [[SK_TabBarController alloc] init];
+    [self.window makeKeyAndVisible];
+}
+
+#pragma mark - 设置启动页
+-(void)setLaunchScreenImg
+{
+    UIViewController *vc=[[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil]instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    self.lunchV=vc.view;
+    self.lunchV.frame =[UIScreen mainScreen].bounds;
+    [self.window addSubview:self.lunchV];
+    [self.window bringSubviewToFront:self.lunchV];
+    [self loadNetGif];
+    [self start];
+}
+//加载网络GIF
+-(void)loadNetGif{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.lunchV.bounds];
+    NSURL *url = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554358521337&di=786503e1b451f9335e18ca75b2259414&imgtype=0&src=http%3A%2F%2Ftheiphonewalls.com%2Fwp-content%2Fuploads%2F2013%2F02%2FFinal-Fantasy.jpg"];
+    [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"LaunchImage"]];
+    [self.lunchV addSubview:imageView];
+}
+//加载本地GIF
+-(void)loadNativeGif{
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.lunchV.bounds];
+    imgView.contentMode = UIViewContentModeScaleAspectFit;
+    imgView.image = [UIImage imageNamed:@"LaunchImage"];
+    [self.lunchV addSubview:imgView];
+}
+
+-(void)start{
+    __block NSInteger second = 6;//加载时长
+    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, quene);
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"%ld",second);
+            if (second == 0) {
+                [self.lunchV removeFromSuperview];
+                [self setRootView];
+                dispatch_cancel(timer);
+            } else {
+                second--;
+            }
+        });
+    });
+    dispatch_resume(timer);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -81,7 +155,12 @@
 }
 -(void)testDemo
 {
-
+    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneWeak)];
+    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneMonth)];
+    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_ThreeMonths)];
+    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_HalfYear)];
+    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneYear)];
+    
 }
 
 @end

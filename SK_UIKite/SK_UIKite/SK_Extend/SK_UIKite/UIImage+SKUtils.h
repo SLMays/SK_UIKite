@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, directionType) {
 #pragma mark - 生成单一颜色的图片
 +(UIImage *)imageWithColor:(UIColor *)color;
 #pragma mark - 生成渐变颜色的图片
-+(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType addSuperView:(UIView *)sView;
++(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType frame:(CGRect)frame;
 #pragma mark - 图片中心点拉伸
 +(UIImage *)scalingImagWithName:(NSString *)name;
 

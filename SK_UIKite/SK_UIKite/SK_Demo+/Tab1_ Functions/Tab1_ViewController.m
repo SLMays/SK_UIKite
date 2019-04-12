@@ -43,6 +43,8 @@
 //                             @{K_MenuTitle:@"屏幕旋转",K_MenuClass:@"SK_Vertical_ViewController"},
                              @{K_MenuTitle:@"屏幕截屏分享",K_MenuClass:@"Screenshot_ViewController"},
                              @{K_MenuTitle:@"时间转换",K_MenuClass:@"SK_DateTransformation_ViewController"},
+                             @{K_MenuTitle:@"日历时间选择器",K_MenuClass:@"SK_CalendarDateChoose_ViewController"},
+                             @{K_MenuTitle:@"动态更换AppIcon",K_MenuClass:@"SK_ChangeAppIcon_ViewController"},
                              ];
     }
     

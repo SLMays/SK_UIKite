@@ -124,34 +124,34 @@
 /**
  *  初始化
  */
-+(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha
++(UIView*)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha
 {
     UIView * view = [[UIView alloc]initWithFrame:frame];
     [view setBackgroundColor:bgColor];
     view.alpha = alpha;
     return view;
 }
-+(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag
++(UIView*)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag
 {
-    UIView * view = [UIView initWithFrame:frame setBackgroundColor:bgColor alpha:alpha];
+    UIView * view = [UIView initWithFrame:frame backgroundColor:bgColor alpha:alpha];
     view.tag = tag;
     return view;
 }
-+(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX
++(UIView*)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX
 {
-    UIView * view = [UIView initWithFrame:frame setBackgroundColor:bgColor alpha:alpha tag:tag];
+    UIView * view = [UIView initWithFrame:frame backgroundColor:bgColor alpha:alpha tag:tag];
     view.centerX = centerX;
     return view;
 }
-+(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerY:(CGFloat)centerY
++(UIView*)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerY:(CGFloat)centerY
 {
-    UIView * view = [UIView initWithFrame:frame setBackgroundColor:bgColor alpha:alpha tag:tag];
+    UIView * view = [UIView initWithFrame:frame backgroundColor:bgColor alpha:alpha tag:tag];
     view.centerY = centerY;
     return view;
 }
-+(UIView*)initWithFrame:(CGRect)frame setBackgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX centerY:(CGFloat)centerY
++(UIView*)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)bgColor alpha:(CGFloat)alpha tag:(int)tag centerX:(CGFloat)centerX centerY:(CGFloat)centerY
 {
-    UIView * view = [UIView initWithFrame:frame setBackgroundColor:bgColor alpha:alpha tag:tag];
+    UIView * view = [UIView initWithFrame:frame backgroundColor:bgColor alpha:alpha tag:tag];
     view.centerX = centerX;
     view.centerY = centerY;
     return view;

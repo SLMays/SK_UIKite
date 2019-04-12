@@ -42,7 +42,7 @@
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
     
     //修改背景为图片
-    [self.navigationBar setBackgroundImage:[UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(SK_GradientType_leftToRight) addSuperView:self.navigationBar] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setBackgroundImage:[UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(SK_GradientType_leftToRight) frame:self.navigationBar.bounds] forBarMetrics:UIBarMetricsDefault];
 }
 -(void)BackAction
 {

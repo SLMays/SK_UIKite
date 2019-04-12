@@ -42,7 +42,7 @@
     [self.view addSubview:navigationView];
     
     navigationBgView = [[UIImageView alloc]initWithFrame:navigationView.bounds];
-    navigationBgView.image = [UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(SK_GradientType_leftToRight) addSuperView:navigationBgView];
+    navigationBgView.image = [UIImage GradientImageFromColors:@[COLORWITHRGBA(171, 0, 166, 1),COLORWITHRGBA(70, 0, 180, 1)] ByGradientType:(SK_GradientType_leftToRight) frame:navigationBgView.bounds];
     navigationBgView.alpha = 0.0;
     [navigationView addSubview:navigationBgView];
     

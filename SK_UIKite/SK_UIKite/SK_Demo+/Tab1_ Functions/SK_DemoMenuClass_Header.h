@@ -35,6 +35,21 @@
 //时间转换
 #import "SK_DateTransformation_ViewController.h"
 
+//日历时间选择器
+#import "SK_CalendarDateChoose_ViewController.h"
+
+//动态更换AppIcon
+#import "SK_ChangeAppIcon_ViewController.h"
+
+
+
+
+
+
+
 
 //测试时使用的Demo控制器
 #import "SK_Demo_ViewController.h"
+
+
+

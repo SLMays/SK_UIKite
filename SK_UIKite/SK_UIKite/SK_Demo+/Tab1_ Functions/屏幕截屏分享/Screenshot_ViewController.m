@@ -87,7 +87,7 @@
     
     CGFloat imgWidth = Width_Alert-20;
     CGFloat imgHeigth = imgWidth/ScreenRatio_WH;
-    UIView * imgBgView = [UIView initWithFrame:CGRectMake(0, 0, Width_Alert, imgHeigth+20) setBackgroundColor:[UIColor whiteColor] alpha:1.0];
+    UIView * imgBgView = [UIView initWithFrame:CGRectMake(0, 0, Width_Alert, imgHeigth+20) backgroundColor:[UIColor whiteColor] alpha:1.0];
     UIImageView * imgView = [UIImageView initWithFrame:CGRectMake(10, 10, imgWidth, imgHeigth) Image:_mainScreenshot ContentMode:(UIViewContentModeScaleAspectFit) Tag:0 String:nil];
     [imgBgView addSubview:imgView];
     

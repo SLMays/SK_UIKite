@@ -38,7 +38,6 @@ static SK_HTTPClient *singleHTTPClient = nil;
 
 +(void)post:(NSString *)requestHeader
  parameters:(NSDictionary *)parameters
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
     success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
     failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
@@ -95,7 +94,6 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
 
 +(void)get:(NSString *)requestHeader
 parameters:(id)parameters
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
    success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
    failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
@@ -149,7 +147,6 @@ HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
        name:(NSString *)name
    fileName:(NSString *)fileName
    mimeType:(NSString *)mimeType
-HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType
     success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success
     failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
@@ -218,7 +215,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
 }
 
 #pragma mark - 上传多张图片
-+(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType HTTPCachePolicy:(HTTPCachePolicy)HTTPCashPolicyType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
++(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
     
     SK_HTTPClient *manager = [SK_HTTPClient manager];

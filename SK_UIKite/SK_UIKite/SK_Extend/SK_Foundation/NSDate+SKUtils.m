@@ -580,4 +580,97 @@
     return dateStr;
 }
 
++(NSString *)getBeforeDate:(NSString *)nowDate type:(DateBeforeType)type
+{
+    if (nowDate.length<8) {
+        return nil;
+    }
+    long long year = [[nowDate substringToIndex:4] longLongValue];
+    long long month = [[nowDate substringWithRange:NSMakeRange(4, 2)] longLongValue];
+    long long day = [[nowDate substringWithRange:NSMakeRange(6, 2)] longLongValue];
+    
+    switch (type) {
+        case DateBeforeType_OneWeak:
+        {
+            NSInteger totalDays = [self getTotalDays_Month:month Year:year];
+
+            if (day>6) {
+                day-=6;
+            }else{
+                day-=6;
+                if (month>1) {
+                    month--;
+                }else{
+                    month = 12;
+                    year--;
+                }
+                day += totalDays;
+            }
+        }
+            break;
+        case DateBeforeType_OneMonth:
+        case DateBeforeType_ThreeMonths:
+        case DateBeforeType_HalfYear:
+        {
+            NSInteger totalDays = [self getTotalDays_Month:month Year:year];
+            month-=type;
+            if (month<=0) {
+                month += 12;
+                year--;
+            }
+            if (day<totalDays) {
+                day++;
+            }else{
+                day=1;
+                month++;
+                if (month>12) {
+                    month=1;
+                }
+            }
+        }
+            break;
+        case DateBeforeType_OneYear:
+        {
+            NSInteger totalDays = [self getTotalDays_Month:month Year:year];
+            year--;
+            if (day<totalDays) {
+                day++;
+            }else{
+                day=1;
+                month++;
+                if (month>12) {
+                    month=1;
+                }
+            }
+        }
+            break;
+
+        default:
+            break;
+    }
+    
+    NSString * beforeDate = [NSString stringWithFormat:@"%.4lld%.2lld%.2lld",year,month,day];
+        
+    NSLog(@" ---> %@ - %@",beforeDate,nowDate);
+    
+    return beforeDate;
+}
++(NSInteger)getTotalDays_Month:(long long)month Year:(long long)year
+{
+    NSInteger day = 0;
+    
+    if (month==1||month==3||month==5||month==7||month==8||month==10||month==12) {
+        day = 31;
+    }else if (month==4||month==6||month==9||month==11){
+        day = 30;
+    }else{
+        if ((year%100!=0 && year%4==0) || year%400==0) {
+            day = 29;
+        }else{
+            day = 28;
+        }
+    }
+    
+    return day;
+}
 @end

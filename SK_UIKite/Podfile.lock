@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - HexColors (2.2.1)
   - LEETheme (1.1.7)
   - Masonry (1.1.0)
@@ -27,6 +28,9 @@ PODS:
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
+  - SDWebImage/GIF (4.4.1):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
 
@@ -36,11 +40,13 @@ DEPENDENCIES:
   - Masonry
   - ReactiveCocoa (= 2.3.1)
   - SDWebImage
+  - SDWebImage/GIF
   - TSMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FLAnimatedImage
     - HexColors
     - LEETheme
     - Masonry
@@ -50,6 +56,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   LEETheme: e5dc623fe58ee9f2b973e9a7445267e3e972deb4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -57,6 +64,6 @@ SPEC CHECKSUMS:
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: f543fbd02d9e0a53fce218e545e3722098b7a798
+PODFILE CHECKSUM: fc43a31d704696d91c042dc224300816d5c20088
 
 COCOAPODS: 1.6.0
