@@ -40,10 +40,10 @@
 -(GFCalendarView *)calendarView
 {
     if (!_calendarView) {
-        CGFloat width = WIDTH_IPHONE-10;
-        CGFloat height = (0.85 * (width / 7.0)) * 7.4;
-        _calendarView = [[GFCalendarView alloc] initWithFrameOrigin:CGPointMake(5, NOHAVE_TABBAR_HEIGHT-height-5) width:width];
-        
+        int intNum = WIDTH_IPHONE/7;//整数
+        CGFloat width = intNum*7;
+        _calendarView = [[GFCalendarView alloc] initWithFrameOrigin:CGPointMake((WIDTH_IPHONE-width)/2, HEIGHT_IPHONE) width:width];
+        _calendarView.top = NOHAVE_TABBAR_HEIGHT-_calendarView.height;
         // 点击某一天的回调
         SK_WEAKSELF
         [_calendarView setDidSelectDayHandler:^(NSString *startDate, NSString *endDate) {
@@ -74,7 +74,6 @@
 
 -(NSString *)getDateStrBeforDate:(NSString *)newDate type:(NSInteger)type
 {
-    
     
     return @"";
 }

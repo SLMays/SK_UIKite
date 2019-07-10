@@ -134,6 +134,8 @@
 		A44B0BF91FA9D64A001B00FB /* UIButton+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0BF81FA9D64A001B00FB /* UIButton+SKUtils.m */; };
 		A44B0BFC1FA9D662001B00FB /* UICollectionView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0BFB1FA9D662001B00FB /* UICollectionView+SKUtils.m */; };
 		A44B0C021FA9D768001B00FB /* SK_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B0C011FA9D768001B00FB /* SK_ViewController.m */; };
+		A46087F922A64CA00023E0DE /* SK_Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A46087F822A64CA00023E0DE /* SK_Toast.m */; };
+		A46087FD22A654440023E0DE /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46087FB22A654440023E0DE /* LYLUnicode.m */; };
 		A4620B5D202C5044002686ED /* SK_Define.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5C202C5044002686ED /* SK_Define.m */; };
 		A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5F202C568A002686ED /* UIImage+SKUtils.m */; };
 		A4620B7A202C5E44002686ED /* SK_TableView_Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B79202C5E44002686ED /* SK_TableView_Controller.m */; };
@@ -162,7 +164,6 @@
 		A4CDEE332243822B00AAFE04 /* NSDate+GFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE2C2243822B00AAFE04 /* NSDate+GFCalendar.m */; };
 		A4CDEE342243822B00AAFE04 /* GFCalendarMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE2E2243822B00AAFE04 /* GFCalendarMonth.m */; };
 		A4CDEE382243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CDEE372243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m */; };
-		A4DCD0A7225C6A900074F648 /* SK_LaunchScreen_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */; };
 		A4E7791C20BB9A3500B94944 /* SK_TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7791B20BB9A3500B94944 /* SK_TableView.m */; };
 		A4E7DFA520908E7D007E3967 /* SK_SpeechRecognition_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA420908E7D007E3967 /* SK_SpeechRecognition_ViewController.m */; };
 		A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7DFA720909544007E3967 /* UITextView+SKUtils.m */; };
@@ -375,6 +376,10 @@
 		A44B0C001FA9D768001B00FB /* SK_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_ViewController.h; sourceTree = "<group>"; };
 		A44B0C011FA9D768001B00FB /* SK_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_ViewController.m; sourceTree = "<group>"; };
 		A44B0C091FA9D9F1001B00FB /* SK_ExtendHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_ExtendHeader.h; sourceTree = "<group>"; };
+		A46087F722A64CA00023E0DE /* SK_Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_Toast.h; sourceTree = "<group>"; };
+		A46087F822A64CA00023E0DE /* SK_Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SK_Toast.m; sourceTree = "<group>"; };
+		A46087FB22A654440023E0DE /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
+		A46087FC22A654440023E0DE /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		A4620B5A202C4A87002686ED /* SK_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_PrefixHeader.pch; sourceTree = "<group>"; };
 		A4620B5B202C5044002686ED /* SK_Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_Define.h; sourceTree = "<group>"; };
 		A4620B5C202C5044002686ED /* SK_Define.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_Define.m; sourceTree = "<group>"; };
@@ -429,8 +434,6 @@
 		A4CDEE2F2243822B00AAFE04 /* GFCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCalendarView.h; sourceTree = "<group>"; };
 		A4CDEE362243829700AAFE04 /* SK_CalendarDateChoose_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_CalendarDateChoose_ViewController.h; sourceTree = "<group>"; };
 		A4CDEE372243829700AAFE04 /* SK_CalendarDateChoose_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_CalendarDateChoose_ViewController.m; sourceTree = "<group>"; };
-		A4DCD0A4225C6A900074F648 /* SK_LaunchScreen_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_LaunchScreen_ViewController.h; sourceTree = "<group>"; };
-		A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_LaunchScreen_ViewController.m; sourceTree = "<group>"; };
 		A4E7791A20BB9A3500B94944 /* SK_TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TableView.h; sourceTree = "<group>"; };
 		A4E7791B20BB9A3500B94944 /* SK_TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_TableView.m; sourceTree = "<group>"; };
 		A4E7DFA320908E7D007E3967 /* SK_SpeechRecognition_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_SpeechRecognition_ViewController.h; sourceTree = "<group>"; };
@@ -531,6 +534,8 @@
 		A419C3D42118339600301306 /* SK_3rdTools */ = {
 			isa = PBXGroup;
 			children = (
+				A46087FA22A654440023E0DE /* LYLUnicode */,
+				A46087F622A64CA00023E0DE /* ZJToast */,
 				A4CDEE242243822B00AAFE04 /* GFCalendar */,
 				A419C4A42118396D00301306 /* PooCodeView */,
 				A419C3D52118339600301306 /* FixOrientation */,
@@ -1060,6 +1065,24 @@
 			path = SK_Extend;
 			sourceTree = "<group>";
 		};
+		A46087F622A64CA00023E0DE /* ZJToast */ = {
+			isa = PBXGroup;
+			children = (
+				A46087F722A64CA00023E0DE /* SK_Toast.h */,
+				A46087F822A64CA00023E0DE /* SK_Toast.m */,
+			);
+			path = ZJToast;
+			sourceTree = "<group>";
+		};
+		A46087FA22A654440023E0DE /* LYLUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				A46087FB22A654440023E0DE /* LYLUnicode.m */,
+				A46087FC22A654440023E0DE /* LYLUnicode.h */,
+			);
+			path = LYLUnicode;
+			sourceTree = "<group>";
+		};
 		A467A7DF21B7CCDE00DCBBA5 /* 时间转换 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,8 +1155,6 @@
 		A4DCD0A3225C6A6C0074F648 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A4DCD0A4225C6A900074F648 /* SK_LaunchScreen_ViewController.h */,
-				A4DCD0A5225C6A900074F648 /* SK_LaunchScreen_ViewController.m */,
 				A425E5BC225F1E430048C4BD /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
@@ -1341,7 +1362,6 @@
 				A44B0BF91FA9D64A001B00FB /* UIButton+SKUtils.m in Sources */,
 				A419C49A2118341000301306 /* SK_BankCard_ViewController.m in Sources */,
 				A44B0BF31FA9D62A001B00FB /* UITextField+SKUtils.m in Sources */,
-				A4DCD0A7225C6A900074F648 /* SK_LaunchScreen_ViewController.m in Sources */,
 				A44B0BDB1FA9D211001B00FB /* UINavigationController+SKUtils.m in Sources */,
 				A419C44F2118339700301306 /* SK_MD5Encryption.m in Sources */,
 				A44B0BEA1FA9D5AA001B00FB /* UIImageView+SKUtils.m in Sources */,
@@ -1355,6 +1375,7 @@
 				A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */,
 				A44B0BC91FA9D19B001B00FB /* NSObject+SKUtils.m in Sources */,
 				A44B0BD51FA9D1F4001B00FB /* UIViewController+SKUtils.m in Sources */,
+				A46087FD22A654440023E0DE /* LYLUnicode.m in Sources */,
 				A467A7E221B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m in Sources */,
 				A44B0BCF1FA9D1B1001B00FB /* NSDate+SKUtils.m in Sources */,
 				A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */,
@@ -1377,6 +1398,7 @@
 				A419C4592118339700301306 /* UINavigationConfig.m in Sources */,
 				A419C45B2118339700301306 /* UIBarButtonItem+SXCreate.m in Sources */,
 				A4B7D1FD207F5FC200A4312D /* SK_IconFont_ViewController.m in Sources */,
+				A46087F922A64CA00023E0DE /* SK_Toast.m in Sources */,
 				A419C47D2118339700301306 /* XLScanManagerControl.m in Sources */,
 				A419C4722118339700301306 /* ApiClient_IdCardIdentify.m in Sources */,
 				A44B0BC01FA9D162001B00FB /* NSMutableArray+SKUtils.m in Sources */,

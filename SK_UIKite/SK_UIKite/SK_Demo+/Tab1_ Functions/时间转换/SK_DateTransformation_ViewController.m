@@ -33,29 +33,22 @@
 {
     if (!_textView) {
         _textView = [[UITextView alloc]initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, NOHAVE_TABBAR_HEIGHT)];
-        _textView.userInteractionEnabled = NO;
         _textView.font = [UIFont boldSystemFontOfSize:14];
+        _textView.editable = NO;
         
         NSDate * date = [NSDate date];
         NSTimeZone * zone = [NSTimeZone systemTimeZone];
         timeStamp = [NSDate GetTimeStampStrWithDate:date];
         timeStamp = [timeStamp substringToIndex:timeStamp.length-3];
-        NSString * log = [NSString stringWithFormat:@"当前UTC时间：%@\n时间戳：%@\n时区：%@\n\n",date,timeStamp,zone];
+        NSString * log = [NSString stringWithFormat:@"当前UTC时间：%@\n时间戳：%@\n时区：%@\n\n\n",date,timeStamp,zone];
         NSLog(@"%@",log);
         
         timeStr = [[NSMutableString alloc]init];
         [timeStr appendString:log];
         _textView.text = timeStr;
         
-//        if (!isTimeRun) {
-//            isTimeRun = YES;
-//            dispatchTimer(self, 1, ^(dispatch_source_t timer) {
-//                [self refShowTime];
-//                if (!isTimeRun) {
-//                    dispatch_source_cancel(timer);
-//                }
-//            });
-//        }
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(refreshTime)];
+        [_textView addGestureRecognizer:tap];
     }
     return _textView;
 }

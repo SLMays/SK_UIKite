@@ -65,21 +65,21 @@
         case 1:
         {
             NSLog(@"相册/拍照");
-            SK_Toast(@"敬请期待。。");
+            SKToast(@"敬请期待。。");
         }
             break;
 
         case 2:
         {
             NSLog(@"制作GIF");
-            SK_Toast(@"敬请期待。。");
+            SKToast(@"敬请期待。。");
         }
             break;
             
         case 3:
         {
             NSLog(@"保存GIF");
-            SK_Toast(@"敬请期待。。");
+            SKToast(@"敬请期待。。");
         }
             break;
 

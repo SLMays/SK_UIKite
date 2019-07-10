@@ -1,10 +1,12 @@
 {
     "color": {
-        "viewBgColor"           :"#FF7F24",
-        "btnBgColor"            :"#FF7F24",
-        "btnTitColor"           :"#FFFFFF",
-        "btnTitHightColor"      :"#1E90FF",
-        "labTextColor"          :"#000000",
+        "Color_363636_FF7F24":"#FF7F24",
+        "Color_CFCFCF_FFFFFF":"#FFFFFF",
+        "Color_FFFF00_1E90FF":"#1E90FF",
+        "Color_CFCFCF_000000":"#000000",
+        "Color_C2D8E4_FFFFFF":"#FFFFFF",
+        "Color_152C45_FFFFFF":"#FFFFFF",
+        "Color_C2D8E4_333333":"#333333",
     },
     
     "image": {

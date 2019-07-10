@@ -72,7 +72,8 @@ _Pragma("clang diagnostic pop") \
 #define SK_WEAKSELF    __weak __typeof(&*self)_weakSelf = self;
 
 #pragma mark - Toast提示
-#define SK_Toast(Msg)  if (STRING_IS_NOT_EMPTY(Msg)) {[[UIViewController currentViewController].view makeToast:Msg];};
+#define SKToast(Msg)  SK_TOAST_SHOW_BOTTOM(Msg)
+#define SKToast_Error(error)  SKToast([SK_HTTPClient getErrorContentWith:error])
 
 #pragma mark - Cell的两种实例化方法
 #define CELL_NAME(UITableViewCell,identStr,color)     static NSString *identifier = identStr;\
@@ -94,10 +95,6 @@ cell.backgroundColor = color;\
 //key宏
 #define K_MenuTitle @"Title"
 #define K_MenuClass @"Class"
-
-
-#define K_UserDefaults_LaunchScreenVersion  @"LaunchScreenVersion"
-
 
 //卡片长宽比
 #define K_CARDRATIO (85.6/54.0)

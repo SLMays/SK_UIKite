@@ -10,10 +10,11 @@
 #import "GFCalendarMonth.h"
 #import "NSDate+GFCalendar.h"
 
-#define TodayColor          [UIColor blueColor]
-#define SelectColor         [UIColor redColor]
-#define IntersectionColor   [UIColor yellowColor]
-
+#define TodayColor          [UIColor colorWithHexString:([[LEETheme currentThemeTag] isEqualToString:Theme_Night]?@"4a647a":@"#e1e1e1") andAlpha:1.0]
+#define HighLightColor      [UIColor colorWithHexString:@"#ffffff" andAlpha:1.0]//选中日期字体颜色
+#define SelectColor         [UIColor colorWithHexString:([[LEETheme currentThemeTag] isEqualToString:Theme_Night]?@"152c45":@"0088ff") andAlpha:1.0]//选中日期背景色
+#define IntersectionColor   ([[LEETheme currentThemeTag] isEqualToString:Theme_Night]?[UIColor colorWithHexString:@"#33e0f7" andAlpha:0.14]:[UIColor colorWithHexString:@"#8bc4f5" andAlpha:1.0])
+#define SelectBorderColor   ([[LEETheme currentThemeTag] isEqualToString:Theme_Night]?[UIColor colorWithHexString:@"33e0f7" andAlpha:1.0]:[UIColor clearColor])//选中日期边框色
 
 @interface GFCalendarScrollView() <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -107,21 +108,21 @@ static NSString *const kCellIdentifier = @"cell";
     _collectionViewL = [[UICollectionView alloc] initWithFrame:CGRectMake(0.0, 0.0, selfWidth, selfHeight) collectionViewLayout:flowLayout];
     _collectionViewL.dataSource = self;
     _collectionViewL.delegate = self;
-    _collectionViewL.backgroundColor = [UIColor whiteColor];
+    _collectionViewL.lee_theme.LeeConfigBackgroundColor(Color_152C45_FFFFFF);
     [_collectionViewL registerClass:[GFCalendarCell class] forCellWithReuseIdentifier:kCellIdentifier];
     [self addSubview:_collectionViewL];
     
     _collectionViewM = [[UICollectionView alloc] initWithFrame:CGRectMake(selfWidth, 0.0, selfWidth, selfHeight) collectionViewLayout:flowLayout];
     _collectionViewM.dataSource = self;
     _collectionViewM.delegate = self;
-    _collectionViewM.backgroundColor = [UIColor whiteColor];
+    _collectionViewM.lee_theme.LeeConfigBackgroundColor(Color_152C45_FFFFFF);
     [_collectionViewM registerClass:[GFCalendarCell class] forCellWithReuseIdentifier:kCellIdentifier];
     [self addSubview:_collectionViewM];
     
     _collectionViewR = [[UICollectionView alloc] initWithFrame:CGRectMake(2 * selfWidth, 0.0, selfWidth, selfHeight) collectionViewLayout:flowLayout];
     _collectionViewR.dataSource = self;
     _collectionViewR.delegate = self;
-    _collectionViewR.backgroundColor = [UIColor whiteColor];
+    _collectionViewR.lee_theme.LeeConfigBackgroundColor(Color_152C45_FFFFFF);
     [_collectionViewR registerClass:[GFCalendarCell class] forCellWithReuseIdentifier:kCellIdentifier];
     [self addSubview:_collectionViewR];
 }
@@ -178,7 +179,6 @@ static NSString *const kCellIdentifier = @"cell";
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     GFCalendarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
-    
     if (collectionView == _collectionViewL) {
         
         GFCalendarMonth *monthInfo = self.monthArray[0];
@@ -193,7 +193,7 @@ static NSString *const kCellIdentifier = @"cell";
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
-            cell.todayLabel.textColor = [UIColor darkTextColor];
+            cell.todayLabel.lee_theme.LeeConfigTextColor(Color_C2D8E4_333333);
             
             // 标识今天
             if ((monthInfo.month == [[NSDate date] dateMonth]) && (monthInfo.year == [[NSDate date] dateYear])) {
@@ -211,18 +211,22 @@ static NSString *const kCellIdentifier = @"cell";
             
             day = [cell.todayLabel.text longLongValue];
             NSString * date = [NSString stringWithFormat:@"%.4ld%.2ld%.2ld",year,month,day];
-            if (self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
+            if (self.startDataNum != self.endDataNum && self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
                 cell.leftBgView.backgroundColor = IntersectionColor;
                 cell.rightBgView.backgroundColor = IntersectionColor;
             }
             if ([date longLongValue]==self.startDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
-                if (self.endDataNum!=0) {
+                cell.todayLabel.bColor = SelectBorderColor;
+                if (self.endDataNum!=0 && self.startDataNum != self.endDataNum) {
                     cell.rightBgView.backgroundColor = IntersectionColor;
                 }
             }
-            if ([date longLongValue]==self.endDataNum) {
+            if ([date longLongValue]==self.endDataNum && self.startDataNum != self.endDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
+                cell.todayLabel.bColor = SelectBorderColor;
                 cell.leftBgView.backgroundColor = IntersectionColor;
             }
         }else{
@@ -250,7 +254,7 @@ static NSString *const kCellIdentifier = @"cell";
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
-            cell.todayLabel.textColor = [UIColor darkTextColor];
+            cell.todayLabel.lee_theme.LeeConfigTextColor(Color_C2D8E4_333333);
             cell.userInteractionEnabled = YES;
 
             // 标识今天
@@ -270,18 +274,22 @@ static NSString *const kCellIdentifier = @"cell";
             
             day = [cell.todayLabel.text longLongValue];
             NSString * date = [NSString stringWithFormat:@"%.4ld%.2ld%.2ld",year,month,day];
-            if (self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
+            if (self.startDataNum != self.endDataNum && self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
                 cell.leftBgView.backgroundColor = IntersectionColor;
                 cell.rightBgView.backgroundColor = IntersectionColor;
             }
             if ([date longLongValue]==self.startDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
-                if (self.endDataNum!=0) {
+                cell.todayLabel.bColor = SelectBorderColor;
+                if (self.endDataNum!=0 && self.startDataNum != self.endDataNum) {
                     cell.rightBgView.backgroundColor = IntersectionColor;
                 }
             }
-            if ([date longLongValue]==self.endDataNum) {
+            if ([date longLongValue]==self.endDataNum && self.startDataNum != self.endDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
+                cell.todayLabel.bColor = SelectBorderColor;
                 cell.leftBgView.backgroundColor = IntersectionColor;
             }
         }else{
@@ -307,7 +315,7 @@ static NSString *const kCellIdentifier = @"cell";
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
             
             cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
-            cell.todayLabel.textColor = [UIColor darkTextColor];
+            cell.todayLabel.lee_theme.LeeConfigTextColor(Color_C2D8E4_333333);
             
             // 标识今天
             if ((monthInfo.month == [[NSDate date] dateMonth]) && (monthInfo.year == [[NSDate date] dateYear])) {
@@ -326,18 +334,22 @@ static NSString *const kCellIdentifier = @"cell";
             
             day = [cell.todayLabel.text longLongValue];
             NSString * date = [NSString stringWithFormat:@"%.4ld%.2ld%.2ld",year,month,day];
-            if (self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
+            if (self.startDataNum != self.endDataNum && self.startDataNum>0 && self.endDataNum>0 && [date longLongValue]>self.startDataNum && [date longLongValue]<self.endDataNum) {
                 cell.leftBgView.backgroundColor = IntersectionColor;
                 cell.rightBgView.backgroundColor = IntersectionColor;
             }
             if ([date longLongValue]==self.startDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
-                if (self.endDataNum!=0) {
+                cell.todayLabel.bColor = SelectBorderColor;
+                if (self.endDataNum!=0 && self.startDataNum != self.endDataNum) {
                     cell.rightBgView.backgroundColor = IntersectionColor;
                 }
             }
-            if ([date longLongValue]==self.endDataNum) {
+            if ([date longLongValue]==self.endDataNum && self.startDataNum != self.endDataNum) {
+                cell.todayLabel.textColor = HighLightColor;
                 cell.todayLabel.backgroundColor = SelectColor;
+                cell.todayLabel.bColor = SelectBorderColor;
                 cell.leftBgView.backgroundColor = IntersectionColor;
             }
         }else{
@@ -378,7 +390,7 @@ static NSString *const kCellIdentifier = @"cell";
         if (self.startDate.length!=0 && self.endDate.length==0){
             self.endDate = [NSString stringWithFormat:@"%.4ld%.2ld%.2ld",(long)year,(long)month,(long)day];
             self.endDataNum = [self.endDate longLongValue];
-            if (self.endDataNum<=self.startDataNum) {
+            if (self.endDataNum<self.startDataNum) {
                 self.startDate = [NSString stringWithFormat:@"%.4ld%.2ld%.2ld",(long)year,(long)month,(long)day];
                 self.startDataNum = [self.startDate longLongValue];
                 self.endDate = @"";
@@ -476,7 +488,7 @@ static NSString *const kCellIdentifier = @"cell";
     [self notifyToChangeCalendarHeader];
     
 }
-- (void)refreshSelectDate_stratDateNum:(long)startDateNum endDateNum:(long)endDateNum
+- (void)refreshSelectDate_stratDateNum:(long long)startDateNum endDateNum:(long long)endDateNum
 {
     self.startDataNum = startDateNum;
     self.endDataNum = endDateNum;

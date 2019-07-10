@@ -46,9 +46,9 @@ typedef void (^DidSelectDayHandler)(NSString * startDate, NSString * endDate);
 /**
  选中时间段后刷新日历
 
- @param startDateNum 开始日期   20190301
- @param endDateNum 结束日期     20190331
+ @param startDateNum 开始日期   yyyyMMdd
+ @param endDateNum 结束日期     yyyyMMdd
  */
-- (void)refreshSelectDate_stratDateNum:(long)startDateNum endDateNum:(long)endDateNum;
+- (void)refreshSelectDate_stratDateNum:(long long)startDateNum endDateNum:(long long)endDateNum;
 
 @end

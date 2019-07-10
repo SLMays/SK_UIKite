@@ -107,13 +107,4 @@ parameters:(id)parameters
  */
 +(NSString *)getErrorContentWith:(NSError *)error;
 
-/**
- *  sign加密
- *
- *  @param header 请求连接
- *
- *  @return 加密后字符串
- */
-+(NSString *)GetJiaMiWithRequestHeader:(NSString *)header;
-
 @end

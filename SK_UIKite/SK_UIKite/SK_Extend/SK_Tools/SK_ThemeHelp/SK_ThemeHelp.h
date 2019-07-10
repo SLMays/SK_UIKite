@@ -11,7 +11,49 @@
 #define Theme_Day       @"Day"
 #define Theme_Night     @"Night"
 
+
+//颜色
+#define Color_363636_FF7F24     @"Color_363636_FF7F24"
+#define Color_CFCFCF_FFFFFF     @"Color_CFCFCF_FFFFFF"
+#define Color_FFFF00_1E90FF     @"Color_FFFF00_1E90FF"
+#define Color_CFCFCF_000000     @"Color_CFCFCF_000000"
+#define Color_C2D8E4_FFFFFF     @"Color_C2D8E4_FFFFFF"
+#define Color_152C45_FFFFFF     @"Color_152C45_FFFFFF"
+#define Color_C2D8E4_333333     @"Color_C2D8E4_333333"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @interface SK_ThemeHelp : NSObject
+
+
+
+
+
+
+
 
 +(SK_ThemeHelp *)sharedInstance;
 -(NSString *)GetThemeJson_Key:(NSString *)key;

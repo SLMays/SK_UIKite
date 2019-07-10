@@ -14,4 +14,7 @@
 +(NSString *)GetURLStringWithDictionary:(NSDictionary *)dict;
 +(NSString *)GetJsonStrWithDictionary:(NSDictionary *)dict;
 
+//获取LaunchImage
++ (NSString *)getLaunchImageName;
+
 @end

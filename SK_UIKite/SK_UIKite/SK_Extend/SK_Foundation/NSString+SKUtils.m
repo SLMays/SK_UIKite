@@ -51,5 +51,23 @@
     return mutStr;
     
 }
+//获取LaunchImage
++ (NSString *)getLaunchImageName
+{
+    CGSize viewSize = [UIScreen mainScreen].bounds.size;
+    // 竖屏
+    NSString *viewOrientation = @"Portrait";
+    NSString *launchImageName = nil;
+    NSArray* imagesDict = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
+    for (NSDictionary* dict in imagesDict)
+    {
+        CGSize imageSize = CGSizeFromString(dict[@"UILaunchImageSize"]);
+        if (CGSizeEqualToSize(imageSize, viewSize) && [viewOrientation isEqualToString:dict[@"UILaunchImageOrientation"]])
+        {
+            launchImageName = dict[@"UILaunchImageName"];
+        }
+    }
+    return launchImageName;
+}
 
 @end

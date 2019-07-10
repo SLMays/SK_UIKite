@@ -95,7 +95,7 @@
     [alertView setContainerView:imgBgView];
     [alertView setButtonTitles:@[@"分享", @"取消"]];
     [alertView setButtonTags:@[@(1),@(0)]];
-    [alertView setButtonBgColors:@[AlertBtnBgColor_Confirm,AlertBtnBgColor_Cancel]];
+    [alertView setButtonBgColors:@[AlertColor_363636_FF7F24_Confirm,AlertColor_363636_FF7F24_Cancel]];
     [alertView setOnButtonTouchUpInside:^(SK_AlertView *alertView, int buttonIndex) {
         [alertView close];
         if (buttonIndex) {

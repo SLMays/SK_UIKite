@@ -17,7 +17,7 @@
 
 @end
 
-#define kDefaultCalendarBasicColor [UIColor colorWithRed:231.0 / 255.0 green:85.0 / 255.0 blue:85.0 / 255.0 alpha:1.0]
+#define kDefaultCalendarBasicColor [UIColor colorWithHexString:([[LEETheme currentThemeTag] isEqualToString:Theme_Night]?@"0c1c2b":@"0088ff") andAlpha:1.0]
 
 @implementation GFCalendarView
 
@@ -34,7 +34,7 @@
     CGFloat weekHeaderHeight = 0.6 * weekLineHight;
     
     // calendar 头部栏高度
-    CGFloat calendarHeaderHeight = 0.8 * weekLineHight;
+    CGFloat calendarHeaderHeight = 1.2 * weekLineHight;
     
     // 最后得到整个 calender 控件的高度
     _calendarHeight = calendarHeaderHeight + weekHeaderHeight + monthHeight;
@@ -75,7 +75,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
     button.backgroundColor = self.calendarBasicColor;
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.lee_theme.LeeConfigButtonTitleColor(Color_C2D8E4_FFFFFF, UIControlStateNormal);
     button.titleLabel.font = [UIFont systemFontOfSize:16.0];
     [button addTarget:self action:@selector(refreshToCurrentMonthAction:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -96,7 +96,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(i * width, 0.0, width, height)];
         label.backgroundColor = [UIColor clearColor];
         label.text = weekArray[i];
-        label.textColor = [UIColor whiteColor];
+        label.lee_theme.LeeConfigTextColor(Color_C2D8E4_FFFFFF);
         label.font = [UIFont systemFontOfSize:13.5];
         label.textAlignment = NSTextAlignmentCenter;
         [view addSubview:label];
@@ -140,7 +140,7 @@
     NSInteger year = [[NSDate date] dateYear];
     NSInteger month = [[NSDate date] dateMonth];
     
-    NSString *title = [NSString stringWithFormat:@"%ld年%ld月", year, month];
+    NSString *title = [NSString stringWithFormat:@"%ld年%ld月", (long)year, (long)month];
     
     [_calendarHeaderButton setTitle:title forState:UIControlStateNormal];
     
@@ -160,7 +160,7 @@
     [_calendarHeaderButton setTitle:title forState:UIControlStateNormal];
 }
 
-- (void)refreshSelectDate_stratDateNum:(long)startDateNum endDateNum:(long)endDateNum
+- (void)refreshSelectDate_stratDateNum:(long long)startDateNum endDateNum:(long long)endDateNum
 {
     [self.calendarScrollView refreshSelectDate_stratDateNum:startDateNum endDateNum:endDateNum];
 }

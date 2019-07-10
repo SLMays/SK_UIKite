@@ -11,8 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define AlertBtnBgColor_Confirm     [UIColor colorWithHexString:@"#ffa510"]
-#define AlertBtnBgColor_Cancel      [UIColor colorWithHexString:@"#ffb707"]
+#define AlertColor_363636_FF7F24_Confirm     [UIColor colorWithHexString:@"#ffa510"]
+#define AlertColor_363636_FF7F24_Cancel      [UIColor colorWithHexString:@"#ffb707"]
 #define AlertBGColor                [UIColor colorWithHexString:@"#ffb707"]
 #define AlertIDCardBorderColor      [UIColor colorWithHexString:@"#0c0c16"]
 #define AlertTransferBorderColor    [UIColor colorWithHexString:@"#b5b5b5"]

@@ -38,7 +38,7 @@
         [self.view addSubview:btn];
     }
     
-    UIButton * restoreBtn = [UIButton initWithFrame:CGRectMake(0, NOHAVE_TABBAR_HEIGHT-45, WIDTH_IPHONE, 45) title:@"还原" titleColor:@"btnTitColor" titleFont:[UIFont boldSystemFontOfSize:20] bgColor:@"btnBgColor" target:self action:@selector(restoreAppIcon) tag:10];
+    UIButton * restoreBtn = [UIButton initWithFrame:CGRectMake(0, NOHAVE_TABBAR_HEIGHT-45, WIDTH_IPHONE, 45) title:@"还原" titleColor:Color_CFCFCF_FFFFFF titleFont:[UIFont boldSystemFontOfSize:20] bgColor:Color_363636_FF7F24 target:self action:@selector(restoreAppIcon) tag:10];
     [self.view addSubview:restoreBtn];
 }
 

@@ -95,7 +95,7 @@
     }
     else {
         [self dismissViewControllerAnimated:YES completion:nil];
-        SK_Toast(@"打开相机失败");
+        SKToast(@"打开相机失败");
     }
     SK_WEAKSELF
     [self.cameraManager.idCardScanSuccess subscribeNext:^(id x) {
@@ -108,7 +108,7 @@
     }];
     [self.cameraManager.scanError subscribeNext:^(id x) {
         [self dismissViewControllerAnimated:YES completion:nil];
-        SK_Toast(@"扫描出错了-.-");
+        SKToast(@"扫描出错了-.-");
     }];
 }
 

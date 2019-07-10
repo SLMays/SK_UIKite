@@ -27,7 +27,7 @@
     UIView * view = [UIView initWithFrame:CGRectMake(0, 20, WIDTH_IPHONE/2, 100) backgroundColor:RandomColor alpha:1.0 tag:1 centerX:WIDTH_IPHONE/2];
     [self.view addSubview:view];
 
-    view.lee_theme.LeeConfigBackgroundColor(@"viewBgColor");
+    view.lee_theme.LeeConfigBackgroundColor(Color_363636_FF7F24);
     
     UIButton * button = [UIButton initWithFrame:CGRectMake(40, view.bottom+20, WIDTH_IPHONE-80, 100) Title:@"" TitleColor:nil BgColor:nil Image:nil BgImage:nil Target:self Action:@selector(buttonClick:) ForControlEvents:UIControlEventTouchDown Tag:2];
     [button setTitle:@"有本事你点我啊！" forState:UIControlStateNormal];
@@ -35,15 +35,15 @@
     [self.view addSubview:button];
     
     button.lee_theme
-    .LeeConfigBackgroundColor(@"btnBgColor")
-    .LeeConfigButtonTitleColor(@"btnTitColor", UIControlStateNormal)
-    .LeeConfigButtonTitleColor(@"btnTitHightColor", UIControlStateHighlighted);
+    .LeeConfigBackgroundColor(Color_363636_FF7F24)
+    .LeeConfigButtonTitleColor(Color_CFCFCF_FFFFFF, UIControlStateNormal)
+    .LeeConfigButtonTitleColor(Color_FFFF00_1E90FF, UIControlStateHighlighted);
     
     
     UILabel * label = [UILabel initWithFrame:CGRectMake(0, button.bottom+20, WIDTH_IPHONE, 30) Title:@"我是一个 Label 啊" TitleColor:nil BgColor:nil Font:[UIFont boldSystemFontOfSize:20] TextAlignment:NSTextAlignmentCenter Tag:3];
     [self.view addSubview:label];
     
-    label.lee_theme.LeeConfigTextColor(@"labTextColor");
+    label.lee_theme.LeeConfigTextColor(Color_CFCFCF_000000);
     
 }
 

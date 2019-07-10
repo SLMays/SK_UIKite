@@ -25,7 +25,7 @@
     [self configTheme];
     
     //设置启动页
-//    [self setLaunchScreenImg];
+    [self setLaunchScreenImg];
     
     return YES;
 }
@@ -89,13 +89,13 @@
 }
 
 -(void)start{
-    __block NSInteger second = 6;//加载时长
+    __block NSInteger second = 3;//加载时长
     dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, quene);
     dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(timer, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"%ld",second);
+            NSLog(@"%ld",(long)second);
             if (second == 0) {
                 [self.lunchV removeFromSuperview];
                 [self setRootView];
@@ -107,17 +107,6 @@
     });
     dispatch_resume(timer);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -148,19 +137,65 @@
 }
 
 
+
 //可以用来做测试方法用
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
     if ([touches.anyObject locationInView:nil].y > Height_StatusBar) return;
-    [self testDemo];
-}
--(void)testDemo
-{
-    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneWeak)];
-    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneMonth)];
-    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_ThreeMonths)];
-    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_HalfYear)];
-    [NSDate getBeforeDate:@"20010228" type:(DateBeforeType_OneYear)];
     
+    if ([touches.anyObject locationInView:nil].x<=(WIDTH_IPHONE/2)) {
+        [self testLeftDemo];
+    }else{
+        [self testrRightDemo];
+    }
+}
+
+#define loginUser   @"I9aq8FrwoAK7qMrbDYP3Eg=="
+-(void)testLeftDemo
+{
+    static int i = 0;
+    NSString * gname = [NSString stringWithFormat:@"%d",i++];
+    
+    NSString * post = [NSString stringWithFormat:@"http://st.lovestockhome.com/st-app/userStockGroup/addUserStockGroup?&version=MM_IOS_V1.0_181211&groupName=%@&order=0&loginUser=%@&alias=Simulator&onlyid=720D03DF-14C8-4CE5-9764-E1B4F25D5081",gname,loginUser];
+    
+    [SK_HTTPClient post:post
+             parameters:nil
+                success:^(NSURLSessionDataTask *operation, id responseObject, BOOL isOK) {
+                    SKToast(responseObject[@"msg"]);
+                    NSLog(@"%@",responseObject);
+                    [self loadData_ALl];
+                } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                    SKToast_Error(error);
+                }];
+}
+-(void)testrRightDemo
+{
+    static int i = 530;
+    NSString * gid = [NSString stringWithFormat:@"%d",i++];
+    
+    NSString * post = [NSString stringWithFormat:@"http://st.lovestockhome.com/st-app/userStockGroup/delUserStockGroup?&id=%@&alias=Simulator&loginUser=%@&onlyid=720D03DF-14C8-4CE5-9764-E1B4F25D5081&version=MM_IOS_V1.0_181211",gid,loginUser];
+
+    [SK_HTTPClient post:post
+             parameters:nil
+                success:^(NSURLSessionDataTask *operation, id responseObject, BOOL isOK) {
+                    SKToast(responseObject[@"msg"]);
+                    [self loadData_ALl];
+                } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                    SKToast_Error(error);
+                }];
+}
+
+-(void)loadData_ALl
+{
+    NSString * post = [NSString stringWithFormat:@"http://st.lovestockhome.com/st-app/userStockGroup/queryUserStockGroup?&version=MM_IOS_V1.0_181211&groupName=&loginUser=%@&alias=Simulator&queryType=2&onlyid=720D03DF-14C8-4CE5-9764-E1B4F25D5081",loginUser];
+    
+    [SK_HTTPClient post:post
+             parameters:nil
+                success:^(NSURLSessionDataTask *operation, id responseObject, BOOL isOK) {
+                    SKToast(responseObject[@"msg"]);
+                    NSLog(@"%@",responseObject);
+                } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+                    SKToast_Error(error);
+                }];
 }
 
 @end

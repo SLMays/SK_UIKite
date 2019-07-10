@@ -107,7 +107,6 @@ parameters:(id)parameters
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     NSMutableString * sginRequestHeader = [[NSMutableString alloc]initWithString:requestHeader];
-    [sginRequestHeader appendFormat:@"&sign=%@",[self GetJiaMiWithRequestHeader:requestHeader]];
     
     if (LogURL) {
         NSLog(@"____http 请求____\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n%@\n________",sginRequestHeader);
@@ -296,52 +295,418 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         return @"网络有问题,请检查网络";
     }
     
-    NSLog(@"\n错误信息:  %@",error);
-    
-    // -1001: request timeout
-    // -1002: unsupported URL
-    // -1003: cannot find host
-    // -1004: cannot connect to host
-    // -1005: network connection lost
-    // -1006: DNS lookup failed
-    // -1008: resource unavailable
-    // -1009: not connected to internet
-    
     switch (errorCode) {
-        case -999:
-            errorContent = @"请求被取消";
+        case NSURLErrorUnknown:
+        {
+            errorContent = @"未知Error";
+        }
             break;
-        case -1001:
-            errorContent = @"网络不稳定，请重新刷新";
+        case kCFHostErrorHostNotFound:
+        {
+            errorContent = @"Indicates that the DNS lookup failed.";
+        }
             break;
-        case -1002:
-            errorContent = @"不支持的URL";
+        case kCFHostErrorUnknown:
+        {
+            errorContent = @"An unknown error occurred (a name server failure, for example). For additional information, query the kCFGetAddrInfoFailureKey to get the value returned from getaddrinfo; lookup in netdb.h.";
+        }
             break;
-        case -1003:
-            errorContent = @"找不到服务器";
+        case kCFSOCKSErrorUnknownClientVersion:
+        {
+            errorContent = @"The SOCKS server rejected access because it does not support connections with the requested SOCKS version.Query kCFSOCKSStatusCodeKey to recover the status code returned by the server.";
+        }
             break;
-        case -1004:
-            errorContent = @"无法连接到服务器";
+        case kCFSOCKSErrorUnsupportedServerVersion:
+        {
+            errorContent = @"The version of SOCKS requested by the server is not supported. Query kCFSOCKSStatusCodeKey to recover the status code returned by the server.";
+        }
             break;
-        case -1005:
-            errorContent = @"网络连接丢失";
+        case kCFSOCKS4ErrorRequestFailed:
+        {
+            errorContent = @"Request rejected or failed by the server.";
+        }
             break;
-        case -1006:
-            errorContent = @"DNS查找失败";
+        case kCFSOCKS4ErrorIdentdFailed:
+        {
+            errorContent = @"Request rejected because SOCKS server cannot connect to identd on the client.";
+        }
             break;
-        case -1009:
-            errorContent = @"没有连接到互联网";
+        case kCFSOCKS4ErrorIdConflict:
+        {
+            errorContent = @"Request rejected because the client program and identd report different user-ids.";
+        }
             break;
-        case -1011:
-            errorContent = @"服务器异常";
+        case kCFSOCKS4ErrorUnknownStatusCode:
+        {
+            errorContent = @"The status code returned by the server is unknown.";
+        }
+            break;
+        case kCFSOCKS5ErrorBadState:
+        {
+            errorContent = @"The stream is not in a state that allows the requested operation.";
+        }
+            break;
+        case kCFSOCKS5ErrorBadResponseAddr:
+        {
+            errorContent = @"The address type returned is not supported.";
+        }
+            break;
+        case kCFSOCKS5ErrorBadCredentials:
+        {
+            errorContent = @"The SOCKS server refused the client connection because of bad login credentials.";
+        }
+            break;
+        case kCFSOCKS5ErrorUnsupportedNegotiationMethod:
+        {
+            errorContent = @"The requested method is not supported. Query kCFSOCKSNegotiationMethodKey to find the method requested.";
+        }
+            break;
+        case kCFSOCKS5ErrorNoAcceptableMethod:
+        {
+            errorContent = @"The client and server could not find a mutually agreeable authentication method.";
+        }
+            break;
+        case kCFFTPErrorUnexpectedStatusCode:
+        {
+            errorContent = @"The server returned an unexpected status code. Query the kCFFTPStatusCodeKey to get the status code returned by the server";
+        }
+            break;
+        case kCFErrorHTTPAuthenticationTypeUnsupported:
+        {
+            errorContent = @"The client and server could not agree on a supported authentication type.";
+        }
+            break;
+        case kCFErrorHTTPBadCredentials:
+        {
+            errorContent = @"The credentials provided for an authenticated connection were rejected by the server.";
+        }
+            break;
+        case kCFErrorHTTPConnectionLost:
+        {
+            errorContent = @"The connection to the server was dropped. This usually indicates a highly overloaded server.";
+        }
+            break;
+        case kCFErrorHTTPParseFailure:
+        {
+            errorContent = @"The HTTP server response could not be parsed.";
+        }
+            break;
+        case kCFErrorHTTPRedirectionLoopDetected:
+        {
+            errorContent = @"Too many HTTP redirects occurred before reaching a page that did not redirect the client to another page. This usually indicates a redirect loop.";
+        }
+            break;
+        case kCFErrorHTTPBadURL:
+        {
+            errorContent = @"The requested URL could not be retrieved.";
+        }
+            break;
+        case kCFErrorHTTPProxyConnectionFailure:
+        {
+            errorContent = @"A connection could not be established to the HTTP proxy.";
+        }
+            break;
+        case kCFErrorHTTPBadProxyCredentials:
+        {
+            errorContent = @"The authentication credentials provided for logging into the proxy were rejected.";
+        }
+            break;
+        case kCFErrorPACFileError:
+        {
+            errorContent = @"An error occurred with the proxy autoconfiguration file.";
+        }
+            break;
+        case kCFErrorPACFileAuth:
+        {
+            errorContent = @"The authentication credentials provided by the proxy autoconfiguration file were rejected.";
+        }
+            break;
+        case kCFErrorHTTPSProxyConnectionFailure:
+        {
+            errorContent = @"A connection could not be established to the HTTPS proxy.";
+        }
+            break;
+        case kCFStreamErrorHTTPSProxyFailureUnexpectedResponseToCONNECTMethod:
+        {
+            errorContent = @"The HTTPS proxy returned an unexpected status code, such as a 3xx redirect.";
+        }
+            break;
+        case kCFURLErrorUnknown:
+        {
+            errorContent = @"An unknown error occurred.";
+        }
+            break;
+        case kCFURLErrorCancelled:
+        {
+            errorContent = @"The connection was cancelled.";
+        }
+            break;
+        case kCFURLErrorBadURL:
+        {
+            errorContent = @"The connection failed due to a malformed URL.";
+        }
+            break;
+        case kCFURLErrorTimedOut:
+        {
+            errorContent = @"The connection timed out.";
+        }
+            break;
+        case kCFURLErrorUnsupportedURL:
+        {
+            errorContent = @"The connection failed due to an unsupported URL scheme.";
+        }
+            break;
+        case kCFURLErrorCannotFindHost:
+        {
+            errorContent = @"The connection failed because the host could not be found.";
+        }
+            break;
+        case kCFURLErrorCannotConnectToHost:
+        {
+            errorContent = @"The connection failed because a connection cannot be made to the host.";
+        }
+            break;
+        case kCFURLErrorNetworkConnectionLost:
+        {
+            errorContent = @"The connection failed because the network connection was lost.";
+        }
+            break;
+        case kCFURLErrorDNSLookupFailed:
+        {
+            errorContent = @"The connection failed because the DNS lookup failed.";
+        }
+            break;
+        case kCFURLErrorHTTPTooManyRedirects:
+        {
+            errorContent = @"The HTTP connection failed due to too many redirects.";
+        }
+            break;
+        case kCFURLErrorResourceUnavailable:
+        {
+            errorContent = @"The connection’s resource is unavailable.";
+        }
+            break;
+        case kCFURLErrorNotConnectedToInternet:
+        {
+            errorContent = @"The connection failed because the device is not connected to the internet.";
+        }
+            break;
+        case kCFURLErrorRedirectToNonExistentLocation:
+        {
+            errorContent = @"The connection was redirected to a nonexistent location.";
+        }
+            break;
+        case kCFURLErrorBadServerResponse:
+        {
+            errorContent = @"The connection received an invalid server response.";
+        }
+            break;
+        case kCFURLErrorUserCancelledAuthentication:
+        {
+            errorContent = @"The connection failed because the user cancelled required authentication.";
+        }
+            break;
+        case kCFURLErrorUserAuthenticationRequired:
+        {
+            errorContent = @"The connection failed because authentication is required.";
+        }
+            break;
+        case kCFURLErrorZeroByteResource:
+        {
+            errorContent = @"The resource retrieved by the connection is zero bytes.";
+        }
+            break;
+        case kCFURLErrorCannotDecodeRawData:
+        {
+            errorContent = @"The connection cannot decode data encoded with a known content encoding.";
+        }
+            break;
+        case kCFURLErrorCannotDecodeContentData:
+        {
+            errorContent = @"The connection cannot decode data encoded with an unknown content encoding.";
+        }
+            break;
+        case kCFURLErrorCannotParseResponse:
+        {
+            errorContent = @"The connection cannot parse the server’s response.";
+        }
+            break;
+        case kCFURLErrorInternationalRoamingOff:
+        {
+            errorContent = @"The connection failed because international roaming is disabled on the device.";
+        }
+            break;
+        case kCFURLErrorCallIsActive:
+        {
+            errorContent = @"The connection failed because a call is active.";
+        }
+            break;
+        case kCFURLErrorDataNotAllowed:
+        {
+            errorContent = @"The connection failed because data use is currently not allowed on the device.";
+        }
+            break;
+        case kCFURLErrorRequestBodyStreamExhausted:
+        {
+            errorContent = @"The connection failed because its request’s body stream was exhausted.";
+        }
+            break;
+        case kCFURLErrorFileDoesNotExist:
+        {
+            errorContent = @"The file operation failed because the file does not exist.";
+        }
+            break;
+        case kCFURLErrorFileIsDirectory:
+        {
+            errorContent = @"The file operation failed because the file is a directory.";
+        }
+            break;
+        case kCFURLErrorNoPermissionsToReadFile:
+        {
+            errorContent = @"The file operation failed because it does not have permission to read the file.";
+        }
+            break;
+        case kCFURLErrorDataLengthExceedsMaximum:
+        {
+            errorContent = @"The file operation failed because the file is too large.";
+        }
+            break;
+        case kCFURLErrorSecureConnectionFailed:
+        {
+            errorContent = @"The secure connection failed for an unknown reason";
+        }
+            break;
+        case kCFURLErrorServerCertificateHasBadDate:
+        {
+            errorContent = @"The secure connection failed because the server’s certificate has an invalid date.";
+        }
+            break;
+        case kCFURLErrorServerCertificateUntrusted:
+        {
+            errorContent = @"The secure connection failed because the server’s certificate is not trusted.";
+        }
+            break;
+        case kCFURLErrorServerCertificateHasUnknownRoot:
+        {
+            errorContent = @"The secure connection failed because the server’s certificate has an unknown root.";
+        }
+            break;
+        case kCFURLErrorServerCertificateNotYetValid:
+        {
+            errorContent = @"The secure connection failed because the server’s certificate is not yet valid.";
+        }
+            break;
+        case kCFURLErrorClientCertificateRejected:
+        {
+            errorContent = @"The secure connection failed because the client’s certificate was rejected.";
+        }
+            break;
+        case kCFURLErrorClientCertificateRequired:
+        {
+            errorContent = @"The secure connection failed because the server requires a client certificate.";
+        }
+            break;
+        case kCFURLErrorCannotLoadFromNetwork:
+        {
+            errorContent = @"The connection failed because it is being required to return a cached resource, but one is not available.";
+        }
+            break;
+        case kCFURLErrorCannotCreateFile:
+        {
+            errorContent = @"The file cannot be created.";
+        }
+            break;
+        case kCFURLErrorCannotOpenFile:
+        {
+            errorContent = @"The file cannot be opened.";
+        }
+            break;
+        case kCFURLErrorCannotCloseFile:
+        {
+            errorContent = @"The file cannot be closed.";
+        }
+            break;
+        case kCFURLErrorCannotWriteToFile:
+        {
+            errorContent = @"The file cannot be written.";
+        }
+            break;
+        case kCFURLErrorCannotRemoveFile:
+        {
+            errorContent = @"The file cannot be removed.";
+        }
+            break;
+        case kCFURLErrorCannotMoveFile:
+        {
+            errorContent = @"The file cannot be moved.";
+        }
+            break;
+        case kCFURLErrorDownloadDecodingFailedMidStream:
+        {
+            errorContent = @"The download failed because decoding of the downloaded data failed mid-stream.";
+        }
+            break;
+        case kCFURLErrorDownloadDecodingFailedToComplete:
+        {
+            errorContent = @"The download failed because decoding of the downloaded data failed to complete.";
+        }
+            break;
+        case kCFHTTPCookieCannotParseCookieFile:
+        {
+            errorContent = @"The cookie file cannot be parsed.";
+        }
+            break;
+        case kCFNetServiceErrorUnknown:
+        {
+            errorContent = @"An unknown error occurred.";
+        }
+            break;
+        case kCFNetServiceErrorCollision:
+        {
+            errorContent = @"An attempt was made to use a name that is already in use.";
+        }
+            break;
+        case kCFNetServiceErrorNotFound:
+        {
+            errorContent = @"Not used.";
+        }
+            break;
+        case kCFNetServiceErrorInProgress:
+        {
+            errorContent = @"A new search could not be started because a search is already in progress.";
+        }
+            break;
+        case kCFNetServiceErrorBadArgument:
+        {
+            errorContent = @"A required argument was not provided or was not valid.";
+        }
+            break;
+        case kCFNetServiceErrorCancel:
+        {
+            errorContent = @"The search or service was cancelled.";
+        }
+            break;
+        case kCFNetServiceErrorInvalid:
+        {
+            errorContent = @"Invalid data was passed to a CFNetServices function.";
+        }
+            break;
+        case kCFNetServiceErrorTimeout:
+        {
+            errorContent = @"A search failed because it timed out.";
+        }
+            break;
+        case kCFNetServiceErrorDNSServiceFailure:
+        {
+            errorContent = @"An error from DNS discovery; look at kCFDNSServiceFailureKey to get the error number and interpret using dnssd.h.";
+        }
             break;
             
         default:
-            errorContent = [NSString stringWithFormat:@"未知错误:%ld",(long)errorCode];
+            errorContent = [NSString stringWithFormat:@"ErrorCode:%ld",(long)errorCode];
             break;
     }
     
-    errorContent = @"网络连接失败";
     
     return errorContent;
 }
