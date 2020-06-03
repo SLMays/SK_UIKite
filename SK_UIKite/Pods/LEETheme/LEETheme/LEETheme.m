@@ -217,8 +217,12 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
     NSString *colorHexString = colorInfo[identifier];
     
     if (colorHexString) {
-        
-        UIColor *color = [UIColor leeTheme_ColorWithHexString:colorHexString];
+        UIColor *color = [UIColor clearColor];
+        if ([colorHexString isEqualToString:@"Color_Radom"]) {
+            color = [UIColor leeTheme_RadomColor];
+        }else if (![colorHexString isEqualToString:@"Color_Clear"]) {
+            color = [UIColor leeTheme_ColorWithHexString:colorHexString];
+        }
         
         if (color && !value) value = color;
     }
@@ -251,14 +255,34 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
     return value;
 }
 
++ (id)getJsonValueWithTag:(NSString *)tag Identifier:(NSString *)identifier{
+    
+    id value = nil;
+    
+    NSDictionary *configInfo = [LEETheme shareTheme].configInfo[tag];
+    
+    NSDictionary *info = configInfo[@"info"];
+    
+    NSDictionary *colorInfo = info[@"color"];
+    
+    value = colorInfo[identifier];
+
+    
+    NSDictionary *otherInfo = info[@"other"];
+    
+    if (!value) value = otherInfo[identifier];
+    
+    return value;
+}
+
 @end
 
 #pragma mark - ----------------主题设置模型----------------
 
 @interface LEEThemeConfigModel ()
 
-@property (nonatomic , copy ) void(^modelUpdateCurrentThemeConfig)();
-@property (nonatomic , copy ) void(^modelConfigThemeChangingBlock)();
+@property (nonatomic , copy ) void(^modelUpdateCurrentThemeConfig)(void);
+@property (nonatomic , copy ) void(^modelConfigThemeChangingBlock)(void);
 
 @property (nonatomic , copy ) LEEThemeChangingBlock modelChangingBlock;
 
@@ -2268,6 +2292,11 @@ typedef NS_ENUM(NSInteger, LEEThemeIdentifierConfigType) {
     unsigned hexComponent;
     [[NSScanner scannerWithString: fullHex] scanHexInt: &hexComponent];
     return hexComponent / 255.0f;
+}
+
++(UIColor *)leeTheme_RadomColor
+{
+    return [UIColor colorWithHue: (arc4random()% 256/256.0) saturation:(arc4random()%128/256.0)+0.5 brightness:(arc4random()%128/256.0)+ 0.5 alpha:1];
 }
 
 @end

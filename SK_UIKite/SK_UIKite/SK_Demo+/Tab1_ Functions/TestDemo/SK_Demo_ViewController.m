@@ -18,6 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    NSMutableDictionary * mDict = [NSMutableDictionary new];
+    [mDict setObject:@"v1" forKey:@"k1"];
+    [mDict setObject:@"v2" forKey:@"k2"];
+    [mDict setObject:@"v3" forKey:@"k3"];
+    [mDict setObject:@"v4" forKey:@"k4"];
+    [mDict setObject:@"v5" forKey:@"k5"];
+    [mDict setObject:@"v6" forKey:@"k6"];
+    [mDict setObject:@"v7" forKey:@"k7"];
+    
+    NSLog(@"%@",mDict);
+    
+    
+    
+    NSMutableDictionary * muDict = [[NSMutableDictionary alloc]initWithObjects:@[@"v1",@"v2",@"v3",@"v4",@"v5",@"v6",@"v7",] forKeys:@[@"k1",@"k2",@"k3",@"k4",@"k5",@"k6",@"k7"]];
+    
+    NSLog(@"%@",muDict);
+
+    
 }
 
 

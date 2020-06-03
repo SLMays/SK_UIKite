@@ -103,8 +103,18 @@ parameters:(id)parameters
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 6.f;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    
+    //设置请求头
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"cn" forHTTPHeaderField:@"Accept-Language"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"0oalnfaz49KsTy9CB8e8" forHTTPHeaderField:@"ApplicationKey"];
     
     NSMutableString * sginRequestHeader = [[NSMutableString alloc]initWithString:requestHeader];
     
@@ -176,11 +186,9 @@ parameters:(id)parameters
        parameters:mdict
 constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
     if (image) {
-        UIImage * _image = image;
-        NSData *imgData = UIImagePNGRepresentation(_image);
+        UIImage * _image = [image fixOrientation];
+        NSData *imgData = UIImageJPEGRepresentation(_image, 1);
 
-        _image  = [_image fixOrientation];
-        imgData = UIImageJPEGRepresentation(_image, 1);
         long KB = (long)imgData.length/1024;
         NSLog(@"【原始】图片内存大小__%ld_KB",KB);
         if (KB>MaxKB) {
@@ -214,7 +222,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
 }
 
 #pragma mark - 上传多张图片
-+(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
++(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr serverNameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
     
     SK_HTTPClient *manager = [SK_HTTPClient manager];

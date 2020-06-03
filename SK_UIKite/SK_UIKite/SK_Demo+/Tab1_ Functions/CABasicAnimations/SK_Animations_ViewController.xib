@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SK_Animations_ViewController">
+            <connections>
+                <outlet property="pingyiBtn" destination="1ww-gc-bSy" id="5Kz-O0-7Z9"/>
+                <outlet property="suofangBtn" destination="4wt-ma-656" id="dV9-Rr-yCm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xuanzhuanBtn" destination="qhw-7i-XUr" id="e6d-Y2-N6A"/>
+                <outlet property="zuheBtn" destination="6uc-0P-mv2" id="I41-gQ-oC5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ww-gc-bSy">
+                    <rect key="frame" x="77" y="318" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9U1-wk-DBY"/>
+                        <constraint firstAttribute="width" constant="60" id="nSr-gc-vXY"/>
+                    </constraints>
+                    <state key="normal" title="平移">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="pingyiAction:" destination="-1" eventType="touchUpInside" id="TPs-kR-pfW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-7i-XUr">
+                    <rect key="frame" x="77" y="518" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="MUs-iU-hkD"/>
+                        <constraint firstAttribute="width" constant="60" id="Nsv-6P-s7P"/>
+                    </constraints>
+                    <state key="normal" title="旋转">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="xuanzhuanAction:" destination="-1" eventType="touchUpInside" id="c10-ED-5zR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wt-ma-656">
+                    <rect key="frame" x="277" y="318" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="8H8-nb-5rM"/>
+                        <constraint firstAttribute="width" constant="60" id="so0-UU-Ggm"/>
+                    </constraints>
+                    <state key="normal" title="缩放">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="zuofangAction:" destination="-1" eventType="touchUpInside" id="gfa-Rr-so2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uc-0P-mv2">
+                    <rect key="frame" x="277" y="518" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="ASO-Wx-ly3"/>
+                        <constraint firstAttribute="height" constant="60" id="KAg-XC-eUD"/>
+                    </constraints>
+                    <state key="normal" title="组合">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="zuheAction:" destination="-1" eventType="touchUpInside" id="4fk-Qa-kAF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qhw-7i-XUr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-100" id="6cV-Dw-JVW"/>
+                <constraint firstItem="6uc-0P-mv2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="100" id="6gv-1B-X2r"/>
+                <constraint firstItem="1ww-gc-bSy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="LBp-XE-LOa"/>
+                <constraint firstItem="4wt-ma-656" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="imn-gr-A7p"/>
+                <constraint firstItem="1ww-gc-bSy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-100" id="u4S-Si-O0v"/>
+                <constraint firstItem="6uc-0P-mv2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="100" id="vam-1Z-K8s"/>
+                <constraint firstItem="4wt-ma-656" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="100" id="wCS-oP-bGD"/>
+                <constraint firstItem="qhw-7i-XUr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="100" id="wwn-o9-l5Z"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </view>
+    </objects>
+</document>

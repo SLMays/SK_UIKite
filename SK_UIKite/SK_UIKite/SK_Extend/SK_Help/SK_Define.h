@@ -21,7 +21,7 @@ _Pragma("clang diagnostic pop") \
 } while (0)
 
 #pragma mark - 系统版本号
-#define iOSVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
 #pragma mark - 设备型号识别
 #define Device_iPhone_3_5 (WIDTH_IPHONE==320&&HEIGHT_IPHONE==480)

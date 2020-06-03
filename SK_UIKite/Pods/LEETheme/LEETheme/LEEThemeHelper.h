@@ -43,7 +43,7 @@ FOUNDATION_EXPORT const unsigned char LEEThemeVersionString[];
 typedef void(^LEEThemeConfigBlock)(id item);
 typedef void(^LEEThemeConfigBlockToValue)(id item , id value);
 typedef void(^LEEThemeChangingBlock)(NSString *tag , id item);
-typedef LEEThemeConfigModel *(^LEEConfigTheme)();
+typedef LEEThemeConfigModel *(^LEEConfigTheme)(void);
 typedef LEEThemeConfigModel *(^LEEConfigThemeToFloat)(CGFloat number);
 typedef LEEThemeConfigModel *(^LEEConfigThemeToTag)(NSString *tag);
 typedef LEEThemeConfigModel *(^LEEConfigThemeToKeyPath)(NSString *keyPath);

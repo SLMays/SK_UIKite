@@ -107,6 +107,16 @@
  */
 + (id)getValueWithTag:(NSString *)tag Identifier:(NSString *)identifier;
 
+/**
+ *  获取值
+ *
+ *  @param tag          主题标签
+ *  @param identifier   标识符
+ *
+ *  @return 值对象 (UIColor或UIImage或NSString 如为不存在则返回nil)
+ */
++ (id)getJsonValueWithTag:(NSString *)tag Identifier:(NSString *)identifier;
+
 @end
 
 @interface LEEThemeConfigModel : NSObject
@@ -406,6 +416,8 @@
 @interface UIColor (LEEThemeColor)
 
 + (UIColor *)leeTheme_ColorWithHexString:(NSString *)hexString;
+
++ (UIColor *)leeTheme_RadomColor;
 
 @end
 

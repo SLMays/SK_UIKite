@@ -20,4 +20,29 @@
 -(void)LeftIconFontImg:(NSString *_Nullable)leftImg Size:(int)size;
 -(void)RightIconFontImg:(NSString *_Nullable)rightImg Size:(int)size;
 
+
+
+#pragma mark - 【键盘弹起回收问题】
+/**
+ *  是否支持视图上移
+ */
+@property (nonatomic, assign) BOOL canMove;
+/**
+ *  点击回收键盘、移动的视图，默认是当前控制器的view
+ */
+@property (nonatomic, strong) UIView * _Nullable moveView;
+/**
+ *  textfield底部距离键盘顶部的距离
+ */
+@property (nonatomic, assign) CGFloat heightToKeyboard;
+
+@property (nonatomic, assign, readonly) CGFloat keyboardY;
+@property (nonatomic, assign, readonly) CGFloat keyboardHeight;
+@property (nonatomic, assign, readonly) CGFloat initialY;
+@property (nonatomic, assign, readonly) CGFloat totalHeight;
+@property (nonatomic, strong, readonly) UITapGestureRecognizer * _Nullable tapGesture;
+@property (nonatomic, assign, readonly) BOOL hasContentOffset;
+
+
+
 @end

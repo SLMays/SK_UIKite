@@ -33,7 +33,6 @@
     [self.navigationController setNavigationBarHidden:[viewController isKindOfClass:[self class]] animated:YES];
 }
 
-
 -(void)initUI
 {
     //自定义导航栏
@@ -48,7 +47,7 @@
     
     
     //返回按钮
-    UIButton * backBtn = [UIButton initWithFrame:CGRectMake(20, Height_NavigationBar-44, 44, 44) Title:@"" TitleColor:nil BgColor:nil Image:SK_IconImageMake(K_IconFont_Back, 24, [UIColor whiteColor]) BgImage:nil Target:self Action:@selector(BackAction) ForControlEvents:UIControlEventTouchUpInside Tag:0];
+    UIButton * backBtn = [UIButton initWithFrame:CGRectMake(0, Height_StatusBar, 44, 44) Title:@"" TitleColor:nil BgColor:nil Image:SK_IconImageMake(K_IconFont_Back, 24, [UIColor whiteColor]) BgImage:nil Target:self Action:@selector(BackAction) ForControlEvents:UIControlEventTouchUpInside Tag:0];
     [navigationView addSubview:backBtn];
     titleLabel = [UILabel initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE/2, 44) Title:@"渐变导航栏" TitleColor:[UIColor whiteColor] BgColor:nil Font:[UIFont boldSystemFontOfSize:18] TextAlignment:NSTextAlignmentCenter  Tag:1];
     titleLabel.center = CGPointMake(WIDTH_IPHONE/2, Height_NavigationBar-22);

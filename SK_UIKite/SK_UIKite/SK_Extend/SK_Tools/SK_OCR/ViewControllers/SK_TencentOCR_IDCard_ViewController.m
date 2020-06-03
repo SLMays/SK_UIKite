@@ -28,7 +28,7 @@
                  @"card_type":@"0"      //0 为身份证有照片的一面，1 为身份证有国徽的一面；如果未指定，默认为0。
                  }
       imageArr:@[img]
-       nameArr:@[@"image[0]"]
+ serverNameArr:@[@"image[0]"]
    fileNameArr:@[@"image"]
       mimeType:@"image/jpeg"
        success:^(NSURLSessionDataTask *operation, id responseObject, BOOL isOK) {
@@ -66,7 +66,7 @@
          }];
 }
 
--(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr nameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
+-(void)post:(NSString *)requestHeader parameters:(id)parameters imageArr:(NSArray *)imageArr serverNameArr:(NSArray *)nameArr fileNameArr:(NSArray *)fileNameArr mimeType:(NSString *)mimeType success:(void (^)(NSURLSessionDataTask *operation, id responseObject, BOOL isOK))success failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure
 {
     
     SK_HTTPClient *manager = [SK_HTTPClient manager];

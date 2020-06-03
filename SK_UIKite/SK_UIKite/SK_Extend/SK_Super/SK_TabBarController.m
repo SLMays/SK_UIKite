@@ -8,7 +8,6 @@
 
 #import "SK_TabBarController.h"
 #import "Tab1_ViewController.h"
-#import "Tab2_ViewController.h"
 
 @interface SK_TabBarController ()
 
@@ -34,15 +33,9 @@
     Tab1_ViewController * vc1 = [[Tab1_ViewController alloc] init];
     SK_NavigationController * nav1 = [[SK_NavigationController alloc]initWithRootViewController:vc1];
 
-    Tab2_ViewController * vc2 = [[Tab2_ViewController alloc] init];
-    SK_NavigationController * nav2 = [[SK_NavigationController alloc]initWithRootViewController:vc2];
-
-    //设置tabbar
     [self addChildVC:vc1 titile:@"功能" iconFontName:k_IconFont_Tab1 selectIconFontName:k_IconFont_Tab1];
-    [self addChildVC:vc2 titile:@"主题" iconFontName:k_IconFont_Tab2 selectIconFontName:k_IconFont_Tab2];
     
-    
-    self.viewControllers =  @[nav1,nav2];
+    self.viewControllers =  @[nav1];
 }
 
 /**

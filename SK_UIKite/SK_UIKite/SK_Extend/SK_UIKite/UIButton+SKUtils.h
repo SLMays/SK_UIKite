@@ -22,7 +22,7 @@ typedef enum :NSInteger{
 
 @interface UIButton (SKUtils)
 
-+(UIButton * _Nullable)initWithFrame:(CGRect)frame Title:(NSString * _Nullable)title TitleColor:(UIColor *)titleColor BgColor:(UIColor *)bgColor Image:(UIImage *)img BgImage:(NSString *)bgImgName Target:(id _Nullable )target Action:(_Nullable SEL)sel ForControlEvents:(UIControlEvents)events Tag:(int)tag;
++(UIButton * _Nullable)initWithFrame:(CGRect)frame Title:(NSString * _Nullable)title TitleColor:(UIColor *_Nullable)titleColor BgColor:(UIColor *_Nullable)bgColor Image:(UIImage *_Nullable)img BgImage:(NSString *_Nullable)bgImgName Target:(id _Nullable )target Action:(_Nullable SEL)sel ForControlEvents:(UIControlEvents)events Tag:(int)tag;
 
 //纯文本
 +(UIButton *_Nullable)initWithFrame:(CGRect)frame title:(NSString * _Nullable)title titleColor:(NSString *_Nullable)tColor titleFont:(UIFont*_Nullable)font bgColor:(NSString *_Nullable)bgColor target:(id _Nullable )target action:(_Nullable SEL)sel  tag:(int)tag;

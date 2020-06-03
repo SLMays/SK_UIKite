@@ -16,7 +16,7 @@
     if (Device_iPhone_5_8) {
         return 88.0;
     } else {
-        if (iOSVersion>=7.0) {
+        if (IOS_VERSION>=7.0) {
             return 64.0;
         }else{
             return 44.0;

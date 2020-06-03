@@ -12,7 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIView *lunchV;
-
+@property (nonatomic, strong) UIButton * passBtn;
+@property (nonatomic, assign) BOOL  isPass;
 @end
 
 

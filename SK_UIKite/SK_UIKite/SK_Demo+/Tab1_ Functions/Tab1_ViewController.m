@@ -33,18 +33,25 @@
 -(NSArray *)DemoMenuListArr
 {
     if (!_DemoMenuListArr) {
-        _DemoMenuListArr = @[@{K_MenuTitle:@"DEMO-ViewController",K_MenuClass:@"SK_Demo_ViewController"},
+        _DemoMenuListArr = @[@{K_MenuTitle:@"Test-Demo",K_MenuClass:@"SK_Demo_ViewController"},
                              @{K_MenuTitle:@"自定义导航栏颜色渐变",K_MenuClass:@"SK_NavigationAlpha_ViewController"},
+                             @{K_MenuTitle:@"Lottie动画",K_MenuClass:@"SK_LottieAnim_ViewController"},
                              @{K_MenuTitle:@"IconFont主题",K_MenuClass:@"SK_IconFont_ViewController"},
-                             @{K_MenuTitle:@"制作GIF",K_MenuClass:@"SK_MakeGIF_ViewController"},
                              @{K_MenuTitle:@"图像识别技术",K_MenuClass:@"SK_OCR_ViewController"},
+                             @{K_MenuTitle:@"屏幕截屏分享",K_MenuClass:@"Screenshot_ViewController"},
                              @{K_MenuTitle:@"语音识别",K_MenuClass:@"SK_SpeechRecognition_ViewController"},
                              @{K_MenuTitle:@"颜色渐变动画",K_MenuClass:@"SK_ColorGradientAnimation_ViewController"},
 //                             @{K_MenuTitle:@"屏幕旋转",K_MenuClass:@"SK_Vertical_ViewController"},
-                             @{K_MenuTitle:@"屏幕截屏分享",K_MenuClass:@"Screenshot_ViewController"},
                              @{K_MenuTitle:@"时间转换",K_MenuClass:@"SK_DateTransformation_ViewController"},
+                             @{K_MenuTitle:@"日期转换",K_MenuClass:@"SK_TimeStampTransformation_ViewController"},
                              @{K_MenuTitle:@"日历时间选择器",K_MenuClass:@"SK_CalendarDateChoose_ViewController"},
                              @{K_MenuTitle:@"动态更换AppIcon",K_MenuClass:@"SK_ChangeAppIcon_ViewController"},
+//                             @{K_MenuTitle:@"TabBar动画",K_MenuClass:@"SK_TabBar_ViewController"},
+                             @{K_MenuTitle:@"CABasic动画",K_MenuClass:@"SK_Animations_ViewController"},
+                             @{K_MenuTitle:@"WebSocket",K_MenuClass:@"SK_WebSocket_ViewController"},
+                             @{K_MenuTitle:@"PDF预览(在线+本地)",K_MenuClass:@"SK_PDFReder_ViewController"},
+                             @{K_MenuTitle:@"制作GIF",K_MenuClass:@"SK_MakeGIF_ViewController"},
+                             @{K_MenuTitle:@"二维码生成",K_MenuClass:@"SK_QRCode_ViewController"},
                              ];
     }
     
@@ -54,7 +61,7 @@
 -(UITableView *)mainTableView
 {
     if (!_mainTableView) {
-        _mainTableView = [UITableView initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, HEIGHT_IPHONE) Style:UITableViewStylePlain Delegate:self SeparatorStyle:SK_TableViewCellSeparatorStyle_Full];
+        _mainTableView = [UITableView initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, NOHAVE_TABBAR_HEIGHT) Style:UITableViewStylePlain Delegate:self SeparatorStyle:SK_TableViewCellSeparatorStyle_Full];
     }
     return _mainTableView;
 }

@@ -36,7 +36,6 @@ typedef NS_ENUM(NSInteger, directionType) {
 +(UIImage*)GradientImageFromColors:(NSArray*)colors ByGradientType:(SK_GradientType)gradientType frame:(CGRect)frame;
 #pragma mark - 图片中心点拉伸
 +(UIImage *)scalingImagWithName:(NSString *)name;
-
 #pragma mark - 对图片进行滤镜处理
 // 怀旧 --> CIPhotoEffectInstant                         单色 --> CIPhotoEffectMono
 // 黑白 --> CIPhotoEffectNoir                            褪色 --> CIPhotoEffectFade
@@ -287,4 +286,11 @@ typedef NS_ENUM(NSInteger, directionType) {
 
 //根据图片获取图片的主色调
 +(UIColor*)mostColor:(UIImage*)image;
+
+/**
+ 生成二维码(中间有小图片)
+ QRStering：字符串
+ centerImage：二维码中间的image对象
+ */
++ (UIImage *)createImgQRCodeWithString:(NSString *)QRString centerImage:(UIImage *)centerImage;
 @end

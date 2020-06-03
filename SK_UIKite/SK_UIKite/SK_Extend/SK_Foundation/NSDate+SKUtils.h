@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define GMT_e8   (8*60*60)   //北京时间(东八)
+#define GMT_w5   (-5*60*60)  //纽约时间(西五)
+#define GMT_0    0           //0时区
+
 typedef enum : NSInteger{
     DateBeforeType_OneWeak=0,      //一周前
     DateBeforeType_OneMonth=1,     //一个月前
@@ -81,6 +85,9 @@ typedef enum : NSInteger{
 +(long)GetTimeStampWithDate:(NSDate *)date millisecond:(BOOL)milli;
 +(NSString *)GetTimeStampStrWithDate:(NSDate *)date;
 
+/// 将日期转换成时间戳
+/// @param dateStr 日期字符串
++(NSString *)GetTimeStampStrWithDateStr:(NSString *)dateStr;
 
 /**
  *  时间戳转换成date
@@ -139,7 +146,6 @@ typedef enum : NSInteger{
 //获取时间戳距离当前时间多久
 + (NSString *)getDateIntervalForNow_CDate:(long long)c_date javaDate:(long long)java_date;
 
-
 /**
  获取传入日期的前一段时间
 
@@ -148,5 +154,7 @@ typedef enum : NSInteger{
  @return 之前的日期         yyyyMMDD
  */
 +(NSString *)getBeforeDate:(NSString *)nowDate type:(DateBeforeType)type;
+
+
 
 @end

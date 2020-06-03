@@ -21,7 +21,7 @@
  */
 +(NSString *)getDateToStr:(NSString *)dateStr withFormatter:(NSString *)Formatter
 {
-    double date = [dateStr doubleValue];
+    long long date = [dateStr longLongValue];
     
     NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:date];
     //实例化一个NSDateFormatter对象
@@ -199,7 +199,14 @@
     
     return TimeStamp;
 }
-
++(NSString *)GetTimeStampStrWithDateStr:(NSString *)dateStr
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    NSDate *date = [dateFormatter dateFromString:dateStr];
+    NSString * timeStamp = [NSString stringWithFormat:@"%ld",[NSDate GetTimeStampWithDate:date millisecond:NO]];
+    return timeStamp;
+}
 /**
  *  时间戳转换成date
  *
@@ -356,21 +363,26 @@
 +(NSString *)getDate:(NSString *)time GMT:(NSInteger)seconds ZoneName:(NSString *)name
 {
     
-    NSDate * date = [NSDate dateWithTimeIntervalSince1970:[time doubleValue]];
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:[time longLongValue]];
     
     // 直接初始化的时间, 也是当前时间
-    //NSDate *date = [[NSDate alloc]init];
-    NSTimeZone *zone = [NSTimeZone timeZoneForSecondsFromGMT:seconds];
+//    NSTimeZone *zone = [NSTimeZone timeZoneForSecondsFromGMT:seconds];
+//
+//    NSTimeInterval interval = [zone secondsFromGMTForDate:date];
+//    NSDate *current = [date dateByAddingTimeInterval:interval];
     
-    NSTimeInterval interval = [zone secondsFromGMTForDate:date];
-    NSDate *current = [date dateByAddingTimeInterval:interval];
-    
-    NSTimeZone *zoneZero = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    //默认0时区
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    if (STRING_IS_NOT_EMPTY(name)) {//根据时区名字
+        timeZone = [NSTimeZone timeZoneWithName:name];
+    }else{//根据GMT时间间隔
+        timeZone = [NSTimeZone timeZoneForSecondsFromGMT:seconds];
+    }
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    [dateFormatter setTimeZone:zoneZero];
-    
-    NSString *currentDateStr = [dateFormatter stringFromDate:current];
+    [dateFormatter setTimeZone:timeZone];
+
+    NSString *currentDateStr = [dateFormatter stringFromDate:date];
     
     NSLog(@"%@ %@",name,currentDateStr);
     

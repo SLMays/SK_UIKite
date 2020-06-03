@@ -20,22 +20,11 @@
 #define Color_C2D8E4_FFFFFF     @"Color_C2D8E4_FFFFFF"
 #define Color_152C45_FFFFFF     @"Color_152C45_FFFFFF"
 #define Color_C2D8E4_333333     @"Color_C2D8E4_333333"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#define Color_FFFFFF_FFFFFF     @"Color_FFFFFF_FFFFFF"
+#define Color_333333_333333     @"Color_333333_333333"
+#define Color_969696_7b7b7b     @"Color_969696_7b7b7b"
+#define Color_Radom             @"Color_Radom"
+#define Color_Clear             @"Color_Clear"
 
 
 
@@ -47,13 +36,6 @@
 
 
 @interface SK_ThemeHelp : NSObject
-
-
-
-
-
-
-
 
 +(SK_ThemeHelp *)sharedInstance;
 -(NSString *)GetThemeJson_Key:(NSString *)key;

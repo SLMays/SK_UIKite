@@ -10,7 +10,8 @@
 
 @implementation SK_IconInfo
 
-- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color {
+- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color
+{
     if (self = [super init]) {
         self.text = text;
         self.size = size;
@@ -18,9 +19,21 @@
     }
     return self;
 }
-
-+ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color {
+- (instancetype)initWithText:(NSString *)text size:(NSInteger)size hexColor:(NSString *)hexColor
+{
+    if (self = [super init]) {
+        self.text = text;
+        self.size = size;
+        self.color = [LEETheme getValueWithTag:[LEETheme currentThemeTag] Identifier:hexColor];
+    }
+    return self;
+}
++ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color
+{
     return [[SK_IconInfo alloc] initWithText:text size:size color:color];
 }
-
++ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size hexColor:(NSString *)hexColor
+{
+    return [[SK_IconInfo alloc] initWithText:text size:size hexColor:hexColor];
+}
 @end

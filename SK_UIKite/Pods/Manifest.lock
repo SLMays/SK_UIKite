@@ -17,6 +17,7 @@ PODS:
   - FLAnimatedImage (1.0.12)
   - HexColors (2.2.1)
   - LEETheme (1.1.7)
+  - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
@@ -31,17 +32,22 @@ PODS:
   - SDWebImage/GIF (4.4.1):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - SocketRocket (0.5.1)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
+  - UINavigation-SXFixSpace (1.2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - LEETheme
+  - lottie-ios (~> 2.5.2)
   - Masonry
   - ReactiveCocoa (= 2.3.1)
   - SDWebImage
   - SDWebImage/GIF
+  - SocketRocket
   - TSMessages
+  - UINavigation-SXFixSpace
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,21 +55,27 @@ SPEC REPOS:
     - FLAnimatedImage
     - HexColors
     - LEETheme
+    - lottie-ios
     - Masonry
     - ReactiveCocoa
     - SDWebImage
+    - SocketRocket
     - TSMessages
+    - UINavigation-SXFixSpace
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   LEETheme: e5dc623fe58ee9f2b973e9a7445267e3e972deb4
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
+  UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: fc43a31d704696d91c042dc224300816d5c20088
+PODFILE CHECKSUM: 53d5f86428b222e11d48e523349ca7eaf7384179
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.5

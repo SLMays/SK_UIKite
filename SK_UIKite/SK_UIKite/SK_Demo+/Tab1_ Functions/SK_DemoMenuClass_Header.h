@@ -34,6 +34,7 @@
 
 //时间转换
 #import "SK_DateTransformation_ViewController.h"
+#import "SK_TimeStampTransformation_ViewController.h"
 
 //日历时间选择器
 #import "SK_CalendarDateChoose_ViewController.h"
@@ -42,14 +43,28 @@
 #import "SK_ChangeAppIcon_ViewController.h"
 
 
+//TabBar动画
+#import "SK_TabBarController.h"
 
 
-
-
+//CABasicAnimation动画
+#import "SK_Animations_ViewController.h"
 
 
 //测试时使用的Demo控制器
 #import "SK_Demo_ViewController.h"
 
+//WebSocket
+#import "SK_WebSocket_ViewController.h"
 
 
+//PDF预览(在线+本地)
+#import "SK_PDFReder_ViewController.h"
+
+
+//Lottie动画
+#import "SK_LottieAnim_ViewController.h"
+
+
+//s二维码生成
+#import "SK_QRCode_ViewController.h"

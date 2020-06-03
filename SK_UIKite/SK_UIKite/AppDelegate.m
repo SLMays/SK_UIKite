@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "SK_TabBarController.h"
+#import "Tab1_ViewController.h"
+
+#define K_GCDTimer_LunchVTime  @"LunchVTime"
 
 @interface AppDelegate ()
 
@@ -58,7 +61,9 @@
 
 -(void)setRootView
 {
-    self.window.rootViewController = [[SK_TabBarController alloc] init];
+    Tab1_ViewController * vc1 = [[Tab1_ViewController alloc] init];
+    SK_NavigationController * nav1 = [[SK_NavigationController alloc]initWithRootViewController:vc1];
+    self.window.rootViewController = nav1;
     [self.window makeKeyAndVisible];
 }
 
@@ -70,6 +75,7 @@
     self.lunchV.frame =[UIScreen mainScreen].bounds;
     [self.window addSubview:self.lunchV];
     [self.window bringSubviewToFront:self.lunchV];
+    [self.window addSubview:self.passBtn];
     [self loadNetGif];
     [self start];
 }
@@ -87,28 +93,41 @@
     imgView.image = [UIImage imageNamed:@"LaunchImage"];
     [self.lunchV addSubview:imgView];
 }
-
+-(UIButton *)passBtn
+{
+    if (!_passBtn) {
+        _passBtn = [UIButton initWithFrame:CGRectMake(0, 0, 60, 25) title:@"跳过" titleColor:Color_333333_333333 titleFont:[UIFont systemFontOfSize:14] bgColor:Color_FFFFFF_FFFFFF target:self action:@selector(passAction) tag:0];
+        _passBtn.center = CGPointMake(WIDTH_IPHONE-40, Height_StatusBar+20);
+        _passBtn.bRadius = 12.5;
+    }
+    return _passBtn;
+}
+-(void)passAction
+{
+    [[SK_GCDTimer sharedInstance] cancelTimerWithName:K_GCDTimer_LunchVTime];
+    [self setRootView];
+}
 -(void)start{
     __block NSInteger second = 3;//加载时长
-    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, quene);
-    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(timer, ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"%ld",(long)second);
-            if (second == 0) {
-                [self.lunchV removeFromSuperview];
-                [self setRootView];
-                dispatch_cancel(timer);
-            } else {
-                second--;
-            }
-        });
-    });
-    dispatch_resume(timer);
+    
+    SK_WEAKSELF
+    [[SK_GCDTimer sharedInstance]checkExistTimer:K_GCDTimer_LunchVTime completion:^(BOOL doExist) {
+        if (!doExist) {
+            [[SK_GCDTimer sharedInstance]startDispatchTimerWithName:K_GCDTimer_LunchVTime timeInterval:1 queue:nil repeats:YES fireInstantly:NO action:^{
+                if (second==0) {
+                    [[SK_GCDTimer sharedInstance] cancelTimerWithName:K_GCDTimer_LunchVTime];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // 追加在主线程中执行的任务
+                        [_weakSelf.lunchV removeFromSuperview];
+                        [_weakSelf setRootView];
+                    });
+                }else{
+                    second--;
+                }
+            }];
+        }
+    }];
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -119,6 +138,26 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    UIApplication* app = [UIApplication sharedApplication];
+    __block  UIBackgroundTaskIdentifier bgTask;
+    bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (bgTask != UIBackgroundTaskInvalid)
+            {
+                bgTask = UIBackgroundTaskInvalid;
+            }
+        });
+    }];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (bgTask != UIBackgroundTaskInvalid)
+            {
+                bgTask = UIBackgroundTaskInvalid;
+            }
+        });
+    });
 }
 
 

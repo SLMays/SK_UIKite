@@ -31,7 +31,7 @@
     for (int i=0; i<5; i++) {
         NSString * iconName = [NSString stringWithFormat:@"icon_%d",i+1];
         NSString * suffix = @"iPhoneApp_60pt";
-        UIButton * btn = [UIButton initWithFrame:CGRectMake(left+i%2*(imgSize+interval), Height_NavigationBar+i*75, imgSize, imgSize) imageName:nil btnBgImage:[NSString stringWithFormat:@"%@%@",iconName,suffix] target:self action:@selector(changeAppIconWithName:) bgColor:nil tag:i];
+        UIButton * btn = [UIButton initWithFrame:CGRectMake(left+i%2*(imgSize+interval), Height_NavigationBar+i*75, imgSize, imgSize) imageName:@"" btnBgImage:[NSString stringWithFormat:@"%@%@",iconName,suffix] target:self action:@selector(changeAppIconWithName:) bgColor:nil tag:i];
         [btn setTitle:iconName forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
         btn.bRadius = 4;
