@@ -54,7 +54,7 @@
     
 //    UIImage * img = [UIImage shotWithView:self.view];   //除去导航栏
     UIImage * img = [UIImage shotScreen];                 //全屏幕
-    UIImage * bottomImg = [UIImage imageNamed:@"ShareBottom"];
+    UIImage * bottomImg = [UIImage imageNamed:@"img_ShareBottom"];
     img = [UIImage addSlaveImage:bottomImg toMasterImage:img directionType:(SK_DirectionType_TopToBottom)];
     
     self.canBack = YES;

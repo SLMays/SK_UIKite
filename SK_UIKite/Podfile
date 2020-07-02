@@ -16,6 +16,5 @@ target 'SK_UIKite' do
     pod 'SDWebImage/GIF' #GIF图#
     pod 'UINavigation-SXFixSpace' #导航栏两侧按钮间距
     pod 'SocketRocket'
-    pod 'lottie-ios', '~> 2.5.2'
+    pod 'lottie-ios'
 end
-

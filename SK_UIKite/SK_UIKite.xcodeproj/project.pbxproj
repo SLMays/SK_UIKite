@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		09717C9330C2246B7140E941 /* Pods_SK_UIKite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */; };
+		953CCB9924A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CCB9824A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m */; };
+		953CCB9E24AB20FB00550C16 /* YZAuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CCB9C24AB20FB00550C16 /* YZAuthID.m */; };
+		A40A4C01249C622B0085A683 /* NSObject+WHC_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BF7249C622A0085A683 /* NSObject+WHC_Extension.m */; };
+		A40A4C02249C622B0085A683 /* WHC_KeyboardHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BFB249C622A0085A683 /* WHC_KeyboardHeaderView.m */; };
+		A40A4C03249C622B0085A683 /* WHC_KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BFC249C622A0085A683 /* WHC_KeyboardManager.m */; };
 		A40B5B8F20EA07BF000EF0A2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40B5B8E20EA07BF000EF0A2 /* CoreTelephony.framework */; };
 		A40B5B9120EA07CB000EF0A2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40B5B9020EA07CB000EF0A2 /* Security.framework */; };
 		A40B5B9320EA07D7000EF0A2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40B5B9220EA07D7000EF0A2 /* SystemConfiguration.framework */; };
@@ -131,6 +136,7 @@
 		A4620B5D202C5044002686ED /* SK_Define.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5C202C5044002686ED /* SK_Define.m */; };
 		A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B5F202C568A002686ED /* UIImage+SKUtils.m */; };
 		A4620B7A202C5E44002686ED /* SK_TableView_Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A4620B79202C5E44002686ED /* SK_TableView_Controller.m */; };
+		A4627690249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A462768F249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.m */; };
 		A467A7E221B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A7E121B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m */; };
 		A467A7E621B7CF1000DCBBA5 /* SK_GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A7E521B7CF0F00DCBBA5 /* SK_GCDTimer.m */; };
 		A47A26222092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47A26212092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m */; };
@@ -162,7 +168,6 @@
 		E61E996324666ACA00250AD3 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E61E996224666ACA00250AD3 /* libexidcardios.a */; };
 		E62031B7238522EC00301C2D /* SK_Animations_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62031B5238522EC00301C2D /* SK_Animations_ViewController.m */; };
 		E62031B8238522EC00301C2D /* SK_Animations_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62031B6238522EC00301C2D /* SK_Animations_ViewController.xib */; };
-		E62031BD238523C600301C2D /* SK_TabBarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62031BC238523C600301C2D /* SK_TabBarAnimationController.m */; };
 		E6705E9623CEF59E00E55F58 /* shouye.json in Resources */ = {isa = PBXBuildFile; fileRef = E6705E9323CEF59E00E55F58 /* shouye.json */; };
 		E6705EAA23CEFBD300E55F58 /* LottieLogo.json in Resources */ = {isa = PBXBuildFile; fileRef = E6705EA923CEFBD300E55F58 /* LottieLogo.json */; };
 		E67388F023B9EDC6005DA155 /* SK_WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E67388EF23B9EDC6005DA155 /* SK_WebSocketManager.m */; };
@@ -202,13 +207,22 @@
 		E6E17E4A24865EE500B70509 /* UISegmentedControl+SKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E17E4924865EE500B70509 /* UISegmentedControl+SKUtils.m */; };
 		E6FC276D23B45EEE0042226C /* JFRSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FC276A23B45EEE0042226C /* JFRSecurity.m */; };
 		E6FC276E23B45EEE0042226C /* JFRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FC276B23B45EEE0042226C /* JFRWebSocket.m */; };
-		E6FC277223B476AE0042226C /* SK_WebSocket_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FC277123B476AE0042226C /* SK_WebSocket_ViewController.m */; };
 		E6FD189E246ADC4600499368 /* SK_QRCode_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FD189C246ADC4600499368 /* SK_QRCode_ViewController.m */; };
 		E6FD189F246ADC4600499368 /* SK_QRCode_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6FD189D246ADC4600499368 /* SK_QRCode_ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SK_UIKite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953CCB9724A9E57800550C16 /* SK_FaceID_TouchID_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_FaceID_TouchID_ViewController.h; sourceTree = "<group>"; };
+		953CCB9824A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_FaceID_TouchID_ViewController.m; sourceTree = "<group>"; };
+		953CCB9C24AB20FB00550C16 /* YZAuthID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZAuthID.m; sourceTree = "<group>"; };
+		953CCB9D24AB20FB00550C16 /* YZAuthID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZAuthID.h; sourceTree = "<group>"; };
+		A40A4BF7249C622A0085A683 /* NSObject+WHC_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WHC_Extension.m"; sourceTree = "<group>"; };
+		A40A4BF8249C622A0085A683 /* WHC_KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_KeyboardManager.h; sourceTree = "<group>"; };
+		A40A4BF9249C622A0085A683 /* WHC_KeyboardHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_KeyboardHeaderView.h; sourceTree = "<group>"; };
+		A40A4BFA249C622A0085A683 /* NSObject+WHC_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WHC_Extension.h"; sourceTree = "<group>"; };
+		A40A4BFB249C622A0085A683 /* WHC_KeyboardHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_KeyboardHeaderView.m; sourceTree = "<group>"; };
+		A40A4BFC249C622A0085A683 /* WHC_KeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_KeyboardManager.m; sourceTree = "<group>"; };
 		A40B5B8C20EA07A1000EF0A2 /* tingyunApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tingyunApp.framework; path = SK_UIKite/SK_Extend/SK_Tools/SK_3rdClass/TingYun/tingyunApp.framework; sourceTree = "<group>"; };
 		A40B5B8E20EA07BF000EF0A2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A40B5B9020EA07CB000EF0A2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -410,6 +424,8 @@
 		A4620B5F202C568A002686ED /* UIImage+SKUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SKUtils.m"; sourceTree = "<group>"; };
 		A4620B78202C5E44002686ED /* SK_TableView_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TableView_Controller.h; sourceTree = "<group>"; };
 		A4620B79202C5E44002686ED /* SK_TableView_Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_TableView_Controller.m; sourceTree = "<group>"; };
+		A462768E249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_KeyBoardTool_ViewController.h; sourceTree = "<group>"; };
+		A462768F249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_KeyBoardTool_ViewController.m; sourceTree = "<group>"; };
 		A467A7E021B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_DateTransformation_ViewController.h; sourceTree = "<group>"; };
 		A467A7E121B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_DateTransformation_ViewController.m; sourceTree = "<group>"; };
 		A467A7E421B7CF0F00DCBBA5 /* SK_GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SK_GCDTimer.h; sourceTree = "<group>"; };
@@ -467,8 +483,6 @@
 		E62031B4238522EC00301C2D /* SK_Animations_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_Animations_ViewController.h; sourceTree = "<group>"; };
 		E62031B5238522EC00301C2D /* SK_Animations_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_Animations_ViewController.m; sourceTree = "<group>"; };
 		E62031B6238522EC00301C2D /* SK_Animations_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SK_Animations_ViewController.xib; sourceTree = "<group>"; };
-		E62031BB238523C600301C2D /* SK_TabBarAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_TabBarAnimationController.h; sourceTree = "<group>"; };
-		E62031BC238523C600301C2D /* SK_TabBarAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_TabBarAnimationController.m; sourceTree = "<group>"; };
 		E6705E9323CEF59E00E55F58 /* shouye.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shouye.json; sourceTree = "<group>"; };
 		E6705EA923CEFBD300E55F58 /* LottieLogo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo.json; sourceTree = "<group>"; };
 		E67388EE23B9EDC6005DA155 /* SK_WebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_WebSocketManager.h; sourceTree = "<group>"; };
@@ -546,8 +560,6 @@
 		E6FC276A23B45EEE0042226C /* JFRSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRSecurity.m; sourceTree = "<group>"; };
 		E6FC276B23B45EEE0042226C /* JFRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRWebSocket.m; sourceTree = "<group>"; };
 		E6FC276C23B45EEE0042226C /* Jetfire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jetfire.h; sourceTree = "<group>"; };
-		E6FC277023B476AE0042226C /* SK_WebSocket_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_WebSocket_ViewController.h; sourceTree = "<group>"; };
-		E6FC277123B476AE0042226C /* SK_WebSocket_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_WebSocket_ViewController.m; sourceTree = "<group>"; };
 		E6FD189B246ADC4600499368 /* SK_QRCode_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_QRCode_ViewController.h; sourceTree = "<group>"; };
 		E6FD189C246ADC4600499368 /* SK_QRCode_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_QRCode_ViewController.m; sourceTree = "<group>"; };
 		E6FD189D246ADC4600499368 /* SK_QRCode_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SK_QRCode_ViewController.xib; sourceTree = "<group>"; };
@@ -608,6 +620,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		953CCB9A24A9E58100550C16 /* FaceID&TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				953CCB9724A9E57800550C16 /* SK_FaceID_TouchID_ViewController.h */,
+				953CCB9824A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m */,
+			);
+			path = "FaceID&TouchID";
+			sourceTree = "<group>";
+		};
+		953CCB9B24AB20FB00550C16 /* YZAuthID */ = {
+			isa = PBXGroup;
+			children = (
+				953CCB9D24AB20FB00550C16 /* YZAuthID.h */,
+				953CCB9C24AB20FB00550C16 /* YZAuthID.m */,
+			);
+			path = YZAuthID;
+			sourceTree = "<group>";
+		};
+		A40A4BF6249C622A0085A683 /* WHC_KeyboradManager(OC) */ = {
+			isa = PBXGroup;
+			children = (
+				A40A4BFA249C622A0085A683 /* NSObject+WHC_Extension.h */,
+				A40A4BF7249C622A0085A683 /* NSObject+WHC_Extension.m */,
+				A40A4BF9249C622A0085A683 /* WHC_KeyboardHeaderView.h */,
+				A40A4BFB249C622A0085A683 /* WHC_KeyboardHeaderView.m */,
+				A40A4BF8249C622A0085A683 /* WHC_KeyboardManager.h */,
+				A40A4BFC249C622A0085A683 /* WHC_KeyboardManager.m */,
+			);
+			path = "WHC_KeyboradManager(OC)";
+			sourceTree = "<group>";
+		};
 		A419C3C42118339600301306 /* SK_Encryption */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +688,8 @@
 		A419C3D42118339600301306 /* SK_3rdTools */ = {
 			isa = PBXGroup;
 			children = (
+				953CCB9B24AB20FB00550C16 /* YZAuthID */,
+				A40A4BF6249C622A0085A683 /* WHC_KeyboradManager(OC) */,
 				E6CC209A23CC7A4D007D585E /* MJRefresh */,
 				E6FC276723B45EEE0042226C /* Jetfire */,
 				E67888752338C6C900268E2C /* YYWebImage */,
@@ -1021,11 +1066,11 @@
 				A4CDEE352243824400AAFE04 /* 日历时间选择器 */,
 				A425E60F225F34610048C4BD /* 动态更换AppIcon */,
 				E66D01F42383D70700C487C4 /* CABasicAnimations */,
-				E62031BA238523A900301C2D /* TabBar动画 */,
-				E6FC276F23B4767A0042226C /* WebSocket */,
 				E6C4CAEF23CEE53300C9632C /* Lottie动画 */,
 				E6CC208823CC6BA6007D585E /* PDF预览 */,
 				E6FD189A246ADBD800499368 /* 二维码生成 */,
+				A462768D249C4B8D00D5427E /* 键盘回收Tool */,
+				953CCB9A24A9E58100550C16 /* FaceID&TouchID */,
 			);
 			path = "Tab1_ Functions";
 			sourceTree = "<group>";
@@ -1183,6 +1228,15 @@
 			path = LYLUnicode;
 			sourceTree = "<group>";
 		};
+		A462768D249C4B8D00D5427E /* 键盘回收Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A462768E249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.h */,
+				A462768F249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.m */,
+			);
+			path = "键盘回收Tool";
+			sourceTree = "<group>";
+		};
 		A467A7DF21B7CCDE00DCBBA5 /* 时间转换 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1215,9 +1269,9 @@
 		A4B7D1FF207F605700A4312D /* SK_Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A419C3D42118339600301306 /* SK_3rdTools */,
 				E67388ED23B9EDB2005DA155 /* SK_WebSocketManager */,
 				A467A7E321B7CF0F00DCBBA5 /* SK_GCDTimer */,
-				A419C3D42118339600301306 /* SK_3rdTools */,
 				A419C3C42118339600301306 /* SK_Encryption */,
 				A419C4082118339700301306 /* SK_IconFont */,
 				A419C3CC2118339600301306 /* SK_NetworkHandler */,
@@ -1271,15 +1325,6 @@
 				A4620B5C202C5044002686ED /* SK_Define.m */,
 			);
 			path = SK_Help;
-			sourceTree = "<group>";
-		};
-		E62031BA238523A900301C2D /* TabBar动画 */ = {
-			isa = PBXGroup;
-			children = (
-				E62031BB238523C600301C2D /* SK_TabBarAnimationController.h */,
-				E62031BC238523C600301C2D /* SK_TabBarAnimationController.m */,
-			);
-			path = "TabBar动画";
 			sourceTree = "<group>";
 		};
 		E66D01F42383D70700C487C4 /* CABasicAnimations */ = {
@@ -1430,15 +1475,6 @@
 				E6FC276C23B45EEE0042226C /* Jetfire.h */,
 			);
 			path = Jetfire;
-			sourceTree = "<group>";
-		};
-		E6FC276F23B4767A0042226C /* WebSocket */ = {
-			isa = PBXGroup;
-			children = (
-				E6FC277023B476AE0042226C /* SK_WebSocket_ViewController.h */,
-				E6FC277123B476AE0042226C /* SK_WebSocket_ViewController.m */,
-			);
-			path = WebSocket;
 			sourceTree = "<group>";
 		};
 		E6FD189A246ADBD800499368 /* 二维码生成 */ = {
@@ -1658,6 +1694,7 @@
 				E6FC276E23B45EEE0042226C /* JFRWebSocket.m in Sources */,
 				E67888A82338C6C900268E2C /* YYAnimatedImageView.m in Sources */,
 				A419C49A2118341000301306 /* SK_BankCard_ViewController.m in Sources */,
+				A40A4C01249C622B0085A683 /* NSObject+WHC_Extension.m in Sources */,
 				A44B0BF31FA9D62A001B00FB /* UITextField+SKUtils.m in Sources */,
 				E67888A52338C6C900268E2C /* YYImage.m in Sources */,
 				E67888AB2338C6C900268E2C /* UIImageView+YYWebImage.m in Sources */,
@@ -1674,7 +1711,6 @@
 				A419C46A2118339700301306 /* LMComBoxView.m in Sources */,
 				A419C4AE21183AF500301306 /* SK_GraphicsValidation_ViewController.m in Sources */,
 				A419C4522118339700301306 /* SK_HTTPClient.m in Sources */,
-				E62031BD238523C600301C2D /* SK_TabBarAnimationController.m in Sources */,
 				A4CDEE302243822B00AAFE04 /* GFCalendarScrollView.m in Sources */,
 				A4E7DFA820909544007E3967 /* UITextView+SKUtils.m in Sources */,
 				A44B0BC91FA9D19B001B00FB /* NSObject+SKUtils.m in Sources */,
@@ -1683,6 +1719,7 @@
 				A44B0BD51FA9D1F4001B00FB /* UIViewController+SKUtils.m in Sources */,
 				A46087FD22A654440023E0DE /* LYLUnicode.m in Sources */,
 				A467A7E221B7CD4A00DCBBA5 /* SK_DateTransformation_ViewController.m in Sources */,
+				A40A4C03249C622B0085A683 /* WHC_KeyboardManager.m in Sources */,
 				A44B0BCF1FA9D1B1001B00FB /* NSDate+SKUtils.m in Sources */,
 				A4620B60202C568A002686ED /* UIImage+SKUtils.m in Sources */,
 				A419C4892118339700301306 /* BankOverlayView.m in Sources */,
@@ -1700,11 +1737,11 @@
 				A419C49C2118341000301306 /* SK_BankScanning_ViewController.m in Sources */,
 				E67888A02338C6C900268E2C /* YYCache.m in Sources */,
 				A419C4552118339700301306 /* SK_ThemeHelp.m in Sources */,
+				953CCB9924A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m in Sources */,
 				A44B0BCC1FA9D1A5001B00FB /* NSData+SKUtils.m in Sources */,
 				A47A2628209310520015F03E /* SK_TabBarController.m in Sources */,
 				A44B0BF01FA9D5C0001B00FB /* UIScrollView+SKUtils.m in Sources */,
 				A419C49E2118341000301306 /* SK_IDScanning_ViewController.m in Sources */,
-				E6FC277223B476AE0042226C /* SK_WebSocket_ViewController.m in Sources */,
 				E67888A42338C6C900268E2C /* YYSpriteSheetImage.m in Sources */,
 				E678889E2338C6C900268E2C /* YYImageCache.m in Sources */,
 				A4B7D1FD207F5FC200A4312D /* SK_IconFont_ViewController.m in Sources */,
@@ -1724,6 +1761,7 @@
 				A44B0BF61FA9D63B001B00FB /* UILabel+SKUtils.m in Sources */,
 				E678889F2338C6C900268E2C /* YYDiskCache.m in Sources */,
 				A419C45D2118339700301306 /* UIView+Toast.m in Sources */,
+				A4627690249C4BBB00D5427E /* SK_KeyBoardTool_ViewController.m in Sources */,
 				E67888A92338C6C900268E2C /* _YYWebImageSetter.m in Sources */,
 				A419C4782118339700301306 /* BankCardSearch.m in Sources */,
 				E67888AD2338C6C900268E2C /* UIImage+YYWebImage.m in Sources */,
@@ -1751,9 +1789,11 @@
 				A4E7791C20BB9A3500B94944 /* SK_TableView.m in Sources */,
 				A425E613225F34C90048C4BD /* SK_ChangeAppIcon_ViewController.m in Sources */,
 				A47D81AA208DC542003958C9 /* UIColor+SKUtils.m in Sources */,
+				953CCB9E24AB20FB00550C16 /* YZAuthID.m in Sources */,
 				A44B0C021FA9D768001B00FB /* SK_ViewController.m in Sources */,
 				A4B7D1FA207F566D00A4312D /* SK_NavigationController.m in Sources */,
 				A47A26222092D3640015F03E /* SK_ColorGradientAnimation_ViewController.m in Sources */,
+				A40A4C02249C622B0085A683 /* WHC_KeyboardHeaderView.m in Sources */,
 				A419C4712118339700301306 /* Demo_IdCardIdentify.m in Sources */,
 				A4AEDB2B20A581A300315E82 /* UIWebView+SKUtils.m in Sources */,
 				E6CC20AC23CC7A4D007D585E /* MJRefreshConst.m in Sources */,
@@ -1903,6 +1943,18 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1916,6 +1968,30 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sky.SKUIKiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1940,6 +2016,18 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/ALi_src",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
@@ -1953,6 +2041,30 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
 					"$(PROJECT_DIR)/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/libexidcard",
+					"$(PROJECT_DIR)/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Demo+/Tab1_\\ Functions/WebSocket/GitHub/SK_UIKite/SK_UIKite/SK_UIKite/SK_Extend/SK_Tools/SK_OCR/SDKs/bank_io/exbankcardcore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Sky.SKUIKiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

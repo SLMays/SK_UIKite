@@ -55,5 +55,6 @@
 #import "UIImageView+WebCache.h"
 #import "YYWebImage.h"
 #import "MJRefresh.h"
+#import "WHC_KeyboardManager.h"//键盘管理
 
 

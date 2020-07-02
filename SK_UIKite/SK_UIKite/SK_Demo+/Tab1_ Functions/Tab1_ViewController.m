@@ -46,12 +46,12 @@
                              @{K_MenuTitle:@"日期转换",K_MenuClass:@"SK_TimeStampTransformation_ViewController"},
                              @{K_MenuTitle:@"日历时间选择器",K_MenuClass:@"SK_CalendarDateChoose_ViewController"},
                              @{K_MenuTitle:@"动态更换AppIcon",K_MenuClass:@"SK_ChangeAppIcon_ViewController"},
-//                             @{K_MenuTitle:@"TabBar动画",K_MenuClass:@"SK_TabBar_ViewController"},
                              @{K_MenuTitle:@"CABasic动画",K_MenuClass:@"SK_Animations_ViewController"},
-                             @{K_MenuTitle:@"WebSocket",K_MenuClass:@"SK_WebSocket_ViewController"},
                              @{K_MenuTitle:@"PDF预览(在线+本地)",K_MenuClass:@"SK_PDFReder_ViewController"},
                              @{K_MenuTitle:@"制作GIF",K_MenuClass:@"SK_MakeGIF_ViewController"},
                              @{K_MenuTitle:@"二维码生成",K_MenuClass:@"SK_QRCode_ViewController"},
+                             @{K_MenuTitle:@"键盘回收",K_MenuClass:@"SK_KeyBoardTool_ViewController"},
+                             @{K_MenuTitle:@"FaceID&TouchID",K_MenuClass:@"SK_FaceID_TouchID_ViewController"},
                              ];
     }
     

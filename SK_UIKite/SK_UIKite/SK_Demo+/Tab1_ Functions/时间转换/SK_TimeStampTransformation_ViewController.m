@@ -30,10 +30,10 @@
     UILabel * titleLabel = [UILabel initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, 35) Font:16 Text:@"自定义日期->时间戳->转换日期" setColor:[UIColor blackColor] numberOfLines:1 textAlignment:(NSTextAlignmentCenter)];
     [self.view addSubview:titleLabel];
     
-    self.dateTextF = [UITextField initWithFrame:CGRectMake(20, titleLabel.bottom, WIDTH_IPHONE-100, 40) placeholder:@"yyyy/MM/dd HH:mm:ss" passWord:NO leftImageView:nil rightImageView:nil font:14 backgRoundImageName:nil text:@"2020/06/01 20:00:13" textBorderStyle:(UITextBorderStyleRoundedRect) keyboardType:(UIKeyboardTypeDefault) textAlignment:(NSTextAlignmentCenter) bgColor:nil borderColor:Color_Radom tag:0];
+    self.dateTextF = [UITextField initWithFrame:CGRectMake(20, titleLabel.bottom, WIDTH_IPHONE-100, 40) placeholder:@"yyyy/MM/dd HH:mm:ss" passWord:NO leftImageView:nil rightImageView:nil font:14 backgRoundImageName:nil text:@"2020/06/01 20:00:13" textBorderStyle:(UITextBorderStyleRoundedRect) keyboardType:(UIKeyboardTypeDefault) textAlignment:(NSTextAlignmentCenter) bgColor:nil borderColor:Color_Random tag:0];
     [self.view addSubview:self.dateTextF];
     
-    UIButton * doneBtn = [UIButton initWithFrame:CGRectMake(self.dateTextF.right+10, self.dateTextF.top, 60, self.dateTextF.height) title:@"确认" titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont systemFontOfSize:16] bgColor:Color_Radom target:self action:@selector(doneAction) tag:1];
+    UIButton * doneBtn = [UIButton initWithFrame:CGRectMake(self.dateTextF.right+10, self.dateTextF.top, 60, self.dateTextF.height) title:@"确认" titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont systemFontOfSize:16] bgColor:Color_Random target:self action:@selector(doneAction) tag:1];
     doneBtn.bRadius = 4;
     [self.view addSubview:doneBtn];
     
@@ -41,10 +41,10 @@
     self.dateShowTextV.bColor = RandomColor;
     [self.view addSubview:self.dateShowTextV];
     
-    self.TimeZoneSeg = [UISegmentedControl initWithItems:@[@"当前时区转换",@"固定时区转换(北京)"] frame:CGRectMake(20, self.dateShowTextV.bottom+10, WIDTH_IPHONE-40, 45) selectedIndex:0 tintColor:Color_Radom titleAttNormal:nil titleAttSelected:nil target:self action:nil];
+    self.TimeZoneSeg = [UISegmentedControl initWithItems:@[@"当前时区转换",@"固定时区转换(北京)"] frame:CGRectMake(20, self.dateShowTextV.bottom+10, WIDTH_IPHONE-40, 45) selectedIndex:0 tintColor:Color_Random titleAttNormal:nil titleAttSelected:nil target:self action:nil];
     [self.view addSubview:self.TimeZoneSeg];
     
-    UIButton * transBtn = [UIButton initWithFrame:CGRectMake(20, self.TimeZoneSeg.bottom+10, WIDTH_IPHONE-40, 45) title:@"开始转换" titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont systemFontOfSize:16] bgColor:Color_Radom target:self action:@selector(TransformationAction) tag:3];
+    UIButton * transBtn = [UIButton initWithFrame:CGRectMake(20, self.TimeZoneSeg.bottom+10, WIDTH_IPHONE-40, 45) title:@"开始转换" titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont systemFontOfSize:16] bgColor:Color_Random target:self action:@selector(TransformationAction) tag:3];
     transBtn.bRadius = 4;
     [self.view addSubview:transBtn];
     

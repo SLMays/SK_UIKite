@@ -23,7 +23,7 @@
     NSArray * titArr = @[@"本地预览",@"在线预览",@"下载预览"];
     for (int i=0; i<3; i++) {
         CGFloat size = (WIDTH_IPHONE/2);
-        UIButton * btn = [UIButton initWithFrame:CGRectMake(i%2*size, i/2*size, size, size) title:titArr[i] titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont boldSystemFontOfSize:20] bgColor:Color_Radom target:self action:@selector(btnClick:) tag:i];
+        UIButton * btn = [UIButton initWithFrame:CGRectMake(i%2*size, i/2*size, size, size) title:titArr[i] titleColor:Color_FFFFFF_FFFFFF titleFont:[UIFont boldSystemFontOfSize:20] bgColor:Color_Random target:self action:@selector(btnClick:) tag:i];
         [self.view addSubview:btn];
     }
 }

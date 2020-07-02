@@ -50,7 +50,7 @@ DEPENDENCIES:
   - UINavigation-SXFixSpace
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - FLAnimatedImage
     - HexColors
@@ -78,4 +78,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 53d5f86428b222e11d48e523349ca7eaf7384179
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3

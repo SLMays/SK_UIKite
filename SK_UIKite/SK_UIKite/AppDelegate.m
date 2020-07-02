@@ -82,7 +82,7 @@
 //加载网络GIF
 -(void)loadNetGif{
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.lunchV.bounds];
-    NSURL *url = [NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554358521337&di=786503e1b451f9335e18ca75b2259414&imgtype=0&src=http%3A%2F%2Ftheiphonewalls.com%2Fwp-content%2Fuploads%2F2013%2F02%2FFinal-Fantasy.jpg"];
+    NSURL *url = [NSURL URLWithString:@"https://i.loli.net/2020/07/02/s15KMWzUGiqjtVw.jpg"];
     [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"LaunchImage"]];
     [self.lunchV addSubview:imageView];
 }
@@ -105,6 +105,7 @@
 -(void)passAction
 {
     [[SK_GCDTimer sharedInstance] cancelTimerWithName:K_GCDTimer_LunchVTime];
+    [self.lunchV removeFromSuperview];
     [self setRootView];
 }
 -(void)start{

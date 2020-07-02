@@ -23,7 +23,7 @@
 #define Color_FFFFFF_FFFFFF     @"Color_FFFFFF_FFFFFF"
 #define Color_333333_333333     @"Color_333333_333333"
 #define Color_969696_7b7b7b     @"Color_969696_7b7b7b"
-#define Color_Radom             @"Color_Radom"
+#define Color_Random             @"Color_Random"
 #define Color_Clear             @"Color_Clear"
 
 

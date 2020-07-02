@@ -43,19 +43,12 @@
 #import "SK_ChangeAppIcon_ViewController.h"
 
 
-//TabBar动画
-#import "SK_TabBarController.h"
-
-
 //CABasicAnimation动画
 #import "SK_Animations_ViewController.h"
 
 
 //测试时使用的Demo控制器
 #import "SK_Demo_ViewController.h"
-
-//WebSocket
-#import "SK_WebSocket_ViewController.h"
 
 
 //PDF预览(在线+本地)
@@ -68,3 +61,13 @@
 
 //s二维码生成
 #import "SK_QRCode_ViewController.h"
+
+
+//回收键盘
+#import "SK_KeyBoardTool_ViewController.h"
+
+
+//FaceID&TouchID
+#import "SK_FaceID_TouchID_ViewController.h"
+
+

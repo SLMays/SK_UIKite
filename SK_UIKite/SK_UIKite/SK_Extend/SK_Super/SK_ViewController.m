@@ -20,6 +20,7 @@
     self.navigationController.delegate = self;
     [self initNavigation];
     [self initTopBgImageView];
+    [[WHC_KeyboardManager share] addMonitorViewController:self];//添加键盘管理
 }
 -(void)setCanBack:(BOOL)canBack
 {

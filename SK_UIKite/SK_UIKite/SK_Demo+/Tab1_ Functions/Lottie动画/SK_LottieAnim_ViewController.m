@@ -48,7 +48,7 @@
     
     
     UIView * tabBarView = [UIView initWithFrame:CGRectMake(0, HAVE_TABBAR_HEIGHT, WIDTH_IPHONE, Height_TabBar) backgroundColor:nil alpha:1.0];
-    tabBarView.lee_theme.LeeConfigBackgroundColor(Color_Radom);
+    tabBarView.lee_theme.LeeConfigBackgroundColor(Color_Random);
     [self.view addSubview:tabBarView];
     
     _anim = [LOTAnimationView animationNamed:@"shouye"];

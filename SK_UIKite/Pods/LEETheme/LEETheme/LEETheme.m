@@ -218,7 +218,7 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
     
     if (colorHexString) {
         UIColor *color = [UIColor clearColor];
-        if ([colorHexString isEqualToString:@"Color_Radom"]) {
+        if ([colorHexString isEqualToString:@"Color_Random"]) {
             color = [UIColor leeTheme_RadomColor];
         }else if (![colorHexString isEqualToString:@"Color_Clear"]) {
             color = [UIColor leeTheme_ColorWithHexString:colorHexString];

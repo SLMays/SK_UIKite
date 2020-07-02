@@ -62,7 +62,7 @@
      *CIMedianFilter ---> 中值模糊, 用于消除图像噪点, 无需设置radius(Available in iOS 9.0 and later)
      *CIMotionBlur   ---> 运动模糊, 用于模拟相机移动拍摄时的扫尾效果(Available in iOS 9.0 and later)
      */
-    headImageView = [UIImageView initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, HeadViewHeight) Image:[[UIImage imageNamed:@"timg.jpeg"] blurImage] ContentMode:(UIViewContentModeScaleAspectFill) Tag:0 String:@""];
+    headImageView = [UIImageView initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, HeadViewHeight) Image:[[UIImage imageNamed:@"img_Top"] blurImage] ContentMode:(UIViewContentModeScaleAspectFill) Tag:0 String:@""];
     headImageView.clipsToBounds = YES;//截掉多余的部分
     [self.view addSubview:headImageView];
     
@@ -73,7 +73,7 @@
     
     //头像
     CGFloat headWidth = 100;
-    UIImageView * headImgView = [UIImageView initWithFrame:CGRectMake(0, 0, headWidth, headWidth) Image:[UIImage imageNamed:@"timg.jpeg"] ContentMode:UIViewContentModeScaleAspectFill Tag:1 String:@""];
+    UIImageView * headImgView = [UIImageView initWithFrame:CGRectMake(0, 0, headWidth, headWidth) Image:[UIImage imageNamed:@"img_Top"] ContentMode:UIViewContentModeScaleAspectFill Tag:1 String:@""];
     headImgView.bRadius = headWidth/2;
     headImgView.center = CGPointMake(WIDTH_IPHONE/2, headView.height/2);
     [headView addSubview:headImgView];
