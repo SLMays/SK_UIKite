@@ -74,11 +74,16 @@
 -(WKWebView *)webView
 {
     if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE, NOHAVE_TABBAR_HEIGHT)];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         _webView.UIDelegate = self;
         _webView.navigationDelegate = self;
         [_webView.scrollView addHeaderWithTarget:self action:@selector(reloadUrl)];
         
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+        //
+        _webView.frame = CGRectMake(0, Height_StatusBar, WIDTH_IPHONE, NOHAVE_TABBAR_HEIGHT+Height_NavigationBar-Height_StatusBar);
+
         // 是否允许手势左滑返回上一级, 类似导航控制的左滑返回
         _webView.allowsBackForwardNavigationGestures = YES;
         

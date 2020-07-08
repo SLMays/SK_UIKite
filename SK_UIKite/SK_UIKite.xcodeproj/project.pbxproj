@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09717C9330C2246B7140E941 /* Pods_SK_UIKite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */; };
 		953CCB9924A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CCB9824A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m */; };
 		953CCB9E24AB20FB00550C16 /* YZAuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CCB9C24AB20FB00550C16 /* YZAuthID.m */; };
+		95EC6BBF24B5AE2D00AD3B9B /* gifLaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 95EC6BBE24B5AE2D00AD3B9B /* gifLaunchScreen.gif */; };
 		A40A4C01249C622B0085A683 /* NSObject+WHC_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BF7249C622A0085A683 /* NSObject+WHC_Extension.m */; };
 		A40A4C02249C622B0085A683 /* WHC_KeyboardHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BFB249C622A0085A683 /* WHC_KeyboardHeaderView.m */; };
 		A40A4C03249C622B0085A683 /* WHC_KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A40A4BFC249C622A0085A683 /* WHC_KeyboardManager.m */; };
@@ -209,14 +209,16 @@
 		E6FC276E23B45EEE0042226C /* JFRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FC276B23B45EEE0042226C /* JFRWebSocket.m */; };
 		E6FD189E246ADC4600499368 /* SK_QRCode_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FD189C246ADC4600499368 /* SK_QRCode_ViewController.m */; };
 		E6FD189F246ADC4600499368 /* SK_QRCode_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6FD189D246ADC4600499368 /* SK_QRCode_ViewController.xib */; };
+		FDFF744A46D22049C8B3EADC /* Pods_SK_UIKite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F3C153DFE739AF934DB32 /* Pods_SK_UIKite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SK_UIKite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5F3C153DFE739AF934DB32 /* Pods_SK_UIKite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SK_UIKite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953CCB9724A9E57800550C16 /* SK_FaceID_TouchID_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SK_FaceID_TouchID_ViewController.h; sourceTree = "<group>"; };
 		953CCB9824A9E57800550C16 /* SK_FaceID_TouchID_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SK_FaceID_TouchID_ViewController.m; sourceTree = "<group>"; };
 		953CCB9C24AB20FB00550C16 /* YZAuthID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZAuthID.m; sourceTree = "<group>"; };
 		953CCB9D24AB20FB00550C16 /* YZAuthID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZAuthID.h; sourceTree = "<group>"; };
+		95EC6BBE24B5AE2D00AD3B9B /* gifLaunchScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifLaunchScreen.gif; sourceTree = "<group>"; };
 		A40A4BF7249C622A0085A683 /* NSObject+WHC_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WHC_Extension.m"; sourceTree = "<group>"; };
 		A40A4BF8249C622A0085A683 /* WHC_KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_KeyboardManager.h; sourceTree = "<group>"; };
 		A40A4BF9249C622A0085A683 /* WHC_KeyboardHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_KeyboardHeaderView.h; sourceTree = "<group>"; };
@@ -585,7 +587,7 @@
 				A40B5B9120EA07CB000EF0A2 /* Security.framework in Frameworks */,
 				A40B5B8F20EA07BF000EF0A2 /* CoreTelephony.framework in Frameworks */,
 				A4A33A142086F5A900907B97 /* Photos.framework in Frameworks */,
-				09717C9330C2246B7140E941 /* Pods_SK_UIKite.framework in Frameworks */,
+				FDFF744A46D22049C8B3EADC /* Pods_SK_UIKite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +609,6 @@
 				A40B5B8E20EA07BF000EF0A2 /* CoreTelephony.framework */,
 				A4C9CFCE20FC91CD0076F63C /* JavaScriptCore.framework */,
 				A4A33A132086F5A900907B97 /* Photos.framework */,
-				51768831877A3C50C525E624 /* Pods_SK_UIKite.framework */,
 				A40B5B9020EA07CB000EF0A2 /* Security.framework */,
 				A41DE3A92114273300BA6340 /* Social.framework */,
 				A40B5B9220EA07D7000EF0A2 /* SystemConfiguration.framework */,
@@ -616,6 +617,7 @@
 				A4C9CFD020FC91E30076F63C /* libsqlite3.tbd */,
 				A4C9CFCC20FC91BE0076F63C /* libstdc++.tbd */,
 				A40B5B9420EA07E2000EF0A2 /* libz.tbd */,
+				7B5F3C153DFE739AF934DB32 /* Pods_SK_UIKite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1005,6 +1007,7 @@
 		A42F6F4D20EC742900666251 /* GIF图片制作 */ = {
 			isa = PBXGroup;
 			children = (
+				95EC6BBE24B5AE2D00AD3B9B /* gifLaunchScreen.gif */,
 				A4A33A112086E60900907B97 /* SK_MakeGIF_ViewController.h */,
 				A4A33A102086E60900907B97 /* SK_MakeGIF_ViewController.m */,
 			);
@@ -1096,7 +1099,6 @@
 		A44B0B921FA9CF2B001B00FB /* SK_UIKite */ = {
 			isa = PBXGroup;
 			children = (
-				E67888712338C0D400268E2C /* Gif */,
 				A44B0B931FA9CF2B001B00FB /* AppDelegate.h */,
 				A44B0B941FA9CF2B001B00FB /* AppDelegate.m */,
 				A44B0B9C1FA9CF2B001B00FB /* Assets.xcassets */,
@@ -1346,13 +1348,6 @@
 			path = SK_WebSocketManager;
 			sourceTree = "<group>";
 		};
-		E67888712338C0D400268E2C /* Gif */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gif;
-			sourceTree = "<group>";
-		};
 		E67888752338C6C900268E2C /* YYWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1498,7 +1493,7 @@
 				A44B0B8C1FA9CF2B001B00FB /* Sources */,
 				A44B0B8D1FA9CF2B001B00FB /* Frameworks */,
 				A44B0B8E1FA9CF2B001B00FB /* Resources */,
-				7B6AD73AB8A6A60CFD3FE895 /* [CP] Embed Pods Frameworks */,
+				F78B09CED90D06DB88BE3C3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1594,6 +1589,7 @@
 				A425E5BD225F1E430048C4BD /* LaunchScreen.storyboard in Resources */,
 				A425E5E8225F2C5F0048C4BD /* icon_3iPhoneSpootlight5_29pt@3x.png in Resources */,
 				A419C4862118339700301306 /* zocr0.lib in Resources */,
+				95EC6BBF24B5AE2D00AD3B9B /* gifLaunchScreen.gif in Resources */,
 				A425E5C7225F2C390048C4BD /* icon_1iPhoneApp_60pt@2x.png in Resources */,
 				A425E5EB225F2C5F0048C4BD /* icon_3iPhoneApp_60pt@2x.png in Resources */,
 				A425E5CC225F2C390048C4BD /* icon_1iPhoneApp_60pt@3x.png in Resources */,
@@ -1635,7 +1631,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B6AD73AB8A6A60CFD3FE895 /* [CP] Embed Pods Frameworks */ = {
+		F78B09CED90D06DB88BE3C3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

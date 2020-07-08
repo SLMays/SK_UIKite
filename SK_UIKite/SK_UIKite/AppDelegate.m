@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "SK_TabBarController.h"
 #import "Tab1_ViewController.h"
+#import "SK_WebViewController.h"
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImageView.h>
 
 #define K_GCDTimer_LunchVTime  @"LunchVTime"
 
@@ -75,23 +78,46 @@
     self.lunchV.frame =[UIScreen mainScreen].bounds;
     [self.window addSubview:self.lunchV];
     [self.window bringSubviewToFront:self.lunchV];
+    [self.window addSubview:self.clickBtn];
     [self.window addSubview:self.passBtn];
-    [self loadNetGif];
+//    [self loadNetGif];//加载网络图片
+    [self loadNativeGif];//加载本地图片
     [self start];
 }
 //加载网络GIF
--(void)loadNetGif{
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.lunchV.bounds];
-    NSURL *url = [NSURL URLWithString:@"https://i.loli.net/2020/07/02/s15KMWzUGiqjtVw.jpg"];
-    [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"LaunchImage"]];
-    [self.lunchV addSubview:imageView];
+-(void)loadNetGif
+{
+    FLAnimatedImageView * gifImgView = [[FLAnimatedImageView alloc]initWithFrame:self.lunchV.bounds];
+    gifImgView.contentMode = UIViewContentModeScaleAspectFill;
+    NSURL *url = [NSURL URLWithString:@"https://i.loli.net/2020/07/08/1cyr7S5Bmsxf4NR.gif"];
+    [gifImgView sd_setImageWithURL:url];
+    [self.lunchV addSubview:gifImgView];
+    
 }
 //加载本地GIF
--(void)loadNativeGif{
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.lunchV.bounds];
-    imgView.contentMode = UIViewContentModeScaleAspectFit;
-    imgView.image = [UIImage imageNamed:@"LaunchImage"];
-    [self.lunchV addSubview:imgView];
+-(void)loadNativeGif
+{
+    FLAnimatedImageView * gifImgView = [[FLAnimatedImageView alloc]initWithFrame:self.lunchV.bounds];
+    gifImgView.contentMode = UIViewContentModeScaleAspectFill;
+    NSString  *filePath = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]]pathForResource:@"gifLaunchScreen" ofType:@"gif"];
+    NSData  *imageData = [NSData dataWithContentsOfFile:filePath];
+    [gifImgView setAnimatedImage:[FLAnimatedImage animatedImageWithGIFData:imageData]];
+    [self.lunchV addSubview:gifImgView];
+}
+-(UIButton *)clickBtn
+{
+    if (!_clickBtn) {
+        _clickBtn = [UIButton initWithFrame:self.lunchV.bounds target:self action:@selector(goToDetail) forControlEvents:UIControlEventTouchUpInside tag:0];
+    }
+    return _clickBtn;
+}
+-(void)goToDetail
+{
+    [self passAction];
+    NSURL * url = [NSURL URLWithString:@"http://www.baidu.com"];
+    SK_WebViewController * web = [[SK_WebViewController alloc]initWithURL:url];
+    web.hidesBottomBarWhenPushed = YES;
+    [[UIViewController currentViewController].navigationController pushViewController:web animated:YES];
 }
 -(UIButton *)passBtn
 {
@@ -109,7 +135,7 @@
     [self setRootView];
 }
 -(void)start{
-    __block NSInteger second = 3;//加载时长
+    __block NSInteger second = 5;//加载时长
     
     SK_WEAKSELF
     [[SK_GCDTimer sharedInstance]checkExistTimer:K_GCDTimer_LunchVTime completion:^(BOOL doExist) {

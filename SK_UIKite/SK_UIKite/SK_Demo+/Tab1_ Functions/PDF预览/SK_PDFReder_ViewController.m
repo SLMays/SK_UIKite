@@ -75,7 +75,7 @@
 #pragma mark - 在线预览
 -(void)onLinePreview
 {
-    NSURL * url = [NSURL URLWithString:@"http://ima.51mm.com/taImage/product/subInsurance/20/shuoMingZ3VqaWEhQCMxNTc3OTM1NjM4NTEyMTYwOQ==.pdf"];
+    NSURL * url = [NSURL URLWithString:@""];
     SK_WebViewController * web = [[SK_WebViewController alloc]initWithURL:url];
     [self.navigationController pushViewController:web animated:YES];
 }

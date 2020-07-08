@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50235ECF9E29A2D092CA3D733ABB7B1A"
+               BlueprintIdentifier = "C04243A3B170B8A9793B7FB0D9E56007"
                BuildableName = "TSMessages.framework"
                BlueprintName = "TSMessages"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -50,7 +50,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50235ECF9E29A2D092CA3D733ABB7B1A"
+            BlueprintIdentifier = "C04243A3B170B8A9793B7FB0D9E56007"
             BuildableName = "TSMessages.framework"
             BlueprintName = "TSMessages"
             ReferencedContainer = "container:Pods.xcodeproj">
