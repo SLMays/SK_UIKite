@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *imgName;
 @property (nonatomic, copy) NSString *btnTitle;
 @property (nonatomic, strong) YZAuthID *authID;
+
 @end
 
 @implementation SK_FaceID_TouchID_ViewController
@@ -32,19 +33,27 @@
         self.btnTitle = @"指纹";
     }
     
-    self.authID = [[YZAuthID alloc] init];
-    
-    UIButton * verifyBtn = [UIButton initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE/2, WIDTH_IPHONE/2) imageName:self.imgName btnBgImage:nil target:self action:@selector(startVerify) title:self.btnTitle bgColor:nil titleColor:Color_Random titleFont:[UIFont systemFontOfSize:15] tag:0];
+    UIButton * verifyBtn = [UIButton initWithFrame:CGRectMake(0, 0, WIDTH_IPHONE/2, WIDTH_IPHONE/2) imageName:self.imgName btnBgImage:nil target:self action:@selector(verify) title:self.btnTitle bgColor:nil titleColor:Color_Random titleFont:[UIFont systemFontOfSize:15] tag:0];
     verifyBtn.center = self.view.center;
     [verifyBtn layoutButtonWithEdgeInsetsStyle:(SK_ButtonEdgeInsetsStyle_imgTop) imageTitleSpace:20];
     [self.view addSubview:verifyBtn];
     
 }
-
+-(YZAuthID *)authID
+{
+    if (!_authID) {
+        _authID = [[YZAuthID alloc] init];
+    }
+    return _authID;
+}
+-(void)verify
+{
+    [self startVerify];
+    [self startVerify];
+}
 -(void)startVerify
 {
     [self.authID yz_showAuthIDWithDescribe:nil block:^(YZAuthIDState state, NSError *error) {
-        
         if (state == YZAuthIDStateNotSupport) { // 不支持TouchID/FaceID
             SKToast(@"对不起，当前设备不支持指纹/面容ID");
         } else if(state == YZAuthIDStateFail) { // 认证失败
@@ -58,9 +67,6 @@
         }
     }];
 }
-
-
-
 
 /*
 #pragma mark - Navigation

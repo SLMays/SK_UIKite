@@ -118,8 +118,10 @@
 	<string>用于语音识别功能</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>用于语音识别功能</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>用于图片保存功能</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>用于图片保存功能</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>用于FaceID验证</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconfont.ttf</string>
